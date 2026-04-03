@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Star, ArrowRight, ShieldCheck, Sparkles, Gem, Clock, Quote, Phone, MessageCircle, MapPin } from 'lucide-react';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { BRAND, CONTACT, HOME_CONTENT, SIGNATURE_TREATMENTS, TRUST_STATEMENTS, TESTIMONIALS } from '@/content/data';
+import { BRAND, CONTACT, HOME_CONTENT, SIGNATURE_TREATMENTS, TRUST_STATEMENTS } from '@/content/data';
 import { cn } from '@/lib/utils';
 
 export default function Home() {

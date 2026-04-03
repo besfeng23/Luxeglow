@@ -26,9 +26,9 @@ export const CONTACT = {
   mallLocation: "3F East Wing, Estancia Mall",
   hours: "Daily: 10:00 AM - 9:00 PM",
   socials: {
-    facebook: "https://facebook.com",
-    instagram: "https://instagram.com",
-    messenger: "https://facebook.com",
+    facebook: "https://facebook.com/luxeglowbeautylounge",
+    instagram: "https://instagram.com/luxeglowbeautylounge",
+    messenger: "https://m.me/luxeglowbeautylounge",
   }
 };
 
