@@ -1,3 +1,4 @@
+
 'use client';
 
 import React from 'react';
@@ -6,6 +7,11 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Star, Gem, Sparkles, Quote, MapPin, CheckCircle2 } from 'lucide-react';
+
+// Note: Metadata is handled in a separate layout or sibling file for static pages, 
+// but since this is 'use client', we'll rely on the parent layout default or 
+// export a separate metadata object if this were a server component. 
+// For this MVP, we focus on the semantic content.
 
 export default function AboutPage() {
   const clinicImg = PlaceHolderImages.find(img => img.id === 'clinic-interior');
@@ -38,7 +44,7 @@ export default function AboutPage() {
             <div className="relative group aspect-[4/5] overflow-hidden rounded-[4rem] luxury-shadow animate-reveal">
               <Image 
                 src={modelImg?.imageUrl || "https://picsum.photos/seed/lux6/600/800"} 
-                alt="Luxe Glow Philosophy" 
+                alt="Radiant model representing Luxe Glow skincare philosophy" 
                 fill
                 className="object-cover transition-transform duration-[4000ms] group-hover:scale-105"
                 data-ai-hint="glowing skin"
@@ -96,7 +102,7 @@ export default function AboutPage() {
                 <div className="w-20 h-20 rounded-full border border-black/5 flex items-center justify-center text-primary bg-white luxury-shadow group-hover:bg-foreground group-hover:text-white transition-all duration-1000 mx-auto md:mx-0">
                   <item.icon className="w-8 h-8" />
                 </div>
-                <h4 className="text-[12px] uppercase tracking-[0.4em] font-bold">{item.title}</h4>
+                <h3 className="text-[12px] uppercase tracking-[0.4em] font-bold">{item.title}</h3>
                 <p className="text-base text-muted-foreground/80 leading-relaxed font-light italic">{item.desc}</p>
               </div>
             ))}
@@ -117,14 +123,14 @@ export default function AboutPage() {
               <div className="flex items-center gap-8 p-10 rounded-[3rem] bg-secondary/30 border border-black/5 luxury-shadow">
                 <CheckCircle2 className="w-8 h-8 text-accent" />
                 <div>
-                  <h5 className="text-[11px] uppercase tracking-widest font-bold mb-2">Elite Comfort</h5>
+                  <h4 className="text-[11px] uppercase tracking-widest font-bold mb-2">Elite Comfort</h4>
                   <p className="text-sm text-muted-foreground font-light italic leading-relaxed">Ergonomic treatment beds and premium linens for absolute relaxation during rituals.</p>
                 </div>
               </div>
               <div className="flex items-center gap-8 p-10 rounded-[3rem] bg-secondary/30 border border-black/5 luxury-shadow">
                 <CheckCircle2 className="w-8 h-8 text-accent" />
                 <div>
-                  <h5 className="text-[11px] uppercase tracking-widest font-bold mb-2">Advanced Science</h5>
+                  <h4 className="text-[11px] uppercase tracking-widest font-bold mb-2">Advanced Science</h4>
                   <p className="text-sm text-muted-foreground font-light italic leading-relaxed">Equipped with the latest FDA-approved aesthetic technology for consistent, visible results.</p>
                 </div>
               </div>
@@ -135,7 +141,7 @@ export default function AboutPage() {
               <div className="aspect-[3/4] rounded-[4rem] overflow-hidden luxury-shadow relative mt-16 animate-reveal">
                 <Image 
                   src={clinicImg?.imageUrl || "https://picsum.photos/seed/lux3/800/600"} 
-                  alt="Clinic Reception" 
+                  alt="Interior of Luxe Glow Premier aesthetic clinic reception" 
                   fill 
                   className="object-cover"
                   data-ai-hint="aesthetic clinic"
@@ -144,7 +150,7 @@ export default function AboutPage() {
               <div className="aspect-[3/4] rounded-[4rem] overflow-hidden luxury-shadow relative animate-reveal delay-500">
                 <Image 
                   src={treatmentImg?.imageUrl || "https://picsum.photos/seed/lux5/800/600"} 
-                  alt="Treatment Room" 
+                  alt="Private luxury treatment suite at Luxe Glow Premier" 
                   fill 
                   className="object-cover"
                   data-ai-hint="treatment room"
@@ -177,7 +183,7 @@ export default function AboutPage() {
         <div className="absolute inset-0 opacity-10">
           <Image 
             src={productsImg?.imageUrl || "https://picsum.photos/seed/lux4/600/400"} 
-            alt="Products Background" 
+            alt="Luxury skincare products used at Luxe Glow Premier" 
             fill 
             className="object-cover grayscale"
             data-ai-hint="luxury skincare"

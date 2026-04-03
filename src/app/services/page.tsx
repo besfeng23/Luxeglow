@@ -1,3 +1,4 @@
+
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
@@ -10,6 +11,12 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Ritual Menu | Premium Aesthetic Treatments & Facials in Pasig',
+  description: 'Explore our curated menu of aesthetic rituals including Signature Facials, Carbon Laser, and BB Glow at Luxe Glow Premier, Estancia Mall.',
+};
 
 const services = [
   {
@@ -116,7 +123,7 @@ export default function ServicesPage() {
         <div className="absolute inset-0 opacity-40">
           <Image
             src={serviceImg?.imageUrl || ''}
-            alt="Services Header"
+            alt="Overview of aesthetic treatments available at Luxe Glow Premier"
             fill
             className="object-cover scale-110"
           />
@@ -197,7 +204,7 @@ export default function ServicesPage() {
                   <AccordionTrigger className="hover:no-underline py-10 group">
                     <div className="flex items-center gap-8 text-left">
                        <span className="text-[10px] font-bold text-accent group-hover:text-primary transition-colors duration-500">0{index+1}</span>
-                       <span className="text-xl font-headline italic text-foreground leading-tight">{faq.question}</span>
+                       <h3 className="text-xl font-headline italic text-foreground leading-tight">{faq.question}</h3>
                     </div>
                   </AccordionTrigger>
                   <AccordionContent className="pb-10 pt-0">
@@ -222,7 +229,7 @@ export default function ServicesPage() {
               <div className="relative aspect-square rounded-[4rem] overflow-hidden luxury-shadow border-[12px] border-white/5">
                 <Image 
                   src={PlaceHolderImages.find(img => img.id === 'hero-main')?.imageUrl || ''} 
-                  alt="Luxe Packages" 
+                  alt="Curated beauty packages at Luxe Glow Premier" 
                   fill 
                   className="object-cover transition-transform duration-1000 group-hover:scale-110"
                 />
