@@ -2,7 +2,8 @@ import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { 
   Star, Gem, Sparkles, ShieldCheck, MapPin, Clock, 
   CheckCircle2, Phone, MessageCircle, Mail, Facebook, 
-  Instagram, Waves, Sun, Hand, Zap, Snowflake, Target, Smile, Info
+  Instagram, Waves, Sun, Hand, Zap, Snowflake, Target, Smile, Info,
+  Lock, Award, Eye
 } from 'lucide-react';
 
 const getImg = (id: string) => PlaceHolderImages.find(img => img.id === id)?.imageUrl || `https://picsum.photos/seed/${id}/800/600`;
@@ -39,6 +40,45 @@ export const NAVIGATION = [
   { name: 'Gallery', href: '/gallery' },
   { name: 'Concierge', href: '/ai-recommendations' },
   { name: 'Contact', href: '/contact' },
+];
+
+export const TRUST_STATEMENTS = [
+  {
+    icon: ShieldCheck,
+    title: "Clinical Integrity",
+    desc: "Every ritual is performed using FDA-approved technology and medical-grade clinical protocols."
+  },
+  {
+    icon: Lock,
+    title: "Absolute Discretion",
+    desc: "Our private suites and discrete location ensure your aesthetic journey remains your own narrative."
+  },
+  {
+    icon: Award,
+    title: "Master Artistry",
+    desc: "Our therapists undergo rigorous proprietary training in advanced aesthetic intelligence and care."
+  }
+];
+
+export const TESTIMONIALS = [
+  {
+    quote: "The most discrete and professional clinical experience I've had in Manila. The Signature Facial is truly transformative.",
+    author: "A. Rivera",
+    title: "Private Clientele",
+    rating: 5
+  },
+  {
+    quote: "Luxe Glow isn't just a clinic; it's a sanctuary. Their attention to detail and the 'Quiet Wealth' ambiance is unmatched.",
+    author: "C. Montilla",
+    title: "Signature Member",
+    rating: 5
+  },
+  {
+    quote: "Finally, a place that understands subtle, natural refinement. The Carbon Laser ritual left my skin looking airbrushed.",
+    author: "S. Tan",
+    title: "Elite Client",
+    rating: 5
+  }
 ];
 
 export const HOME_CONTENT = {
@@ -81,89 +121,6 @@ export const PACKAGES = [
     tag: "New Privilege",
     desc: "Your first journey with us begins with a complimentary Skin Intelligence report and a special rate on our Signature Facial ritual.",
     variant: "primary"
-  }
-];
-
-export const ABOUT_CONTENT = {
-  philosophy: {
-    title: "Our",
-    titleItalic: "Philosophy",
-    text: [
-      'At Luxe Glow Premier, we approach aesthetics as a fine clinical art. Our philosophy is rooted in the concept of "Quiet Wealth"—delivering transformative results without the noise of mass-market trends.',
-      'Every ritual we perform is a dedicated sequence of refinement, designed to honor the natural architecture of your skin. We don\'t just treat; we curate an environment where your beauty can truly radiate.'
-    ],
-    image: getImg('model-glowing-skin')
-  },
-  experience: [
-    { title: "Private Sanctuary", desc: "Located in the exclusive Estancia Mall at Capitol Commons, our clinic offers a discrete and peaceful haven away from the city's pace.", icon: MapPin },
-    { title: "Clinical Artistry", desc: "Our therapists are trained in proprietary clinical protocols that merge medical science with the sensory experience of luxury care.", icon: Gem },
-    { title: "Bespoke Care", desc: "No two skins are identical. We provide a tailored intelligence report for every client, ensuring your journey is uniquely yours.", icon: Sparkles }
-  ]
-};
-
-export const SERVICES_MENU = [
-  {
-    category: "Signature Rituals",
-    items: [
-      {
-        name: "Luxe Signature Facial",
-        price: "₱3,500",
-        duration: "90 min",
-        desc: "Our most comprehensive clinical experience. A multi-step journey including Diamond Peel, Radiofrequency, and PDT Light Therapy.",
-        features: ["Diamond Peel", "Radiofrequency", "PDT Light Therapy", "Cooling Hammer", "Meticulous Extraction"],
-        link: "/signature/facial"
-      },
-      {
-        name: "Carbon Laser Ritual",
-        price: "₱4,500",
-        duration: "75 min",
-        desc: "Advanced laser rejuvenation for porcelain-smooth skin. Targets pore size, texture, and collagen induction.",
-        features: ["Hollywood Peel", "Pore Minimization", "Deep Exfoliation", "Collagen Stimulation"],
-        link: "/signature"
-      }
-    ]
-  },
-  {
-    category: "Radiance & Glow",
-    items: [
-      {
-        name: "BB Glow Ritual",
-        price: "₱3,000",
-        duration: "60 min",
-        desc: "Semi-permanent foundation infusion for a flawlessly radiant and even-toned complexion.",
-        features: ["Pigment infusion", "Hydration boost", "Color correction", "Long-lasting glow"],
-        link: "/signature/bb-glow"
-      },
-      {
-        name: "BB Blush Ritual",
-        price: "₱2,500",
-        duration: "45 min",
-        desc: "A natural, semi-permanent rosy flush that enhances your cheekbone definition without makeup.",
-        features: ["Natural tint", "Youthful glow", "No makeup finish", "Sweat-proof radiance"],
-        link: "/signature/bb-glow"
-      }
-    ]
-  },
-  {
-    category: "Advanced Aesthetics",
-    items: [
-      {
-        name: "Mesolipo Sculpt",
-        price: "₱5,000",
-        duration: "45 min",
-        desc: "Targeted fat reduction and contouring using clinical micro-injections for silhouette refinement.",
-        features: ["Fat dissolving", "Body contouring", "Precision targeting", "Minimal downtime"],
-        link: "/signature"
-      },
-      {
-        name: "Botox-Related Treatments",
-        price: "Inquire",
-        duration: "30 min",
-        desc: "Premium wrinkle-smoothing and face slimming procedures administered with aesthetic artistry.",
-        features: ["Forehead lines", "Face slimming", "Crow's feet", "Natural rejuvenation"],
-        link: "/contact"
-      }
-    ]
   }
 ];
 
@@ -216,23 +173,19 @@ export const SIGNATURE_TREATMENTS = [
 
 export const FAQS = [
   {
-    question: "What should I bring to my first consultation?",
-    answer: "Simply yourself. We provide a complete skin intelligence analysis. However, a list of your current skincare ritual products is often helpful for our specialists."
+    question: "What should I expect during my first visit?",
+    answer: "Your journey begins with a private skin intelligence analysis. We discuss your concerns and goals to curate a bespoke ritual sequence tailored specifically to your skin's architecture."
   },
   {
-    question: "Can I book a ritual for a same-day experience?",
-    answer: "While we recommend booking 48 hours in advance, we do occasionally have private cancellations. Please call our sanctuary directly for immediate availability."
+    question: "How do I maintain my results at home?",
+    answer: "Following your ritual, our therapists provide a personalized aftercare protocol. We recommend specific maintenance steps to prolong the luminous effects of your clinical treatment."
   },
   {
-    question: "Is there a cancellation protocol?",
-    answer: "We honor your time and ask for the same in return. We kindly request 24 hours notice for any rescheduling or cancellations of your private appointments."
+    question: "Is there a private waiting area?",
+    answer: "Yes, our Estancia Mall sanctuary is designed for absolute privacy. We offer discrete treatment suites and a serene reception atelier to ensure a peaceful experience."
+  },
+  {
+    question: "Do you offer seasonal privilege packages?",
+    answer: "We periodically curate limited-edition treatment sequences and socialite maintenance protocols. Please enquire with our concierge for current curated offers."
   }
-];
-
-export const GALLERY_ITEMS = [
-  { id: 1, category: "Signature Facial", title: "The Signature Cleansing", image: "https://picsum.photos/seed/gal1/800/1000", hint: "facial treatment", span: "lg:col-span-1 lg:row-span-2" },
-  { id: 2, category: "The Sanctuary", title: "Elite Reception Atelier", image: "https://picsum.photos/seed/gal2/1200/800", hint: "aesthetic clinic", span: "lg:col-span-2 lg:row-span-1" },
-  { id: 3, category: "Advanced Aesthetics", title: "Carbon Laser Precision", image: "https://picsum.photos/seed/gal3/800/800", hint: "laser skin", span: "lg:col-span-1 lg:row-span-1" },
-  { id: 4, category: "Skin Intelligence", title: "Radiant BB Glow", image: "https://picsum.photos/seed/gal4/800/1000", hint: "glowing skin", span: "lg:col-span-1 lg:row-span-2" },
-  { id: 5, category: "The Sanctuary", title: "Private Treatment Suite", image: "https://picsum.photos/seed/gal5/1200/800", hint: "treatment room", span: "lg:col-span-1 lg:row-span-1" },
 ];

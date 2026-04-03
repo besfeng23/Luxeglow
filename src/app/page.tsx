@@ -2,9 +2,9 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { Star, ArrowRight, ShieldCheck, Sparkles, Gem, Clock, CheckCircle2, Phone, MessageCircle, MapPin } from 'lucide-react';
+import { Star, ArrowRight, ShieldCheck, Sparkles, Gem, Clock, CheckCircle2, Phone, MessageCircle, MapPin, Quote } from 'lucide-react';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { BRAND, CONTACT, HOME_CONTENT, SIGNATURE_TREATMENTS, PACKAGES } from '@/content/data';
+import { BRAND, CONTACT, HOME_CONTENT, SIGNATURE_TREATMENTS, PACKAGES, TESTIMONIALS, TRUST_STATEMENTS } from '@/content/data';
 import { cn } from '@/lib/utils';
 
 export default function Home() {
@@ -82,7 +82,7 @@ export default function Home() {
               {HOME_CONTENT.positioning.quote}
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-16 pt-16">
-              {HOME_CONTENT.positioning.features.map((item, i) => (
+              {TRUST_STATEMENTS.map((item, i) => (
                 <div key={i} className="space-y-4 group text-center">
                   <div className="w-12 h-12 rounded-full border border-black/5 flex items-center justify-center mx-auto text-primary group-hover:bg-primary group-hover:text-white transition-all duration-700">
                     <item.icon className="w-5 h-5" />
@@ -134,6 +134,30 @@ export default function Home() {
                 </div>
               );
             })}
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials - Prestige Curation */}
+      <section className="py-48 bg-white overflow-hidden">
+        <div className="container mx-auto px-6 lg:px-12">
+          <div className="text-center mb-24">
+            <span className="text-[10px] uppercase tracking-[0.6em] font-bold text-accent mb-6 block">The Private Circle</span>
+            <h2 className="font-headline text-6xl md:text-8xl">Voices of <span className="italic font-light">Radiance</span></h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+            {TESTIMONIALS.map((t, i) => (
+              <div key={i} className="p-12 rounded-[3rem] bg-secondary/30 border border-black/5 flex flex-col justify-between group hover:-translate-y-2 transition-all duration-700">
+                <div className="space-y-8">
+                  <Quote className="w-10 h-10 text-accent/30 group-hover:text-accent transition-colors duration-700" />
+                  <p className="text-lg italic font-light leading-relaxed text-muted-foreground">"{t.quote}"</p>
+                </div>
+                <div className="pt-10 border-t border-black/5 mt-10">
+                  <p className="text-sm font-bold uppercase tracking-widest">{t.author}</p>
+                  <p className="text-[10px] uppercase tracking-widest text-accent font-bold mt-1">{t.title}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -205,42 +229,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 6. Why Luxe Glow */}
-      <section className="py-40 bg-secondary/10">
-        <div className="container mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
-          <div className="space-y-12">
-            <span className="text-[10px] uppercase tracking-[0.6em] font-bold text-primary">The Differentiation</span>
-            <h2 className="font-headline text-5xl md:text-7xl leading-tight">Why Clients <br /><span className="italic font-light">Trust Us</span></h2>
-            
-            <div className="space-y-10">
-              {[
-                { title: "Private Sanctuary", desc: "A sanctuary of quiet prestige at Estancia Mall, designed for absolute discretion and calm." },
-                { title: "Clinical Artistry", desc: "Our therapists are trained in proprietary clinical protocols that merge medical science with sensory care." },
-                { title: "Modern Intelligence", desc: "We invest in the latest medical-grade aesthetic technology to ensure consistent, luminous results." },
-                { title: "Personalized Care", desc: "We move away from one-size-fits-all. Every treatment plan is bespoke to your skin's intelligence." }
-              ].map((item, idx) => (
-                <div key={idx} className="flex gap-8 group">
-                  <div className="shrink-0 w-8 h-8 rounded-full border border-primary/20 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-500">
-                    <CheckCircle2 className="w-4 h-4" />
-                  </div>
-                  <div className="space-y-2">
-                    <h4 className="text-[11px] uppercase tracking-[0.2em] font-bold">{item.title}</h4>
-                    <p className="text-sm text-muted-foreground/80 font-light leading-relaxed">{item.desc}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-          
-          <div className="relative group">
-            <div className="relative aspect-[3/4] rounded-[4rem] overflow-hidden luxury-shadow">
-              <Image src={productsImg?.imageUrl || "https://picsum.photos/seed/lux4/600/400"} alt="Luxe Products" fill className="object-cover group-hover:scale-110 transition-transform duration-1000" />
-            </div>
-            <div className="absolute inset-0 border-[32px] border-white/20 rounded-[4rem] pointer-events-none" />
-          </div>
-        </div>
-      </section>
-
       {/* 7. Final CTA */}
       <section className="py-40 bg-background relative overflow-hidden">
         <div className="container mx-auto px-6 lg:px-12 relative z-10">
@@ -273,9 +261,15 @@ export default function Home() {
                 </div>
               </div>
 
-              <Button asChild size="lg" className="rounded-full bg-foreground text-white hover:bg-black px-20 h-20 uppercase tracking-[0.4em] text-[11px] font-bold shadow-2xl transition-all duration-700 w-full md:w-auto">
-                <Link href="/contact">Reserve Appointment</Link>
-              </Button>
+              <div className="flex flex-col items-center gap-6">
+                <Button asChild size="lg" className="rounded-full bg-foreground text-white hover:bg-black px-20 h-20 uppercase tracking-[0.4em] text-[11px] font-bold shadow-2xl transition-all duration-700 w-full md:w-auto">
+                  <Link href="/contact">Reserve Appointment</Link>
+                </Button>
+                <div className="flex items-center gap-3 text-[9px] uppercase tracking-widest font-bold text-muted-foreground/60">
+                  <ShieldCheck className="w-3 h-3" />
+                  <span>Private Consultation • Discrete Sanctuary</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>

@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import Link from 'react-all-link';
+import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -19,7 +19,9 @@ import {
   Sparkles,
   ShieldCheck,
   ChevronRight,
-  ArrowRight
+  ArrowRight,
+  Lock,
+  Eye
 } from 'lucide-react';
 import {
   Select,
@@ -36,6 +38,7 @@ import {
 import { Calendar } from "@/components/ui/calendar";
 import { format } from "date-fns";
 import { cn } from "@/lib/utils";
+import { BRAND, CONTACT } from '@/content/data';
 
 const services = [
   "Luxe Signature Facial",
@@ -93,9 +96,7 @@ export default function ContactPage() {
                     </div>
                     <div className="space-y-2">
                       <p className="text-lg font-light italic text-muted-foreground leading-relaxed">
-                        Estancia Mall, 3F East Wing,<br />
-                        Capitol Commons, Pasig City,<br />
-                        Philippines
+                        {CONTACT.address}
                       </p>
                     </div>
                   </div>
@@ -107,7 +108,7 @@ export default function ContactPage() {
                     <div className="shrink-0 w-12 h-12 rounded-full border border-black/5 flex items-center justify-center text-primary bg-secondary/50 transition-all duration-700 group-hover:bg-foreground group-hover:text-white">
                       <Phone className="w-5 h-5" />
                     </div>
-                    <p className="text-2xl font-headline italic">+63 998 936 8395</p>
+                    <p className="text-2xl font-headline italic">{CONTACT.phone}</p>
                   </div>
                 </div>
 
@@ -117,7 +118,7 @@ export default function ContactPage() {
                     <div className="shrink-0 w-12 h-12 rounded-full border border-black/5 flex items-center justify-center text-primary bg-secondary/50 transition-all duration-700 group-hover:bg-foreground group-hover:text-white">
                       <Mail className="w-5 h-5" />
                     </div>
-                    <p className="text-lg font-light italic text-muted-foreground border-b border-black/10 pb-1">luxeglowbeautylounge@gmail.com</p>
+                    <p className="text-lg font-light italic text-muted-foreground border-b border-black/10 pb-1">{CONTACT.email}</p>
                   </div>
                 </div>
               </div>
@@ -129,20 +130,22 @@ export default function ContactPage() {
                   <p className="text-white/50 text-lg font-light italic leading-relaxed">"For immediate bookings or quick questions, our social concierge is active daily."</p>
                   <div className="flex flex-col gap-4">
                     <Button asChild variant="outline" className="justify-between h-14 border-white/10 bg-white/5 hover:bg-white hover:text-foreground rounded-full px-8">
-                      <Link href="https://facebook.com">
+                      <Link href={CONTACT.socials.facebook}>
                         <span className="flex items-center gap-3"><Facebook className="w-4 h-4" /> Facebook</span>
                         <ArrowRight className="w-4 h-4" />
                       </Link>
                     </Button>
                     <Button asChild variant="outline" className="justify-between h-14 border-white/10 bg-white/5 hover:bg-white hover:text-foreground rounded-full px-8">
-                      <Link href="https://instagram.com">
+                      <Link href={CONTACT.socials.instagram}>
                         <span className="flex items-center gap-3"><Instagram className="w-4 h-4" /> Instagram</span>
                         <ArrowRight className="w-4 h-4" />
                       </Link>
                     </Button>
-                    <Button className="justify-between h-14 bg-primary text-white hover:bg-white hover:text-foreground rounded-full px-8 transition-all duration-500">
-                      <span className="flex items-center gap-3"><MessageCircle className="w-4 h-4" /> Messenger Chat</span>
-                      <ChevronRight className="w-4 h-4" />
+                    <Button asChild className="justify-between h-14 bg-primary text-white hover:bg-white hover:text-foreground rounded-full px-8 transition-all duration-500">
+                      <Link href={CONTACT.socials.messenger}>
+                        <span className="flex items-center gap-3"><MessageCircle className="w-4 h-4" /> Messenger Chat</span>
+                        <ChevronRight className="w-4 h-4" />
+                      </Link>
                     </Button>
                   </div>
                 </div>
@@ -152,8 +155,8 @@ export default function ContactPage() {
               {/* Trust Section */}
               <div className="space-y-8 pt-8 border-t border-black/5">
                 <div className="flex items-center gap-4">
-                  <ShieldCheck className="w-5 h-5 text-accent" />
-                  <span className="text-[10px] uppercase tracking-widest font-bold">Secure Data Handling</span>
+                  <Lock className="w-5 h-5 text-accent" />
+                  <span className="text-[10px] uppercase tracking-widest font-bold">Absolute Privacy Guaranteed</span>
                 </div>
                 <p className="text-xs text-muted-foreground leading-relaxed italic">
                   "Your privacy is our utmost priority. All personal and clinical information shared with Luxe Glow Premier is handled with absolute discretion and in accordance with premium security standards."
@@ -249,9 +252,21 @@ export default function ContactPage() {
                     </div>
 
                     <div className="pt-8 space-y-10">
-                      <Button className="w-full bg-foreground text-white hover:bg-black rounded-full h-20 uppercase tracking-[0.4em] text-[11px] font-bold shadow-2xl transition-all duration-700 hover:scale-[1.02]">
-                        Secure Your Experience
-                      </Button>
+                      <div className="space-y-6">
+                        <Button className="w-full bg-foreground text-white hover:bg-black rounded-full h-20 uppercase tracking-[0.4em] text-[11px] font-bold shadow-2xl transition-all duration-700 hover:scale-[1.02]">
+                          Secure Your Experience
+                        </Button>
+                        <div className="flex items-center justify-center gap-6">
+                          <div className="flex items-center gap-2">
+                             <ShieldCheck className="w-3 h-3 text-accent" />
+                             <span className="text-[9px] uppercase tracking-widest font-bold text-muted-foreground/60">Secure Protocol</span>
+                          </div>
+                          <div className="flex items-center gap-2">
+                             <Eye className="w-3 h-3 text-accent" />
+                             <span className="text-[9px] uppercase tracking-widest font-bold text-muted-foreground/60">Private Consultation</span>
+                          </div>
+                        </div>
+                      </div>
                       <div className="flex flex-col items-center gap-4 text-center">
                         <div className="flex items-center gap-3">
                           <Clock className="w-4 h-4 text-accent" />
@@ -300,41 +315,6 @@ export default function ContactPage() {
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Concierge FAQ */}
-      <section className="py-48 bg-white">
-        <div className="container mx-auto px-6 lg:px-12 text-center mb-24">
-          <span className="text-[10px] uppercase tracking-[0.8em] font-bold text-accent mb-8 block">Concierge Intelligence</span>
-          <h2 className="font-headline text-6xl md:text-8xl">Booking <br /><span className="italic font-light">Protocol</span></h2>
-        </div>
-        <div className="container mx-auto px-6 lg:px-12 max-w-5xl">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24">
-            {[
-              {
-                q: "What should I bring to my first consultation?",
-                a: "Simply yourself. We provide a complete skin intelligence analysis. However, a list of your current skincare ritual products is often helpful for our specialists."
-              },
-              {
-                q: "Can I book a ritual for a same-day experience?",
-                a: "While we recommend booking 48 hours in advance, we do occasionally have private cancellations. Please call our sanctuary directly for immediate availability."
-              },
-              {
-                q: "Is there a cancellation protocol?",
-                a: "We honor your time and ask for the same in return. We kindly request 24 hours notice for any rescheduling or cancellations of your private appointments."
-              },
-              {
-                q: "Do you offer group ritual experiences?",
-                a: "Yes. For bridal parties or private group sessions, please enquire about our 'Signature Spreads' through the message section of the booking form."
-              }
-            ].map((faq, i) => (
-              <div key={i} className="space-y-6">
-                <h4 className="font-headline text-2xl italic font-light leading-tight">{faq.q}</h4>
-                <p className="text-muted-foreground font-light leading-relaxed italic border-l border-accent/20 pl-8">{faq.a}</p>
-              </div>
-            ))}
           </div>
         </div>
       </section>

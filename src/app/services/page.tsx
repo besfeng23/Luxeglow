@@ -1,8 +1,15 @@
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { Star, Check, Sparkles, Gem, Clock, ArrowRight } from 'lucide-react';
+import { Star, Check, Sparkles, Gem, Clock, ArrowRight, Info } from 'lucide-react';
 import Link from 'next/link';
+import { FAQS } from '@/content/data';
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 const services = [
   {
@@ -172,6 +179,38 @@ export default function ServicesPage() {
               </div>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* FAQs - Prestige Styling */}
+      <section className="py-48 bg-secondary/10">
+        <div className="container mx-auto px-6 lg:px-12">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-24">
+              <span className="text-[10px] uppercase tracking-[0.8em] font-bold text-primary mb-8 block">Concierge Intelligence</span>
+              <h2 className="font-headline text-6xl md:text-8xl">The Ritual <span className="italic font-light">Protocol</span></h2>
+            </div>
+            
+            <Accordion type="single" collapsible className="w-full space-y-6">
+              {FAQS.map((faq, index) => (
+                <AccordionItem key={index} value={`item-${index}`} className="border-none bg-white rounded-[2rem] px-10 luxury-shadow overflow-hidden transition-all duration-500 hover:bg-white/80">
+                  <AccordionTrigger className="hover:no-underline py-10 group">
+                    <div className="flex items-center gap-8 text-left">
+                       <span className="text-[10px] font-bold text-accent group-hover:text-primary transition-colors duration-500">0{index+1}</span>
+                       <span className="text-xl font-headline italic text-foreground leading-tight">{faq.question}</span>
+                    </div>
+                  </AccordionTrigger>
+                  <AccordionContent className="pb-10 pt-0">
+                    <div className="pl-16">
+                      <p className="text-base text-muted-foreground font-light leading-relaxed border-l-2 border-accent/20 pl-8 italic">
+                        {faq.answer}
+                      </p>
+                    </div>
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </div>
         </div>
       </section>
 
