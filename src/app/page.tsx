@@ -17,63 +17,75 @@ export default function Home() {
       
       {/* 1. Hero Section - Editorial Premium */}
       <section className="relative min-h-screen flex items-center pt-24 pb-16 overflow-hidden">
+        {/* Abstract Background Element */}
+        <div className="absolute top-0 right-0 w-1/3 h-full bg-secondary/30 -z-10 translate-x-1/4 skew-x-12 hidden lg:block" />
+        
         <div className="container mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-6 z-10 animate-fade-in-up">
-            <div className="inline-flex items-center gap-3 mb-8 px-5 py-2 rounded-full border border-primary/10 bg-white/50 backdrop-blur-sm">
+            <div className="inline-flex items-center gap-3 mb-10 px-6 py-2 rounded-full border border-primary/10 bg-white/50 backdrop-blur-sm">
               <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
               <span className="text-[10px] uppercase tracking-[0.5em] font-bold text-primary">The Pinnacle of Skin Intelligence</span>
             </div>
-            <h1 className="font-headline text-6xl md:text-8xl lg:text-[120px] leading-[0.85] mb-10 text-foreground">
+            
+            <h1 className="font-headline text-6xl md:text-8xl lg:text-[110px] leading-[0.85] mb-12 text-foreground tracking-tight">
               Radiance <br />
-              <span className="italic font-light text-primary/80">Redefined.</span>
+              <span className="italic font-light text-primary/70">Redefined.</span>
             </h1>
-            <p className="font-body text-xl text-muted-foreground/80 mb-12 leading-relaxed max-w-lg text-balance font-light">
-              Experience the ultimate sanctuary for aesthetic refinement. At Luxe Glow Premier, we harmonize medical precision with the art of quiet luxury.
+            
+            <p className="font-body text-xl text-muted-foreground/80 mb-14 leading-relaxed max-w-lg text-balance font-light italic">
+              "Experience the ultimate sanctuary for aesthetic refinement, where clinical precision meets the art of quiet luxury."
             </p>
-            <div className="flex flex-col sm:flex-row gap-6">
-              <Button asChild size="lg" className="rounded-full bg-foreground text-white hover:bg-black px-12 h-16 uppercase tracking-[0.3em] text-[10px] font-bold shadow-2xl transition-all duration-700">
-                <Link href="/contact">Book Your Appointment</Link>
+            
+            <div className="flex flex-col sm:flex-row gap-8 items-start sm:items-center">
+              <Button asChild size="lg" className="rounded-full bg-foreground text-white hover:bg-black px-16 h-20 uppercase tracking-[0.4em] text-[11px] font-bold shadow-2xl transition-all duration-700 hover:scale-105">
+                <Link href="/contact">Book Appointment</Link>
               </Button>
-              <Button asChild variant="ghost" size="lg" className="rounded-full text-foreground hover:bg-white/50 px-10 h-16 uppercase tracking-[0.2em] text-[10px] font-bold group border border-transparent hover:border-black/5">
-                <Link href="/services" className="flex items-center">
-                  Explore Rituals <ArrowRight className="ml-3 w-4 h-4 group-hover:translate-x-2 transition-transform duration-500" />
-                </Link>
-              </Button>
+              
+              <Link href="/services" className="group flex items-center gap-4 text-[10px] uppercase tracking-[0.3em] font-bold text-foreground hover:text-primary transition-all duration-500 py-4">
+                Explore Rituals 
+                <div className="w-12 h-px bg-foreground/20 group-hover:w-20 group-hover:bg-primary transition-all duration-500" />
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-2 transition-transform duration-500" />
+              </Link>
             </div>
-            <div className="mt-16 flex items-center gap-8 border-t border-black/5 pt-8">
-              <div>
-                <p className="text-[10px] uppercase tracking-widest font-bold text-muted-foreground mb-1">Location</p>
-                <p className="text-sm font-medium">Capitol Commons, Pasig</p>
+            
+            <div className="mt-24 flex items-center gap-12 border-t border-black/5 pt-12">
+              <div className="space-y-2">
+                <p className="text-[10px] uppercase tracking-[0.3em] font-bold text-muted-foreground/60">Location</p>
+                <p className="text-sm font-medium tracking-wide">Capitol Commons, Pasig</p>
               </div>
-              <div className="w-px h-8 bg-black/5" />
-              <div>
-                <p className="text-[10px] uppercase tracking-widest font-bold text-muted-foreground mb-1">Standard</p>
-                <p className="text-sm font-medium">Private Clinical Boutique</p>
+              <div className="w-px h-12 bg-black/10" />
+              <div className="space-y-2">
+                <p className="text-[10px] uppercase tracking-[0.3em] font-bold text-muted-foreground/60">Standard</p>
+                <div className="flex items-center gap-2">
+                  <Gem className="w-3 h-3 text-accent" />
+                  <p className="text-sm font-medium tracking-wide">Private Clinical Boutique</p>
+                </div>
               </div>
             </div>
           </div>
           
           <div className="lg:col-span-6 relative">
-            <div className="relative aspect-[4/5] rounded-[3rem] overflow-hidden luxury-shadow animate-reveal group">
+            <div className="relative aspect-[4/5] rounded-[3.5rem] overflow-hidden luxury-shadow animate-reveal group">
               <Image
                 src={heroImg?.imageUrl || "https://picsum.photos/seed/lux1/1200/800"}
                 alt="Luxe Glow Premier Editorial"
                 fill
-                className="object-cover scale-105 group-hover:scale-100 transition-transform duration-1000"
+                className="object-cover scale-105 group-hover:scale-100 transition-transform duration-[2000ms] ease-out"
                 priority
                 data-ai-hint="luxury spa"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-60" />
             </div>
-            {/* Floating Detail */}
-            <div className="absolute -bottom-10 -left-10 hidden xl:flex w-72 bg-white/90 backdrop-blur-xl rounded-[2.5rem] p-10 luxury-shadow border border-white flex-col gap-4 animate-fade-in-up delay-500">
-              <div className="flex gap-1">
-                {[1,2,3,4,5].map(i => <Star key={i} className="w-3 h-3 text-accent fill-accent" />)}
-              </div>
-              <p className="text-sm font-headline italic leading-relaxed text-foreground/80">
-                "A transformation that feels as exquisite as it looks. Absolute perfection."
-              </p>
+            
+            {/* Elegant Floating Badge */}
+            <div className="absolute -bottom-12 -right-12 hidden xl:flex w-64 h-64 bg-white/90 backdrop-blur-2xl rounded-full p-12 luxury-shadow border border-white flex-col items-center justify-center text-center gap-3 animate-fade-in-up delay-700">
+              <Star className="w-6 h-6 text-accent fill-accent mb-2" />
+              <p className="text-[10px] uppercase tracking-[0.3em] font-bold text-primary">Exceptional Result</p>
+              <p className="font-headline italic text-xl leading-tight text-foreground">"Absolute skin <br />perfection."</p>
             </div>
+            
+            {/* Subtle Geometric Overlay */}
+            <div className="absolute -top-12 -left-12 w-48 h-48 border border-accent/20 rounded-full -z-10 animate-pulse" />
           </div>
         </div>
       </section>
@@ -190,7 +202,7 @@ export default function Home() {
             </div>
             <div className="space-y-12 order-1 lg:order-2">
               <span className="text-[10px] uppercase tracking-[0.6em] font-bold text-primary">The Signature Series</span>
-              <h2 className="font-headline text-6xl md:text-8xl leading-[0.9] text-foreground">
+              <h2 className="font-headline text-6xl md:text-[90px] leading-[0.9] text-foreground">
                 Luxe <br />
                 <span className="italic font-light">Signature</span>
               </h2>
@@ -228,7 +240,6 @@ export default function Home() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-4 gap-12 relative">
-            {/* Connection Line */}
             <div className="absolute top-1/4 left-0 w-full h-px bg-white/10 hidden md:block" />
             
             {[
@@ -401,7 +412,6 @@ export default function Home() {
               </Button>
             </div>
             
-            {/* Background elements */}
             <div className="absolute top-0 right-0 w-96 h-96 bg-secondary/20 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2" />
             <div className="absolute bottom-0 left-0 w-96 h-96 bg-accent/10 rounded-full blur-[100px] translate-y-1/2 -translate-x-1/2" />
           </div>
