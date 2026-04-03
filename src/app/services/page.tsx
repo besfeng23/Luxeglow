@@ -6,21 +6,23 @@ import Link from 'next/link';
 
 const services = [
   {
-    category: "Signature Treatments",
+    category: "Signature Rituals",
     items: [
       {
         name: "Luxe Signature Facial",
         price: "₱3,500",
         duration: "90 min",
-        desc: "A comprehensive, multi-step rejuvenating experience tailored to your unique skin needs. Includes cleansing, steaming, extractions, diamond peel, radiofrequency, and PDT light therapy.",
-        features: ["Diamond Peel", "Radiofrequency", "PDT Light Therapy", "Cooling Hammer"]
+        desc: "Our most comprehensive clinical experience. A multi-step journey including Diamond Peel, Radiofrequency, and PDT Light Therapy.",
+        features: ["Diamond Peel", "Radiofrequency", "PDT Light Therapy", "Cooling Hammer", "Meticulous Extraction"],
+        link: "/signature/facial"
       },
       {
         name: "Carbon Laser Ritual",
         price: "₱4,500",
         duration: "75 min",
-        desc: "Advanced laser rejuvenation combined with a basic facial. Perfect for minimizing pores, improving texture, and achieving an immediate glow.",
-        features: ["Pore Tightening", "Deep Exfoliation", "Collagen Stimulation"]
+        desc: "Advanced laser rejuvenation for porcelain-smooth skin. Targets pore size, texture, and collagen induction.",
+        features: ["Hollywood Peel", "Pore Minimization", "Deep Exfoliation", "Collagen Stimulation"],
+        link: "/signature"
       }
     ]
   },
@@ -31,15 +33,17 @@ const services = [
         name: "BB Glow Ritual",
         price: "₱3,000",
         duration: "60 min",
-        desc: "The ultimate semi-permanent foundation treatment for a radiant, even-toned complexion that lasts for weeks.",
-        features: ["Semi-permanent foundation", "Hydration boost", "Color correction"]
+        desc: "Semi-permanent foundation infusion for a flawlessly radiant and even-toned complexion.",
+        features: ["Pigment infusion", "Hydration boost", "Color correction", "Long-lasting glow"],
+        link: "/signature/bb-glow"
       },
       {
-        name: "BB Blush",
+        name: "BB Blush Ritual",
         price: "₱2,500",
         duration: "45 min",
-        desc: "A soft, natural, long-lasting blush effect that gives you a healthy, sun-kissed look without makeup.",
-        features: ["Natural tint", "Rosy glow", "No makeup look"]
+        desc: "A natural, semi-permanent rosy flush that enhances your cheekbone definition without makeup.",
+        features: ["Natural tint", "Youthful glow", "No makeup finish", "Sweat-proof radiance"],
+        link: "/signature/bb-glow"
       }
     ]
   },
@@ -50,15 +54,46 @@ const services = [
         name: "Mesolipo Sculpt",
         price: "₱5,000",
         duration: "45 min",
-        desc: "Targeted fat reduction and body contouring using micro-injections to dissolve stubborn fatty tissue.",
-        features: ["Spot fat reduction", "Body contouring", "Quick recovery"]
+        desc: "Targeted fat reduction and contouring using clinical micro-injections for silhouette refinement.",
+        features: ["Fat dissolving", "Body contouring", "Precision targeting", "Minimal downtime"],
+        link: "/signature"
       },
       {
-        name: "Botox Smoothing",
+        name: "Botox-Related Treatments",
         price: "Inquire",
         duration: "30 min",
-        desc: "Premium wrinkle-smoothing treatments administered with precision and artistry for a naturally youthful appearance.",
-        features: ["Forehead lines", "Crow's feet", "Natural finish"]
+        desc: "Premium wrinkle-smoothing and face slimming procedures administered with aesthetic artistry.",
+        features: ["Forehead lines", "Face slimming", "Crow's feet", "Natural rejuvenation"],
+        link: "/contact"
+      },
+      {
+        name: "Wart Removal Refinement",
+        price: "From ₱500",
+        duration: "30 min",
+        desc: "Safe and effective removal of skin imperfections for a clear, flawless finish.",
+        features: ["Clinical precision", "Safe procedure", "Skin clearing", "Quick healing"],
+        link: "/signature"
+      }
+    ]
+  },
+  {
+    category: "Essential Care",
+    items: [
+      {
+        name: "IPL Hair Removal",
+        price: "From ₱1,500",
+        duration: "30-60 min",
+        desc: "Permanent hair reduction using advanced light technology. Includes special underarm whitening protocols.",
+        features: ["Silk Protocol", "Painless technology", "Underarm whitening", "Permanent reduction"],
+        link: "/signature/ipl-hair-removal"
+      },
+      {
+        name: "Free Basic Facial",
+        price: "Gifted",
+        duration: "45 min",
+        desc: "Our introductory foundational facial experience for first-time privilege clients.",
+        features: ["Skin analysis", "Gentle cleansing", "Foundation care", "Intelligence report"],
+        link: "/contact"
       }
     ]
   }
@@ -81,12 +116,12 @@ export default function ServicesPage() {
         </div>
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-transparent" />
         <div className="container mx-auto px-6 lg:px-12 relative z-10 text-center">
-          <span className="text-[10px] uppercase tracking-[0.6em] font-bold text-accent mb-8 block animate-fade-in-up">The Collection</span>
+          <span className="text-[10px] uppercase tracking-[0.6em] font-bold text-accent mb-8 block animate-fade-in-up">The Ritual Collection</span>
           <h1 className="font-headline text-6xl md:text-9xl text-white mb-8 animate-fade-in-up delay-100">
-            Our <span className="italic font-light">Rituals</span>
+            Private <span className="italic font-light">Menu</span>
           </h1>
           <p className="text-white/60 max-w-2xl mx-auto text-xl italic font-light animate-fade-in-up delay-200 leading-relaxed">
-            "A curation of high-end aesthetic experiences designed for absolute perfection and refined results."
+            "A comprehensive curation of aesthetic intelligence and ritual care designed for absolute perfection."
           </p>
         </div>
       </section>
@@ -130,7 +165,7 @@ export default function ServicesPage() {
                     </div>
                     
                     <Button asChild className="w-full rounded-full bg-foreground text-white h-14 uppercase tracking-[0.3em] text-[10px] font-bold shadow-xl transition-all duration-500 hover:bg-black">
-                      <Link href="/contact">Book This Ritual</Link>
+                      <Link href={service.link}>Inquire Ritual</Link>
                     </Button>
                   </div>
                 ))}
@@ -154,32 +189,32 @@ export default function ServicesPage() {
                 />
               </div>
               <div className="absolute -top-10 -right-10 w-48 h-48 bg-accent rounded-full flex items-center justify-center p-8 text-center text-foreground luxury-shadow rotate-12 group-hover:rotate-0 transition-transform duration-700">
-                <p className="font-headline italic text-xl leading-tight">Seasonal Collections</p>
+                <p className="font-headline italic text-xl leading-tight">Holiday Spreads</p>
               </div>
             </div>
             <div className="space-y-12">
-              <span className="text-[10px] uppercase tracking-[0.6em] font-bold text-accent">Curated Spreads</span>
-              <h2 className="font-headline text-6xl md:text-8xl leading-none">The <span className="italic font-light">Collections</span></h2>
+              <span className="text-[10px] uppercase tracking-[0.6em] font-bold text-accent">Curated Collections</span>
+              <h2 className="font-headline text-6xl md:text-8xl leading-none">Season <span className="italic font-light">Privilege</span></h2>
               <p className="text-white/50 text-xl font-light leading-relaxed">
-                Elevate your journey with our meticulously designed sequences. From the Bridal Radiance collection to Private Boutique events.
+                Experience more of Luxe Glow with our meticulously designed treatment sequences. From bridal preparations to socialite maintenance protocols.
               </p>
               <div className="space-y-8">
                 <div className="flex items-center gap-6 group">
                   <div className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center group-hover:bg-accent group-hover:border-accent transition-all duration-500">
                     <Gem className="w-4 h-4 text-accent group-hover:text-foreground" />
                   </div>
-                  <span className="text-[11px] uppercase tracking-[0.3em] font-bold">Bridal Glow Collection</span>
+                  <span className="text-[11px] uppercase tracking-[0.3em] font-bold">Signature Holiday Package</span>
                 </div>
                 <div className="flex items-center gap-6 group">
                   <div className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center group-hover:bg-accent group-hover:border-accent transition-all duration-500">
                     <Sparkles className="w-4 h-4 text-accent group-hover:text-foreground" />
                   </div>
-                  <span className="text-[11px] uppercase tracking-[0.3em] font-bold">The Socialite Series</span>
+                  <span className="text-[11px] uppercase tracking-[0.3em] font-bold">Bridal Glow Protocol</span>
                 </div>
               </div>
               <div className="pt-10">
                 <Button asChild variant="outline" className="rounded-full border-white/20 text-white hover:bg-white hover:text-foreground px-16 h-16 uppercase tracking-[0.3em] text-[10px] font-bold transition-all duration-500">
-                  <Link href="/promos">Enquire About Packages</Link>
+                  <Link href="/contact">Inquire About Packages</Link>
                 </Button>
               </div>
             </div>

@@ -24,16 +24,16 @@ export default function Home() {
           <div className="lg:col-span-6 z-10 animate-fade-in-up">
             <div className="inline-flex items-center gap-3 mb-10 px-6 py-2 rounded-full border border-primary/10 bg-white/50 backdrop-blur-sm">
               <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
-              <span className="text-[10px] uppercase tracking-[0.5em] font-bold text-primary">The Pinnacle of Skin Intelligence</span>
+              <span className="text-[10px] uppercase tracking-[0.5em] font-bold text-primary">Estancia Mall • Capitol Commons</span>
             </div>
             
             <h1 className="font-headline text-6xl md:text-8xl lg:text-[110px] leading-[0.85] mb-12 text-foreground tracking-tight">
               Radiance <br />
-              <span className="italic font-light text-primary/70">Redefined.</span>
+              <span className="italic font-light text-primary/70">Refined.</span>
             </h1>
             
             <p className="font-body text-xl text-muted-foreground/80 mb-14 leading-relaxed max-w-lg text-balance font-light italic">
-              "Experience the ultimate sanctuary for aesthetic refinement, where clinical precision meets the art of quiet luxury."
+              "Experience the private sanctuary of Luxe Glow Premier, where clinical precision meets the art of quiet luxury and aesthetic intelligence."
             </p>
             
             <div className="flex flex-col sm:flex-row gap-8 items-start sm:items-center">
@@ -41,7 +41,7 @@ export default function Home() {
                 <Link href="/contact">Book Appointment</Link>
               </Button>
               
-              <Link href="/services" className="group flex items-center gap-4 text-[10px] uppercase tracking-[0.3em] font-bold text-foreground hover:text-primary transition-all duration-500 py-4">
+              <Link href="/signature" className="group flex items-center gap-4 text-[10px] uppercase tracking-[0.3em] font-bold text-foreground hover:text-primary transition-all duration-500 py-4">
                 Explore Rituals 
                 <div className="w-12 h-px bg-foreground/20 group-hover:w-20 group-hover:bg-primary transition-all duration-500" />
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-2 transition-transform duration-500" />
@@ -50,15 +50,15 @@ export default function Home() {
             
             <div className="mt-24 flex items-center gap-12 border-t border-black/5 pt-12">
               <div className="space-y-2">
-                <p className="text-[10px] uppercase tracking-[0.3em] font-bold text-muted-foreground/60">Location</p>
+                <p className="text-[10px] uppercase tracking-[0.3em] font-bold text-muted-foreground/60">The Location</p>
                 <p className="text-sm font-medium tracking-wide">Capitol Commons, Pasig</p>
               </div>
               <div className="w-px h-12 bg-black/10" />
               <div className="space-y-2">
-                <p className="text-[10px] uppercase tracking-[0.3em] font-bold text-muted-foreground/60">Standard</p>
+                <p className="text-[10px] uppercase tracking-[0.3em] font-bold text-muted-foreground/60">The Standard</p>
                 <div className="flex items-center gap-2">
                   <Gem className="w-3 h-3 text-accent" />
-                  <p className="text-sm font-medium tracking-wide">Private Clinical Boutique</p>
+                  <p className="text-sm font-medium tracking-wide">Private Aesthetic Intelligence</p>
                 </div>
               </div>
             </div>
@@ -80,12 +80,9 @@ export default function Home() {
             {/* Elegant Floating Badge */}
             <div className="absolute -bottom-12 -right-12 hidden xl:flex w-64 h-64 bg-white/90 backdrop-blur-2xl rounded-full p-12 luxury-shadow border border-white flex-col items-center justify-center text-center gap-3 animate-fade-in-up delay-700">
               <Star className="w-6 h-6 text-accent fill-accent mb-2" />
-              <p className="text-[10px] uppercase tracking-[0.3em] font-bold text-primary">Exceptional Result</p>
-              <p className="font-headline italic text-xl leading-tight text-foreground">"Absolute skin <br />perfection."</p>
+              <p className="text-[10px] uppercase tracking-[0.3em] font-bold text-primary">Private Selection</p>
+              <p className="font-headline italic text-xl leading-tight text-foreground">"Bespoke skin <br />perfection."</p>
             </div>
-            
-            {/* Subtle Geometric Overlay */}
-            <div className="absolute -top-12 -left-12 w-48 h-48 border border-accent/20 rounded-full -z-10 animate-pulse" />
           </div>
         </div>
       </section>
@@ -94,20 +91,20 @@ export default function Home() {
       <section className="py-40 bg-white">
         <div className="container mx-auto px-6 lg:px-12 text-center">
           <div className="max-w-4xl mx-auto space-y-12">
-            <span className="text-[10px] uppercase tracking-[0.6em] font-bold text-accent">The Private Invitation</span>
+            <span className="text-[10px] uppercase tracking-[0.6em] font-bold text-accent">The Private Narrative</span>
             <h2 className="font-headline text-5xl md:text-7xl text-foreground leading-tight">
               A Sanctuary of <br />
-              <span className="italic font-light">Elevated Rejuvenation</span>
+              <span className="italic font-light text-primary/60">Elevated Rejuvenation</span>
             </h2>
             <div className="h-px w-24 bg-accent/30 mx-auto" />
             <p className="text-2xl text-muted-foreground/90 leading-relaxed font-light italic max-w-2xl mx-auto">
-              "We believe beauty is an intimate journey. Our philosophy centers on quiet prestige—delivering loud results through clinical artistry and personalized care."
+              "We believe beauty is an intimate journey of self-honor. Our philosophy centers on quiet prestige—delivering luminous results through clinical artistry and absolute care."
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-16 pt-16">
               {[
-                { icon: ShieldCheck, title: "Clinical Integrity", desc: "Medical-grade precision meets aesthetic intuition." },
-                { icon: Sparkles, title: "Bespoke Protocols", desc: "Every treatment is tailored to your unique skin DNA." },
-                { icon: Gem, title: "Premium Ambiance", desc: "A private boutique setting designed for absolute comfort." }
+                { icon: ShieldCheck, title: "Clinical Integrity", desc: "Medical-grade precision meets aesthetic intuition for safe, visible transformation." },
+                { icon: Sparkles, title: "Bespoke Protocols", desc: "Every treatment is tailored to your unique skin DNA and personal beauty aspirations." },
+                { icon: MapPin, title: "Elite Location", desc: "Located in the exclusive Estancia Mall, offering a discrete and peaceful haven." }
               ].map((item, i) => (
                 <div key={i} className="space-y-4 group">
                   <div className="w-12 h-12 rounded-full border border-black/5 flex items-center justify-center mx-auto text-primary group-hover:bg-primary group-hover:text-white transition-all duration-700">
@@ -129,7 +126,7 @@ export default function Home() {
             <div className="max-w-2xl">
               <span className="text-[10px] uppercase tracking-[0.5em] font-bold text-accent mb-6 block">The Collection</span>
               <h2 className="font-headline text-5xl md:text-6xl mb-8">Refined Rituals</h2>
-              <p className="text-muted-foreground text-xl font-light leading-relaxed italic">Curated aesthetic sequences designed to restore and radiate.</p>
+              <p className="text-muted-foreground text-xl font-light leading-relaxed italic">Specifically curated aesthetic sequences for the discerning individual.</p>
             </div>
             <Link href="/services" className="text-[10px] uppercase tracking-[0.4em] font-bold border-b border-black/10 pb-3 hover:border-primary hover:text-primary transition-all duration-500 flex items-center gap-3 group">
               View All Rituals <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
@@ -141,30 +138,34 @@ export default function Home() {
               {
                 title: "Luxe Signature Facial",
                 price: "₱3,500",
-                desc: "Our most coveted experience. A 10-step rejuvenation that leaves the skin luminous and deeply revitalized.",
+                desc: "The cornerstone of our clinic. A 10-step clinical sequence including Diamond Peel, RF, and PDT Light Therapy.",
                 img: signatureImg?.imageUrl,
-                tag: "Bestseller"
+                tag: "Flagship",
+                link: "/signature/facial"
               },
               {
                 title: "Carbon Laser Ritual",
                 price: "₱4,500",
-                desc: "The 'Hollywood Peel' for porcelain-smooth skin. Minimizes pores and refines texture with zero downtime.",
+                desc: "Advanced laser rejuvenation for immediate texture refinement, pore minimization, and a porcelain glow.",
                 img: PlaceHolderImages.find(img => img.id === 'carbon-laser')?.imageUrl,
-                tag: "Advanced"
+                tag: "Advanced",
+                link: "/signature"
               },
               {
-                title: "BB Glow Ritual",
-                price: "₱3,000",
-                desc: "Wake up with a flawless canvas. Semi-permanent foundation for a naturally radiant, even-toned complexion.",
+                title: "BB Glow & Blush",
+                price: "From ₱2,500",
+                desc: "Semi-permanent foundation infusion for a flawlessly even-toned canvas and a natural rosy flush.",
                 img: PlaceHolderImages.find(img => img.id === 'facial-treatment')?.imageUrl,
-                tag: "Radiance"
+                tag: "Radiance",
+                link: "/signature/bb-glow"
               },
               {
                 title: "IPL Hair Removal",
                 price: "From ₱1,500",
-                desc: "Precision permanent hair reduction using advanced light technology for smooth, carefree skin.",
+                desc: "Permanent hair reduction using the 'Silk Protocol'—precision light therapy for carefree, smooth skin.",
                 img: treatmentImg?.imageUrl,
-                tag: "Essentials"
+                tag: "Essentials",
+                link: "/signature/ipl-hair-removal"
               }
             ].map((item, i) => (
               <div key={i} className="group relative bg-white rounded-[3rem] overflow-hidden luxury-shadow flex flex-col md:flex-row transition-all duration-700 hover:-translate-y-2 border border-black/5">
@@ -181,7 +182,7 @@ export default function Home() {
                   </div>
                   <p className="text-muted-foreground leading-relaxed font-light text-sm mb-10">{item.desc}</p>
                   <Button asChild variant="outline" className="w-fit rounded-full border-black/5 text-[10px] uppercase tracking-widest font-bold h-10 px-8 hover:bg-foreground hover:text-white transition-all duration-500">
-                    <Link href="/contact">Inquire</Link>
+                    <Link href={item.link}>Discover Ritual</Link>
                   </Button>
                 </div>
               </div>
@@ -207,14 +208,14 @@ export default function Home() {
                 <span className="italic font-light">Signature</span>
               </h2>
               <p className="text-xl text-muted-foreground/80 leading-relaxed font-light italic border-l-2 border-accent/20 pl-8">
-                "Our flagship facial isn't just a treatment; it's a 90-minute ritual of deep restoration designed for the skin of royalty."
+                "Our flagship facial isn't just a treatment; it's a dedicated 90-minute ritual of refinement designed to honor the natural architecture of your skin."
               </p>
               <ul className="space-y-6">
                 {[
                   "Diamond Peel Exfoliation",
                   "Radiofrequency Skin Tightening",
                   "PDT Light Therapy Restoration",
-                  "Cooling Hammer Pore Refinement"
+                  "Clinical Steaming & Extraction"
                 ].map((item, idx) => (
                   <li key={idx} className="flex items-center gap-4 text-sm font-medium tracking-wide uppercase">
                     <CheckCircle2 className="w-5 h-5 text-accent" />
@@ -223,7 +224,7 @@ export default function Home() {
                 ))}
               </ul>
               <Button asChild size="lg" className="rounded-full bg-foreground text-white px-16 h-16 uppercase tracking-[0.3em] text-[10px] font-bold shadow-xl">
-                <Link href="/contact">Experience Perfection</Link>
+                <Link href="/signature/facial">Experience The Ritual</Link>
               </Button>
             </div>
           </div>
@@ -243,10 +244,10 @@ export default function Home() {
             <div className="absolute top-1/4 left-0 w-full h-px bg-white/10 hidden md:block" />
             
             {[
-              { step: "01", title: "Consultation", desc: "Private skin intelligence analysis with our aesthetic experts." },
-              { step: "02", title: "Preparation", desc: "Deep double-cleansing and purification to prep the canvas." },
-              { step: "03", title: "Transformation", desc: "Execution of your bespoke clinical treatment ritual." },
-              { step: "04", title: "Aftercare", desc: "Protective hydration and personalized home protocol briefing." }
+              { step: "01", title: "Consultation", desc: "Private skin intelligence analysis with our aesthetic experts at Capitol Commons." },
+              { step: "02", title: "Purification", desc: "Deep double-cleansing and thermal steaming to prepare the clinical canvas." },
+              { step: "03", title: "Refinement", desc: "Precision execution of your bespoke ritual using advanced medical-grade technology." },
+              { step: "04", title: "Restoration", desc: "PDT Light Therapy and final SPF shielding for a luminous, protected finish." }
             ].map((item, idx) => (
               <div key={idx} className="relative z-10 space-y-8 group">
                 <div className="w-16 h-16 rounded-full border border-white/20 bg-foreground flex items-center justify-center text-accent font-headline italic text-2xl group-hover:bg-accent group-hover:text-foreground transition-all duration-700">
@@ -273,7 +274,7 @@ export default function Home() {
                 <span className="italic font-light">Collections</span>
               </h2>
               <p className="text-lg text-muted-foreground font-light leading-relaxed">
-                Experience more of Luxe Glow with our curated treatment sequences. Perfect for bridal preparations or group aesthetic retreats.
+                Experience the complete Luxe Glow transformation with our curated treatment sequences and exclusive seasonal privilege offers.
               </p>
               <Button asChild variant="outline" className="rounded-full border-black/10 px-10 h-14 text-[10px] uppercase tracking-widest font-bold">
                 <Link href="/services">View All Packages</Link>
@@ -285,13 +286,13 @@ export default function Home() {
                 <CardContent className="p-12 space-y-8">
                   <div className="flex justify-between items-start">
                     <Star className="w-8 h-8 text-accent/40" />
-                    <span className="text-[10px] uppercase tracking-widest font-bold text-primary">Limited Collection</span>
+                    <span className="text-[10px] uppercase tracking-widest font-bold text-primary">Limited Selection</span>
                   </div>
-                  <h3 className="font-headline text-4xl italic group-hover:text-primary transition-colors">Bridal Glow Set</h3>
-                  <p className="text-muted-foreground font-light leading-relaxed">A 3-month sequence designed for the modern bride. Includes facials, hair removal, and radiance rituals.</p>
+                  <h3 className="font-headline text-4xl italic group-hover:text-primary transition-colors">Holiday Radiance</h3>
+                  <p className="text-muted-foreground font-light leading-relaxed">A specialized festive sequence designed to restore glow during the social season. Includes Signature Facial and Carbon Laser.</p>
                   <div className="pt-4 border-t border-black/5 flex justify-between items-center">
-                    <span className="font-headline text-2xl italic">₱15,000</span>
-                    <Link href="/contact" className="text-[10px] uppercase tracking-widest font-bold hover:text-primary">Enquire</Link>
+                    <span className="font-headline text-2xl italic">₱12,000</span>
+                    <Link href="/contact" className="text-[10px] uppercase tracking-widest font-bold hover:text-primary">Inquire Ritual</Link>
                   </div>
                 </CardContent>
               </Card>
@@ -300,13 +301,13 @@ export default function Home() {
                 <CardContent className="p-12 space-y-8">
                   <div className="flex justify-between items-start">
                     <Gem className="w-8 h-8 text-accent/40" />
-                    <span className="text-[10px] uppercase tracking-widest font-bold text-accent">Private Booking</span>
+                    <span className="text-[10px] uppercase tracking-widest font-bold text-accent">New Privilege</span>
                   </div>
-                  <h3 className="font-headline text-4xl italic group-hover:text-accent transition-colors">Group Radiance</h3>
-                  <p className="text-white/40 font-light leading-relaxed">A private aesthetic retreat for groups of 4+. Exclusive use of the clinic with catered refreshments.</p>
+                  <h3 className="font-headline text-4xl italic group-hover:text-accent transition-colors">First Experience</h3>
+                  <p className="text-white/40 font-light leading-relaxed">Your first journey with us begins with a complimentary Skin Intelligence report and a special rate on our Signature Facial ritual.</p>
                   <div className="pt-4 border-t border-white/5 flex justify-between items-center">
-                    <span className="font-headline text-2xl italic">Custom Rate</span>
-                    <Link href="/contact" className="text-[10px] uppercase tracking-widest font-bold hover:text-accent">Request Quote</Link>
+                    <span className="font-headline text-2xl italic">Gifted Offer</span>
+                    <Link href="/contact" className="text-[10px] uppercase tracking-widest font-bold hover:text-accent">Redeem Now</Link>
                   </div>
                 </CardContent>
               </Card>
@@ -319,15 +320,15 @@ export default function Home() {
       <section className="py-40 bg-secondary/10">
         <div className="container mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
           <div className="space-y-12">
-            <span className="text-[10px] uppercase tracking-[0.6em] font-bold text-primary">The Standard</span>
-            <h2 className="font-headline text-5xl md:text-7xl leading-tight">Why Choose <br /><span className="italic font-light">Luxe Glow?</span></h2>
+            <span className="text-[10px] uppercase tracking-[0.6em] font-bold text-primary">The Differentiation</span>
+            <h2 className="font-headline text-5xl md:text-7xl leading-tight">Why Clients <br /><span className="italic font-light">Trust Us</span></h2>
             
             <div className="space-y-10">
               {[
-                { title: "Premium Ambiance", desc: "A sanctuary of calm at Capitol Commons, designed for absolute discretion." },
-                { title: "Elite Care", desc: "Each therapist is trained in our exclusive clinical artistry protocols." },
-                { title: "Modern Science", desc: "We invest in the latest medical-grade aesthetic technology." },
-                { title: "Beauty Confidence", desc: "Results that don't just look better, they feel better." }
+                { title: "Private Sanctuary", desc: "A sanctuary of quiet prestige at Estancia Mall, designed for absolute discretion and calm." },
+                { title: "Clinical Artistry", desc: "Our therapists are trained in proprietary clinical protocols that merge medical science with sensory care." },
+                { title: "Modern Intelligence", desc: "We invest in the latest medical-grade aesthetic technology to ensure consistent, luminous results." },
+                { title: "Personalized Care", desc: "We move away from one-size-fits-all. Every treatment plan is bespoke to your skin's intelligence." }
               ].map((item, idx) => (
                 <div key={idx} className="flex gap-8 group">
                   <div className="shrink-0 w-8 h-8 rounded-full border border-primary/20 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-500">
@@ -351,30 +352,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 8. Gallery / Experience Teaser */}
-      <section className="py-40 bg-white">
-        <div className="container mx-auto px-6 lg:px-12">
-          <div className="text-center mb-24">
-            <span className="text-[10px] uppercase tracking-[0.5em] font-bold text-accent mb-8 block">The Atelier</span>
-            <h2 className="font-headline text-5xl md:text-6xl mb-8">Ambiance & Artistry</h2>
-            <p className="text-muted-foreground text-xl font-light italic">"A visual journey through our private sanctuary."</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-6 h-[800px]">
-            <div className="md:col-span-8 relative overflow-hidden rounded-[3rem] luxury-shadow group">
-              <Image src={treatmentImg?.imageUrl || "https://picsum.photos/seed/lux5/800/600"} alt="Gallery 1" fill className="object-cover transition-all duration-1000 group-hover:scale-105" data-ai-hint="treatment room" />
-            </div>
-            <div className="md:col-span-4 grid grid-rows-2 gap-6">
-              <div className="relative overflow-hidden rounded-[2.5rem] luxury-shadow group">
-                <Image src={glowImg?.imageUrl || "https://picsum.photos/seed/lux6/600/800"} alt="Gallery 2" fill className="object-cover transition-all duration-1000 group-hover:scale-105" data-ai-hint="glowing skin" />
-              </div>
-              <div className="relative overflow-hidden rounded-[2.5rem] luxury-shadow group">
-                <Image src={PlaceHolderImages.find(img => img.id === 'clinic-interior')?.imageUrl || "https://picsum.photos/seed/lux3/800/600"} alt="Gallery 3" fill className="object-cover transition-all duration-1000 group-hover:scale-105" data-ai-hint="aesthetic clinic" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* 9. Book-now CTA Section */}
       <section className="py-40 bg-background relative overflow-hidden">
         <div className="container mx-auto px-6 lg:px-12 relative z-10">
@@ -386,24 +363,24 @@ export default function Home() {
                 <span className="italic font-light text-primary/80">Experience.</span>
               </h2>
               <p className="text-xl text-muted-foreground/70 mb-20 leading-relaxed font-light italic">
-                Join our exclusive clientele. Private appointments are available daily at Capitol Commons.
+                Join our private clientele at Estancia Mall. Appointments are available daily for your aesthetic refinement.
               </p>
               
               <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center pb-12">
                 <div className="space-y-4">
                   <Phone className="w-6 h-6 mx-auto text-accent" />
-                  <p className="text-[10px] uppercase tracking-widest font-bold">Call Us</p>
+                  <p className="text-[10px] uppercase tracking-widest font-bold">Call Concierge</p>
                   <p className="text-lg font-medium">+63 998 936 8395</p>
                 </div>
                 <div className="space-y-4">
                   <MessageCircle className="w-6 h-6 mx-auto text-accent" />
-                  <p className="text-[10px] uppercase tracking-widest font-bold">Message</p>
+                  <p className="text-[10px] uppercase tracking-widest font-bold">Social Connection</p>
                   <p className="text-lg font-medium">Messenger / FB</p>
                 </div>
                 <div className="space-y-4">
                   <MapPin className="w-6 h-6 mx-auto text-accent" />
-                  <p className="text-[10px] uppercase tracking-widest font-bold">Location</p>
-                  <p className="text-lg font-medium">Estancia Mall, Pasig</p>
+                  <p className="text-[10px] uppercase tracking-widest font-bold">Sanctuary</p>
+                  <p className="text-sm font-medium">Estancia Mall, Pasig</p>
                 </div>
               </div>
 

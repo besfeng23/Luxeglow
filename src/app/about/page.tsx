@@ -21,24 +21,24 @@ export default function AboutPage() {
           <div className="max-w-5xl mx-auto text-center space-y-12 animate-fade-in-up">
             <span className="text-[10px] uppercase tracking-[0.8em] font-bold text-accent block">The Private Narrative</span>
             <h1 className="font-headline text-7xl md:text-9xl lg:text-[140px] leading-none tracking-tight text-foreground">
-              The Art of <br />
+              Art of <br />
               <span className="italic font-light text-primary/60">Radiant Being.</span>
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground/80 font-light italic max-w-3xl mx-auto leading-relaxed">
-              "We believe beauty is not a standard to be achieved, but an intimate radiance to be cultivated through clinical precision and absolute care."
+              "At Luxe Glow Premier, we believe beauty is an intimate radiance to be cultivated through clinical precision and absolute care."
             </p>
           </div>
         </div>
       </section>
 
-      {/* 2. Philosophy Section - The Quote & Image spread */}
+      {/* 2. Philosophy Section */}
       <section className="py-40 bg-white">
         <div className="container mx-auto px-6 lg:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-32 items-center">
             <div className="relative group aspect-[4/5] overflow-hidden rounded-[4rem] luxury-shadow animate-reveal">
               <Image 
                 src={modelImg?.imageUrl || "https://picsum.photos/seed/lux6/600/800"} 
-                alt="Our Philosophy" 
+                alt="Luxe Glow Philosophy" 
                 fill
                 className="object-cover transition-transform duration-[4000ms] group-hover:scale-105"
                 data-ai-hint="glowing skin"
@@ -51,10 +51,10 @@ export default function AboutPage() {
                 <h2 className="font-headline text-6xl md:text-7xl leading-tight">Our <br /><span className="italic font-light">Philosophy</span></h2>
                 <div className="space-y-10 text-xl text-muted-foreground/80 font-light leading-relaxed italic">
                   <p>
-                    At Luxe Glow Premier, we approach aesthetics as a fine art. Our philosophy is rooted in the concept of "Quiet Wealth"—delivering transformative, clinical results without the noise of mass-market trends.
+                    At Luxe Glow Premier, we approach aesthetics as a fine clinical art. Our philosophy is rooted in the concept of "Quiet Wealth"—delivering transformative results without the noise of mass-market trends.
                   </p>
                   <p>
-                    Every ritual we perform is a dedicated sequence of refinement, designed to honor the natural architecture of your skin. We don't just treat; we curate an environment where your confidence can bloom.
+                    Every ritual we perform is a dedicated sequence of refinement, designed to honor the natural architecture of your skin. We don't just treat; we curate an environment where your beauty can truly radiate.
                   </p>
                 </div>
               </div>
@@ -83,7 +83,7 @@ export default function AboutPage() {
               },
               {
                 title: "Clinical Artistry",
-                desc: "Our therapists are trained in proprietary clinical protocols that merge medical-grade technology with the sensory experience of a luxury spa.",
+                desc: "Our therapists are trained in proprietary clinical protocols that merge medical science with the sensory experience of luxury care.",
                 icon: Gem
               },
               {
@@ -104,28 +104,28 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* 4. Our Space - Visual Gallery */}
+      {/* 4. Our Sanctuary */}
       <section className="py-48 bg-white overflow-hidden">
         <div className="container mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-12 gap-24 items-center">
           <div className="lg:col-span-5 space-y-16 order-2 lg:order-1">
             <span className="text-[10px] uppercase tracking-[0.5em] font-bold text-accent">The Atelier</span>
-            <h2 className="font-headline text-6xl md:text-7xl leading-tight">Our <span className="italic font-light">Sanctuary</span></h2>
+            <h2 className="font-headline text-6xl md:text-7xl leading-tight">The <span className="italic font-light">Sanctuary</span></h2>
             <p className="text-xl text-muted-foreground font-light leading-relaxed italic border-l-2 border-accent/20 pl-8">
-              "A space designed for absolute tranquility. From the soft palette of our treatment rooms to the discrete nature of our layout, every detail is considered."
+              "A space designed for absolute clinical tranquility. From the soft palette of our treatment suites to the discrete layout, every detail is considered."
             </p>
             <div className="grid grid-cols-1 gap-10">
               <div className="flex items-center gap-8 p-10 rounded-[3rem] bg-secondary/30 border border-black/5 luxury-shadow">
                 <CheckCircle2 className="w-8 h-8 text-accent" />
                 <div>
                   <h5 className="text-[11px] uppercase tracking-widest font-bold mb-2">Elite Comfort</h5>
-                  <p className="text-sm text-muted-foreground font-light italic leading-relaxed">Ergonomic treatment beds and premium linens for absolute relaxation.</p>
+                  <p className="text-sm text-muted-foreground font-light italic leading-relaxed">Ergonomic treatment beds and premium linens for absolute relaxation during rituals.</p>
                 </div>
               </div>
               <div className="flex items-center gap-8 p-10 rounded-[3rem] bg-secondary/30 border border-black/5 luxury-shadow">
                 <CheckCircle2 className="w-8 h-8 text-accent" />
                 <div>
-                  <h5 className="text-[11px] uppercase tracking-widest font-bold mb-2">Modern Science</h5>
-                  <p className="text-sm text-muted-foreground font-light italic leading-relaxed">Equipped with the latest FDA-approved aesthetic technology for clinical results.</p>
+                  <h5 className="text-[11px] uppercase tracking-widest font-bold mb-2">Advanced Science</h5>
+                  <p className="text-sm text-muted-foreground font-light italic leading-relaxed">Equipped with the latest FDA-approved aesthetic technology for consistent, visible results.</p>
                 </div>
               </div>
             </div>
@@ -151,12 +151,11 @@ export default function AboutPage() {
                 />
               </div>
             </div>
-            <div className="absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[140%] h-[140%] bg-accent/5 rounded-full blur-[120px]" />
           </div>
         </div>
       </section>
 
-      {/* 5. Personalized Care - Storytelling */}
+      {/* 5. Personalized Care */}
       <section className="py-56 bg-foreground text-white relative overflow-hidden">
         <div className="container mx-auto px-6 lg:px-12 relative z-10 text-center">
           <div className="max-w-5xl mx-auto space-y-20">
@@ -166,7 +165,7 @@ export default function AboutPage() {
               <span className="text-accent">ultimate luxury.</span>"
             </h2>
             <p className="text-white/40 text-2xl font-light leading-relaxed italic max-w-3xl mx-auto">
-              We move away from one-size-fits-all aesthetics. At Luxe Glow, your treatment sequence is built after an intimate understanding of your skin concerns and beauty aspirations.
+              We move away from one-size-fits-all aesthetics. At Luxe Glow, your treatment sequence is built after an intimate understanding of your skin's intelligence and your personal aspirations.
             </p>
             <div className="pt-16">
               <Button asChild className="rounded-full bg-white text-foreground hover:bg-accent px-20 h-20 uppercase tracking-[0.4em] text-[11px] font-bold transition-all duration-700 shadow-2xl">
@@ -183,65 +182,6 @@ export default function AboutPage() {
             className="object-cover grayscale"
             data-ai-hint="luxury skincare"
           />
-        </div>
-        <div className="absolute top-0 left-0 w-full h-px bg-white/10" />
-      </section>
-
-      {/* 6. Why Choose Luxe Glow */}
-      <section className="py-48 bg-white">
-        <div className="container mx-auto px-6 lg:px-12">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-32 items-center">
-             <div className="relative aspect-[4/5] rounded-[5rem] overflow-hidden luxury-shadow">
-               <Image 
-                src={PlaceHolderImages.find(img => img.id === 'facial-treatment')?.imageUrl || "https://picsum.photos/seed/lux2/600/800"} 
-                alt="Treatment Focus" 
-                fill 
-                className="object-cover"
-                data-ai-hint="facial treatment"
-              />
-              <div className="absolute inset-0 border-[40px] border-white/10 rounded-[5rem] pointer-events-none" />
-             </div>
-             <div className="space-y-20">
-               <div className="space-y-8">
-                 <span className="text-[10px] uppercase tracking-[0.6em] font-bold text-primary">The Differentiation</span>
-                 <h2 className="font-headline text-6xl md:text-7xl">Why Our Clients <br /><span className="italic font-light">Trust Us</span></h2>
-               </div>
-               <div className="space-y-16">
-                 {[
-                   { title: "Refined Results", desc: "We focus on enhancements that look natural and radiant, avoiding the over-treated aesthetic." },
-                   { title: "Premium Ambiance", desc: "A sanctuary at Estancia Mall designed for quiet prestige and absolute discretion." },
-                   { title: "Personalized Protocols", desc: "Every treatment plan is bespoke, evolving with your skin's intelligence and needs." }
-                 ].map((item, idx) => (
-                   <div key={idx} className="flex gap-10 group">
-                     <div className="shrink-0 w-14 h-14 rounded-full border border-black/5 flex items-center justify-center text-accent group-hover:bg-accent group-hover:text-white transition-all duration-700">
-                       <CheckCircle2 className="w-6 h-6" />
-                     </div>
-                     <div className="space-y-4">
-                       <h4 className="text-[12px] uppercase tracking-[0.4em] font-bold">{item.title}</h4>
-                       <p className="text-lg text-muted-foreground/80 font-light leading-relaxed italic">{item.desc}</p>
-                     </div>
-                   </div>
-                 ))}
-               </div>
-             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Final CTA */}
-      <section className="py-40 bg-secondary/30">
-        <div className="container mx-auto px-6 lg:px-12 text-center">
-          <div className="max-w-4xl mx-auto space-y-16">
-            <h2 className="font-headline text-6xl md:text-8xl italic font-light leading-none">Your Journey to <br />Radiance Starts Here.</h2>
-            <div className="flex flex-col sm:flex-row justify-center gap-10">
-               <Button asChild variant="outline" className="rounded-full border-black/10 px-16 h-16 uppercase tracking-[0.3em] text-[10px] font-bold bg-white/50 backdrop-blur-sm transition-all duration-500 hover:bg-white">
-                 <Link href="/services">Explore Rituals</Link>
-               </Button>
-               <Button asChild className="rounded-full bg-foreground text-white hover:bg-black px-16 h-16 uppercase tracking-[0.3em] text-[10px] font-bold shadow-2xl transition-all duration-700 hover:scale-105">
-                 <Link href="/contact">Book Appointment</Link>
-               </Button>
-            </div>
-          </div>
         </div>
       </section>
     </div>

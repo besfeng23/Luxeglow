@@ -13,59 +13,54 @@ const signatureTreatments = [
     name: "Luxe Signature Facial",
     tagline: "The 10-Step Rejuvenation Ritual",
     price: "₱3,500",
-    package: "5 Sessions + 1 Free",
-    description: "Our flagship experience. A meticulous multi-step journey designed for deep restoration and visible radiance. This treatment adapts to your skin's unique intelligence, using a combination of medical-grade technology and sensory care.",
-    benefits: ["Deep Cellular Cleansing", "Diamond Peel Exfoliation", "Radiofrequency Tightening", "PDT Light Restoration"],
+    package: "5 Sessions + 1 Complimentary",
+    description: "The definitive Luxe Glow experience. A meticulous multi-step clinical sequence including Diamond Peel, Radiofrequency, and PDT Light Therapy. Tailored precisely to your skin's intelligence.",
+    benefits: ["Cellular Deep Cleansing", "Diamond Peel Exfoliation", "Radiofrequency Tightening", "PDT Light Restoration"],
     image: "signature-facial",
-    accent: "bg-secondary/30",
     link: "/signature/facial"
   },
   {
-    id: "ipl-hair-removal",
-    name: "IPL Hair Removal",
-    tagline: "The Silk Protocol",
-    price: "From ₱1,500",
-    package: "Unlimited Yearly Options",
-    description: "Achieve lasting smoothness with our advanced Intense Pulsed Light technology. Precise, safe, and effective hair reduction for those who demand the ultimate in care and convenience.",
-    benefits: ["Long-term Reduction", "Precision Targeting", "Painless Experience", "Skin Smoothing"],
-    image: "treatment-room",
-    accent: "bg-secondary/20",
-    link: "/signature/ipl-hair-removal"
+    id: "carbon-laser",
+    name: "Carbon Laser Ritual",
+    tagline: "Advanced Texture Refinement",
+    price: "₱4,500",
+    package: "Buy 3 Get 1 Offer",
+    description: "The 'Hollywood Peel' for immediate porcelain-smooth skin. Combines advanced laser technology with our foundational facial for superior pore minimization and texture correction.",
+    benefits: ["Instant Pore Refinement", "Texture Smoothing", "Deep Exfoliation", "Collagen Induction"],
+    image: "carbon-laser",
+    link: "/contact"
   },
   {
     id: "bb-glow",
     name: "BB Glow & Blush",
     tagline: "The Semi-Permanent Canvas",
-    price: "₱3,000",
-    package: "Bundle: Glow + Blush ₱5,000",
-    description: "Wake up with a flawless, radiant complexion every single day. Our BB Glow and Blush treatments use safe, semi-permanent foundation and tinting to even out skin tone and add a natural, healthy flush.",
-    benefits: ["Even Skin Tone", "Hyper-pigmentation Cover", "Natural Rosy Glow", "Minimal Makeup Need"],
+    price: "From ₱2,500",
+    package: "Radiant Bundle: ₱5,000",
+    description: "Wake up with a flawless, radiant complexion every day. Our pigment-infusion rituals provide a semi-permanent foundation and a natural rosy flush for a perfectly finished look.",
+    benefits: ["Even Skin Tone", "Hyper-pigmentation Cover", "Natural Rosy Glow", "Minimal Makeup Lifestyle"],
     image: "facial-treatment",
-    accent: "bg-white",
     link: "/signature/bb-glow"
   },
   {
-    id: "carbon-laser",
-    name: "Carbon Laser Ritual",
-    tagline: "The Hollywood Porcelain Peel",
-    price: "₱4,500",
-    package: "Promo: Buy 3 Get 1",
-    description: "An advanced laser treatment that targets the deepest layers of the skin to minimize pores, refine texture, and stimulate collagen production. Results are immediate: skin looks airbrushed and luminous with zero downtime.",
-    benefits: ["Instant Pore Refinement", "Texture Smoothing", "Oil Control", "Collagen Induction"],
-    image: "carbon-laser",
-    accent: "bg-foreground text-white",
-    link: "/contact"
+    id: "ipl-hair-removal",
+    name: "IPL Silk Protocol",
+    tagline: "Permanent Hair Reduction",
+    price: "From ₱1,500",
+    package: "Unlimited Yearly Privileges",
+    description: "Precision permanent hair reduction using advanced light-based rituals. Includes specialized underarm whitening protocols for the ultimate in carefree, smooth skin.",
+    benefits: ["Permanent Reduction", "Precision Area Targeting", "Painless Technology", "Underarm Whitening"],
+    image: "treatment-room",
+    link: "/signature/ipl-hair-removal"
   },
   {
     id: "mesolipo",
     name: "Mesolipo Sculpt",
-    tagline: "The Art of Contouring",
+    tagline: "Precision Body Contouring",
     price: "₱5,000",
     package: "Full Body Series Available",
-    description: "Targeted fat reduction and body refinement through precision micro-injections. Designed to address stubborn areas and enhance your natural silhouette with medical-grade safety.",
-    benefits: ["Spot Fat Reduction", "Cellulite Improvement", "Body Contouring", "Quick Recovery"],
+    description: "Targeted fat reduction through precision micro-injections. Designed to address stubborn fatty tissue and enhance your natural silhouette with medical-grade efficacy.",
+    benefits: ["Spot Fat Reduction", "Body Contouring", "Cellulite Improvement", "Quick Recovery"],
     image: "skincare-products",
-    accent: "bg-white",
     link: "/contact"
   },
   {
@@ -73,11 +68,10 @@ const signatureTreatments = [
     name: "The Refinement",
     tagline: "Skin Flawlessness Protocol",
     price: "From ₱500",
-    package: "Unlimited Removal Packages",
-    description: "Safe, effective, and clinical removal of skin imperfections. We use precise techniques to ensure clear results and healthy skin healing for a truly flawless finish.",
-    benefits: ["Clinical Precision", "Safe Procedure", "Minimal Scarring", "Immediate Results"],
+    package: "Unlimited Clearing Packages",
+    description: "Safe and effective clinical removal of skin imperfections. We use precise techniques to ensure clear results and healthy skin healing for a truly flawless finish.",
+    benefits: ["Clinical Precision", "Safe Procedure", "Skin Clearing", "Immediate Results"],
     image: "clinic-interior",
-    accent: "bg-secondary/40",
     link: "/contact"
   }
 ];
@@ -95,7 +89,7 @@ export default function SignatureTreatmentsPage() {
               <span className="italic font-light text-primary/60">Rituals.</span>
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground/80 font-light italic max-w-3xl mx-auto leading-relaxed">
-              "A curation of our most transformative aesthetic experiences, where high science meets absolute luxury."
+              "A high-prestige curation of our most transformative aesthetic experiences, designed for absolute perfection and refined results at Estancia Mall."
             </p>
           </div>
         </div>
@@ -142,7 +136,7 @@ export default function SignatureTreatmentsPage() {
                 </p>
 
                 <div className="space-y-6 pt-6">
-                  <h4 className="text-[10px] uppercase tracking-widest font-bold text-foreground">Treatment Benefits</h4>
+                  <h4 className="text-[10px] uppercase tracking-widest font-bold text-foreground">The Benefits</h4>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-4">
                     {item.benefits.map((benefit, bIdx) => (
                       <div key={bIdx} className="flex items-center gap-3">
@@ -159,7 +153,7 @@ export default function SignatureTreatmentsPage() {
                     <p className="text-sm font-bold tracking-wide text-primary">{item.package}</p>
                   </div>
                   <Button asChild className="rounded-full bg-foreground text-white hover:bg-black px-12 h-16 uppercase tracking-[0.3em] text-[10px] font-bold shadow-2xl transition-all duration-700 hover:scale-105">
-                    <Link href={item.link}>Discover The Ritual</Link>
+                    <Link href={item.link}>Reserve Ritual</Link>
                   </Button>
                 </div>
               </div>
@@ -168,39 +162,11 @@ export default function SignatureTreatmentsPage() {
         </section>
       ))}
 
-      {/* Experience High-Trust Section */}
-      <section className="py-56 bg-foreground text-white overflow-hidden relative">
-        <div className="container mx-auto px-6 lg:px-12 text-center relative z-10">
-          <div className="max-w-4xl mx-auto space-y-20">
-            <ShieldCheck className="w-16 h-16 text-accent mx-auto animate-pulse" />
-            <h2 className="font-headline text-6xl md:text-8xl italic font-light leading-tight">
-              Clinical Artistry. <br />
-              <span className="text-accent">Private Luxury.</span>
-            </h2>
-            <p className="text-white/40 text-2xl font-light leading-relaxed italic max-w-3xl mx-auto">
-              Every signature ritual is performed in our discrete Estancia Mall sanctuary, ensuring your journey to radiance is as peaceful as it is transformative.
-            </p>
-            <div className="flex flex-col sm:flex-row justify-center gap-10 pt-10">
-              <div className="flex items-center gap-4 bg-white/5 border border-white/10 px-8 py-4 rounded-full">
-                <Clock className="w-4 h-4 text-accent" />
-                <span className="text-[10px] uppercase tracking-widest font-bold">Daily: 10AM - 9PM</span>
-              </div>
-              <div className="flex items-center gap-4 bg-white/5 border border-white/10 px-8 py-4 rounded-full">
-                <Gem className="w-4 h-4 text-accent" />
-                <span className="text-[10px] uppercase tracking-widest font-bold">Private Boutique Clinic</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="absolute top-0 right-0 w-96 h-96 bg-accent/10 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/2" />
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-primary/10 rounded-full blur-[120px] translate-y-1/2 -translate-x-1/2" />
-      </section>
-
       {/* CTA Spread */}
       <section className="py-40 bg-white">
         <div className="container mx-auto px-6 lg:px-12 text-center">
           <div className="max-w-3xl mx-auto space-y-16">
-            <h2 className="font-headline text-6xl md:text-8xl leading-none">Your Transformation <br /><span className="italic font-light">Starts Here.</span></h2>
+            <h2 className="font-headline text-6xl md:text-8xl leading-none">Your Journey to <br /><span className="italic font-light">Radiance.</span></h2>
             <div className="flex flex-col sm:flex-row justify-center gap-8">
               <Button asChild variant="outline" className="rounded-full border-black/10 px-16 h-16 uppercase tracking-[0.3em] text-[10px] font-bold transition-all duration-500 hover:bg-secondary">
                 <Link href="/services">Full Ritual Menu</Link>
