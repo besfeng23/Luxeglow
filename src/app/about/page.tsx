@@ -1,4 +1,3 @@
-
 'use client';
 
 import React from 'react';
@@ -7,11 +6,6 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Star, Gem, Sparkles, Quote, MapPin, CheckCircle2 } from 'lucide-react';
-
-// Note: Metadata is handled in a separate layout or sibling file for static pages, 
-// but since this is 'use client', we'll rely on the parent layout default or 
-// export a separate metadata object if this were a server component. 
-// For this MVP, we focus on the semantic content.
 
 export default function AboutPage() {
   const clinicImg = PlaceHolderImages.find(img => img.id === 'clinic-interior');
@@ -30,7 +24,7 @@ export default function AboutPage() {
               Art of <br />
               <span className="italic font-light text-primary/60">Radiant Being.</span>
             </h1>
-            <p className="text-xl md:text-2xl text-muted-foreground/80 font-light italic max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl md:text-2xl text-muted-foreground/80 font-light italic max-w-3xl mx-auto leading-relaxed text-balance">
               "At Luxe Glow Premier, we believe beauty is an intimate radiance to be cultivated through clinical precision and absolute care."
             </p>
           </div>
@@ -44,7 +38,7 @@ export default function AboutPage() {
             <div className="relative group aspect-[4/5] overflow-hidden rounded-[4rem] luxury-shadow animate-reveal">
               <Image 
                 src={modelImg?.imageUrl || "https://picsum.photos/seed/lux6/600/800"} 
-                alt="Radiant model representing Luxe Glow skincare philosophy" 
+                alt="Radiant model representing Luxe Glow skincare philosophy in Pasig" 
                 fill
                 className="object-cover transition-transform duration-[4000ms] group-hover:scale-105"
                 data-ai-hint="glowing skin"
@@ -54,7 +48,7 @@ export default function AboutPage() {
             <div className="space-y-16 animate-fade-in-up">
               <Quote className="w-16 h-16 text-accent/20" />
               <div className="space-y-8">
-                <h2 className="font-headline text-6xl md:text-7xl leading-tight">Our <br /><span className="italic font-light">Philosophy</span></h2>
+                <h2 className="font-headline text-6xl md:text-7xl leading-tight text-balance">Our <br /><span className="italic font-light">Philosophy</span></h2>
                 <div className="space-y-10 text-xl text-muted-foreground/80 font-light leading-relaxed italic">
                   <p>
                     At Luxe Glow Premier, we approach aesthetics as a fine clinical art. Our philosophy is rooted in the concept of "Quiet Wealth"—delivering transformative results without the noise of mass-market trends.
@@ -141,7 +135,7 @@ export default function AboutPage() {
               <div className="aspect-[3/4] rounded-[4rem] overflow-hidden luxury-shadow relative mt-16 animate-reveal">
                 <Image 
                   src={clinicImg?.imageUrl || "https://picsum.photos/seed/lux3/800/600"} 
-                  alt="Interior of Luxe Glow Premier aesthetic clinic reception" 
+                  alt="Interior of Luxe Glow Premier aesthetic clinic reception in Estancia Mall" 
                   fill 
                   className="object-cover"
                   data-ai-hint="aesthetic clinic"
@@ -150,7 +144,7 @@ export default function AboutPage() {
               <div className="aspect-[3/4] rounded-[4rem] overflow-hidden luxury-shadow relative animate-reveal delay-500">
                 <Image 
                   src={treatmentImg?.imageUrl || "https://picsum.photos/seed/lux5/800/600"} 
-                  alt="Private luxury treatment suite at Luxe Glow Premier" 
+                  alt="Private luxury treatment suite at Luxe Glow Premier Capitol Commons" 
                   fill 
                   className="object-cover"
                   data-ai-hint="treatment room"
@@ -166,7 +160,7 @@ export default function AboutPage() {
         <div className="container mx-auto px-6 lg:px-12 relative z-10 text-center">
           <div className="max-w-5xl mx-auto space-y-20">
             <Star className="w-12 h-12 text-accent mx-auto animate-pulse fill-accent/20" />
-            <h2 className="font-headline text-6xl md:text-9xl italic font-light leading-tight">
+            <h2 className="font-headline text-6xl md:text-9xl italic font-light leading-tight text-balance">
               "Personalized beauty is the <br />
               <span className="text-accent">ultimate luxury.</span>"
             </h2>
@@ -183,7 +177,7 @@ export default function AboutPage() {
         <div className="absolute inset-0 opacity-10">
           <Image 
             src={productsImg?.imageUrl || "https://picsum.photos/seed/lux4/600/400"} 
-            alt="Luxury skincare products used at Luxe Glow Premier" 
+            alt="Luxury skincare products used at Luxe Glow Premier Pasig" 
             fill 
             className="object-cover grayscale"
             data-ai-hint="luxury skincare"

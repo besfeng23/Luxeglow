@@ -1,4 +1,3 @@
-
 'use client';
 
 import { BRAND, CONTACT } from '@/content/data';
@@ -9,7 +8,7 @@ export default function LocalBusinessSchema() {
     "@type": "BeautySalon",
     "name": BRAND.fullName,
     "alternateName": "Luxe Glow Beauty Lounge",
-    "image": "https://luxeglowpremier.com/hero-main.jpg",
+    "image": "https://picsum.photos/seed/lux1/1200/800",
     "@id": "https://luxeglowpremier.com",
     "url": "https://luxeglowpremier.com",
     "telephone": CONTACT.phone.replace(/\s/g, ''),

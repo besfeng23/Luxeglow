@@ -1,4 +1,3 @@
-
 import type { Metadata } from 'next';
 import './globals.css';
 import Header from '@/components/layout/Header';
@@ -6,7 +5,7 @@ import Footer from '@/components/layout/Footer';
 import LocalBusinessSchema from '@/components/seo/LocalBusinessSchema';
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://luxeglowpremier.com'), // Replace with actual domain when live
+  metadataBase: new URL('https://luxeglowpremier.com'),
   title: {
     default: 'Luxe Glow Premier | Exclusive Aesthetic Clinic in Pasig',
     template: '%s | Luxe Glow Premier'
@@ -22,7 +21,7 @@ export const metadata: Metadata = {
     description: 'Redefining luxury aesthetics through medical-grade precision in Capitol Commons, Pasig.',
     images: [
       {
-        url: '/og-image.jpg',
+        url: 'https://picsum.photos/seed/lux1/1200/630',
         width: 1200,
         height: 630,
         alt: 'Luxe Glow Premier Sanctuary'

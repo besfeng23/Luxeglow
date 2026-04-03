@@ -1,4 +1,3 @@
-
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
@@ -123,7 +122,7 @@ export default function ServicesPage() {
         <div className="absolute inset-0 opacity-40">
           <Image
             src={serviceImg?.imageUrl || ''}
-            alt="Overview of aesthetic treatments available at Luxe Glow Premier"
+            alt="Overview of aesthetic treatments available at Luxe Glow Premier Capitol Commons"
             fill
             className="object-cover scale-110"
           />
@@ -134,7 +133,7 @@ export default function ServicesPage() {
           <h1 className="font-headline text-6xl md:text-9xl text-white mb-8 animate-fade-in-up delay-100">
             Private <span className="italic font-light">Menu</span>
           </h1>
-          <p className="text-white/60 max-w-2xl mx-auto text-xl italic font-light animate-fade-in-up delay-200 leading-relaxed">
+          <p className="text-white/60 max-w-2xl mx-auto text-xl italic font-light animate-fade-in-up delay-200 leading-relaxed text-balance">
             "A comprehensive curation of aesthetic intelligence and ritual care designed for absolute perfection."
           </p>
         </div>
@@ -229,7 +228,7 @@ export default function ServicesPage() {
               <div className="relative aspect-square rounded-[4rem] overflow-hidden luxury-shadow border-[12px] border-white/5">
                 <Image 
                   src={PlaceHolderImages.find(img => img.id === 'hero-main')?.imageUrl || ''} 
-                  alt="Curated beauty packages at Luxe Glow Premier" 
+                  alt="Curated beauty packages at Luxe Glow Premier Pasig" 
                   fill 
                   className="object-cover transition-transform duration-1000 group-hover:scale-110"
                 />
