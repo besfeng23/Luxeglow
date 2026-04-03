@@ -1,3 +1,4 @@
+
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { 
   Star, Gem, Sparkles, ShieldCheck, MapPin, Clock, 
@@ -12,7 +13,7 @@ export const BRAND = {
   fullName: "Luxe Glow Premier",
   type: "Private Aesthetic Clinic",
   location: "Estancia Mall • Capitol Commons",
-  description: "Redefining luxury aesthetics through medical-grade precision and a refined, editorial approach to beauty.",
+  description: "Experience the ultimate skin perfection at Luxe Glow Premier. A private sanctuary where clinical precision meets the quiet elegance of luxury care.",
   tagline: "The Art of Radiant Being.",
 };
 
@@ -64,7 +65,7 @@ export const HOME_CONTENT = {
     title: "The Private Art of",
     titleItalic: "Radiant Being.",
     description: "Experience the pinnacle of skin refinement at Luxe Glow Premier—a sanctuary where clinical precision meets the quiet elegance of luxury care. We don't just treat; we curate your luminous perfection.",
-    image: getImg('hero-main'),
+    image: getImg('brand-hero-campaign'),
   },
   positioning: {
     title: "A Sanctuary of",
@@ -88,7 +89,7 @@ export const SIGNATURE_TREATMENTS = [
     package: "5 Sessions + 1 Complimentary",
     description: "Our flagship clinical experience. A meticulous multi-step sequence including Diamond Peel, Radiofrequency, and PDT Light Therapy tailored to your skin's intelligence.",
     benefits: ["Cellular Deep Cleansing", "Diamond Peel Exfoliation", "Radiofrequency Tightening", "PDT Light Restoration"],
-    image: 'facial-process',
+    image: 'facial-ritual-detail',
     link: "/signature/facial"
   },
   {
@@ -99,7 +100,7 @@ export const SIGNATURE_TREATMENTS = [
     package: "Buy 3 Get 1 Offer",
     description: "Achieve immediate porcelain-smooth skin. This ritual combines advanced laser technology with our basic facial for superior pore architecture refinement.",
     benefits: ["Instant Pore Refinement", "Texture Smoothing", "Deep Exfoliation", "Collagen Induction"],
-    image: 'laser-tech',
+    image: 'laser-ritual-detail',
     link: "/contact"
   },
   {
@@ -110,7 +111,7 @@ export const SIGNATURE_TREATMENTS = [
     package: "Radiant Bundle: ₱5,000",
     description: "Wake up with a flawless, radiant complexion. Our pigment-infusion rituals provide a semi-permanent foundation and natural flush for effortless beauty.",
     benefits: ["Even Skin Tone", "Hyperpigmentation Cover", "Natural Rosy Glow", "Zero Makeup Maintenance"],
-    image: 'model-radiant',
+    image: 'model-radiance-primary',
     link: "/signature/bb-glow"
   },
   {
@@ -121,7 +122,7 @@ export const SIGNATURE_TREATMENTS = [
     package: "Unlimited Yearly Privileges",
     description: "Precision hair reduction meeting clinical artistry. Includes specialized underarm whitening for total skin confidence and liberation.",
     benefits: ["Permanent Reduction", "Area Specific Precision", "Painless Technology", "Underarm Whitening"],
-    image: 'treatment-suite',
+    image: 'treatment-suite-sanctuary',
     link: "/signature/ipl-hair-removal"
   }
 ];

@@ -1,52 +1,64 @@
 {
   "placeholderImages": [
     {
-      "id": "hero-main",
-      "description": "Luxurious spa interior with soft lighting and elegant decor",
+      "id": "brand-hero-campaign",
+      "description": "High-status campaign image of radiant skin in a luxury sanctuary environment",
       "imageUrl": "https://picsum.photos/seed/lux1/1200/800",
-      "imageHint": "luxury spa"
+      "imageHint": "luxury beauty"
     },
     {
-      "id": "facial-treatment",
-      "description": "Professional facial treatment being performed in a clean clinic environment",
-      "imageUrl": "https://picsum.photos/seed/lux2/600/800",
-      "imageHint": "facial treatment"
-    },
-    {
-      "id": "clinic-interior",
-      "description": "Modern and elegant clinic reception area",
-      "imageUrl": "https://picsum.photos/seed/lux3/800/600",
+      "id": "clinic-sanctuary-interior",
+      "description": "The discrete reception atelier at Estancia Mall, showing quiet wealth decor",
+      "imageUrl": "https://picsum.photos/seed/lux3/1200/800",
       "imageHint": "aesthetic clinic"
     },
     {
-      "id": "skincare-products",
-      "description": "Premium skincare products on a marble surface",
-      "imageUrl": "https://picsum.photos/seed/lux4/600/400",
-      "imageHint": "luxury skincare"
-    },
-    {
-      "id": "treatment-room",
-      "description": "Serene treatment room with high-end equipment",
-      "imageUrl": "https://picsum.photos/seed/lux5/800/600",
-      "imageHint": "treatment room"
-    },
-    {
-      "id": "model-glowing-skin",
-      "description": "A woman with radiant, clear skin smiling softly",
-      "imageUrl": "https://picsum.photos/seed/lux6/600/800",
-      "imageHint": "glowing skin"
-    },
-    {
-      "id": "signature-facial",
-      "description": "Close up of a luxury signature facial process",
-      "imageUrl": "https://picsum.photos/seed/lux7/600/600",
+      "id": "facial-ritual-detail",
+      "description": "Close-up of the Luxe Signature Facial clinical protocol",
+      "imageUrl": "https://picsum.photos/seed/lux7/800/800",
       "imageHint": "luxury facial"
     },
     {
-      "id": "carbon-laser",
-      "description": "Advanced laser treatment equipment in a medical spa",
-      "imageUrl": "https://picsum.photos/seed/lux8/600/600",
+      "id": "laser-ritual-detail",
+      "description": "Precision clinical laser treatment in a private suite",
+      "imageUrl": "https://picsum.photos/seed/lux8/800/800",
       "imageHint": "laser skin"
+    },
+    {
+      "id": "model-radiance-primary",
+      "description": "Elite campaign model exhibiting flawless skin intelligence",
+      "imageUrl": "https://picsum.photos/seed/lux6/800/1000",
+      "imageHint": "glowing skin"
+    },
+    {
+      "id": "treatment-suite-sanctuary",
+      "description": "Private treatment room at Capitol Commons, designed for absolute tranquility",
+      "imageUrl": "https://picsum.photos/seed/lux5/1200/800",
+      "imageHint": "treatment room"
+    },
+    {
+      "id": "skincare-apothecary",
+      "description": "Premium clinical skincare curations on white marble",
+      "imageUrl": "https://picsum.photos/seed/lux4/800/1000",
+      "imageHint": "luxury skincare"
+    },
+    {
+      "id": "step-extraction-clinical",
+      "description": "Meticulous clinical extraction process",
+      "imageUrl": "https://picsum.photos/seed/step1/800/600",
+      "imageHint": "facial treatment"
+    },
+    {
+      "id": "step-pdt-restoration",
+      "description": "PDT Light Therapy restoration ritual",
+      "imageUrl": "https://picsum.photos/seed/step2/800/600",
+      "imageHint": "light therapy"
+    },
+    {
+      "id": "step-rf-lifting",
+      "description": "Radiofrequency skin tightening and architectural lifting",
+      "imageUrl": "https://picsum.photos/seed/step3/800/600",
+      "imageHint": "skin tightening"
     }
   ]
 }
