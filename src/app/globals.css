@@ -4,7 +4,7 @@
 
 @layer base {
   :root {
-    /* Muted Royalty Palette - Ivory, Champagne, and Bronze */
+    /* Quiet Luxury Palette - Ivory, Champagne, and Muted Bronze */
     --background: 30 25% 98%; 
     --foreground: 20 12% 12%;
     
@@ -14,29 +14,29 @@
     --popover: 0 0% 100%;
     --popover-foreground: 20 12% 12%;
     
-    /* Muted Bronze-Taupe */
-    --primary: 25 12% 40%; 
+    /* Muted Bronze-Taupe for Primary text and depth */
+    --primary: 25 12% 35%; 
     --primary-foreground: 30 25% 98%;
     
-    /* Softest Champagne */
-    --secondary: 30 20% 95%;
+    /* Softest Champagne for backgrounds */
+    --secondary: 30 20% 94%;
     --secondary-foreground: 20 12% 12%;
     
-    --muted: 30 15% 97%;
-    --muted-foreground: 20 8% 40%;
+    --muted: 30 15% 96%;
+    --muted-foreground: 20 8% 45%;
     
-    /* Heraldic Gold-Sand */
-    --accent: 35 18% 78%;
+    /* Elegant Champagne Gold for highlights */
+    --accent: 35 15% 75%;
     --accent-foreground: 20 12% 12%;
     
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
     
-    --border: 30 15% 92%;
-    --input: 30 15% 92%;
-    --ring: 25 12% 40%;
+    --border: 30 10% 90%;
+    --input: 30 10% 90%;
+    --ring: 25 12% 35%;
     
-    --radius: 2rem;
+    --radius: 1.5rem;
   }
 }
 
@@ -48,20 +48,20 @@
     @apply bg-background text-foreground font-body antialiased selection:bg-accent/30 tracking-tight;
   }
   h1, h2, h3, h4, h5, h6 {
-    @apply font-headline tracking-tighter leading-[1.1];
+    @apply font-headline tracking-tighter leading-[1.05];
   }
 }
 
-/* Luxury Utility Classes */
+/* Luxury UI Utility Classes */
 .luxury-shadow {
-  box-shadow: 0 40px 80px -15px rgba(0, 0, 0, 0.03);
+  box-shadow: 0 50px 100px -20px rgba(0, 0, 0, 0.04);
 }
 
 .text-balance {
   text-wrap: balance;
 }
 
-/* Smooth, High-Prestige Reveal Animations */
+/* Cinematic Reveal Animations */
 @keyframes reveal {
   0% {
     clip-path: inset(0 100% 0 0);
@@ -74,7 +74,7 @@
 @keyframes fade-in-up {
   0% {
     opacity: 0;
-    transform: translateY(60px);
+    transform: translateY(80px);
   }
   100% {
     opacity: 1;
@@ -83,25 +83,25 @@
 }
 
 .animate-reveal {
-  animation: reveal 2.2s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+  animation: reveal 2.5s cubic-bezier(0.77, 0, 0.175, 1) forwards;
 }
 
 .animate-fade-in-up {
   opacity: 0;
-  animation: fade-in-up 1.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation: fade-in-up 2.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
 /* Custom Scrollbar for Luxury Desktop Experience */
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 5px;
 }
 ::-webkit-scrollbar-track {
   background: hsl(var(--background));
 }
 ::-webkit-scrollbar-thumb {
-  background: hsl(var(--accent) / 0.3);
+  background: hsl(var(--accent) / 0.4);
   border-radius: 10px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: hsl(var(--accent) / 0.6);
+  background: hsl(var(--accent) / 0.7);
 }
