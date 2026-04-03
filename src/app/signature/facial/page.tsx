@@ -9,8 +9,6 @@ import {
   Star, 
   Gem, 
   Sparkles, 
-  CheckCircle2, 
-  ArrowRight, 
   Clock, 
   ShieldCheck, 
   Waves, 
@@ -26,76 +24,75 @@ const facialSteps = [
     title: "Double Purification",
     desc: "We begin by removing surface impurities through a double-cleansing ritual, preparing the canvas for deep clinical intervention.",
     icon: Waves,
-    image: "https://picsum.photos/seed/facial1/600/400"
+    image: "https://picsum.photos/seed/facial1/800/600"
   },
   {
     step: "02",
     title: "Thermal Softening",
     desc: "Gentle steaming opens the pores and softens the skin's texture, ensuring the extraction process is seamless and effective.",
     icon: Sun,
-    image: "https://picsum.photos/seed/facial2/600/400"
+    image: "https://picsum.photos/seed/facial2/800/600"
   },
   {
     step: "03",
     title: "Meticulous Extraction",
     desc: "Our skilled therapists perform a precise extraction (pricking) to remove deep-seated impurities while maintaining the skin's integrity.",
     icon: Hand,
-    image: "https://picsum.photos/seed/facial3/600/400"
+    image: PlaceHolderImages.find(img => img.id === 'step-extraction')?.imageUrl || "https://picsum.photos/seed/step1/800/600"
   },
   {
     step: "04",
     title: "Diamond Refinement",
     desc: "A medical-grade diamond-tip exfoliation gently removes dead skin cells, instantly revealing a smoother, more radiant surface.",
     icon: Gem,
-    image: "https://picsum.photos/seed/facial4/600/400"
+    image: "https://picsum.photos/seed/facial4/800/600"
   },
   {
     step: "05",
     title: "Architectural Lifting",
     desc: "Radiofrequency (RF) waves stimulate collagen production in the deep dermis, providing an immediate lift and firmer facial contours.",
     icon: Zap,
-    image: "https://picsum.photos/seed/facial5/600/400"
+    image: PlaceHolderImages.find(img => img.id === 'step-rf')?.imageUrl || "https://picsum.photos/seed/step3/800/600"
   },
   {
     step: "06",
     title: "Cellular Awakening",
     desc: "High-frequency technology delivers antimicrobial energy to the skin, accelerating healing and oxygenating the tissues.",
     icon: Zap,
-    image: "https://picsum.photos/seed/facial6/600/400"
+    image: "https://picsum.photos/seed/facial6/800/600"
   },
   {
     step: "07",
     title: "The Cryo-Seal",
     desc: "A cold hammer treatment provides instant cooling, sealing the pores and locking in the beneficial serums while reducing inflammation.",
     icon: Snowflake,
-    image: "https://picsum.photos/seed/facial7/600/400"
+    image: "https://picsum.photos/seed/facial7/800/600"
   },
   {
     step: "08",
     title: "Luminous Restoration",
     desc: "Photo-Dynamic Therapy (PDT) Light uses specific frequencies to target skin concerns, from acne to aging, at a cellular level.",
     icon: Sparkles,
-    image: "https://picsum.photos/seed/facial8/600/400"
+    image: PlaceHolderImages.find(img => img.id === 'step-pdt')?.imageUrl || "https://picsum.photos/seed/step2/800/600"
   },
   {
     step: "09",
     title: "Signature Masking",
     desc: "A nutrient-rich mask tailored to your skin's intelligence is applied to deeply nourish and hydrate.",
     icon: Gem,
-    image: "https://picsum.photos/seed/facial9/600/400"
+    image: "https://picsum.photos/seed/facial9/800/600"
   },
   {
     step: "10",
     title: "Final Shield",
     desc: "The ritual concludes with premium hydration and a broad-spectrum SPF to protect your newly radiant canvas.",
     icon: ShieldCheck,
-    image: "https://picsum.photos/seed/facial10/600/400"
+    image: "https://picsum.photos/seed/facial10/800/600"
   }
 ];
 
 export default function LuxeSignatureFacialPage() {
-  const mainImg = PlaceHolderImages.find(img => img.id === 'signature-facial');
-  const modelImg = PlaceHolderImages.find(img => img.id === 'model-glowing-skin');
+  const mainImg = PlaceHolderImages.find(img => img.id === 'facial-process');
 
   return (
     <div className="min-h-screen bg-background">
@@ -159,7 +156,7 @@ export default function LuxeSignatureFacialPage() {
               <span className="text-[10px] uppercase tracking-[0.6em] font-bold text-primary">The Philosophy</span>
               <h2 className="font-headline text-6xl md:text-7xl">More Than A <br /><span className="italic font-light">Facial.</span></h2>
               <p className="text-xl text-muted-foreground leading-relaxed font-light italic">
-                At Luxe Glow Premier, we believe the face is an architectural masterpiece that requires periodic refinement. The Luxe Signature Facial is not a one-size-fits-all treatment; it is a clinical sequence that adapts to your skin's unique intelligence.
+                At Luxe Glow Premier, we believe the face is an architectural masterpiece that requires periodic refinement. The Luxe Signature Facial is a clinical sequence that adapts to your skin's unique intelligence.
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 pt-6">
                  <div className="p-8 rounded-[2rem] bg-secondary/30 border border-black/5">
@@ -186,7 +183,7 @@ export default function LuxeSignatureFacialPage() {
         </div>
       </section>
 
-      {/* 3. The Ritual Journey (Sequential Steps) */}
+      {/* 3. The Ritual Journey */}
       <section className="py-48 bg-secondary/20">
         <div className="container mx-auto px-6 lg:px-12 text-center mb-32">
           <span className="text-[10px] uppercase tracking-[0.8em] font-bold text-primary mb-8 block">The Protocol</span>
@@ -220,7 +217,6 @@ export default function LuxeSignatureFacialPage() {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
                   </div>
-                  {/* Accent element */}
                   <div className={`absolute -z-10 w-64 h-64 bg-accent/5 rounded-full blur-3xl ${idx % 2 === 0 ? '-top-12 -right-12' : '-bottom-12 -left-12'}`} />
                 </div>
               </div>
@@ -270,18 +266,13 @@ export default function LuxeSignatureFacialPage() {
             </div>
           </div>
         </div>
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-accent/10 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/2" />
-        <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-primary/10 rounded-full blur-[120px] translate-y-1/2 -translate-x-1/2" />
       </section>
 
       {/* 5. Final CTA */}
-      <section className="py-40 bg-white">
-        <div className="container mx-auto px-6 lg:px-12 text-center">
+      <section className="py-40 bg-white text-center">
+        <div className="container mx-auto px-6 lg:px-12">
           <div className="max-w-4xl mx-auto space-y-16">
             <h2 className="font-headline text-6xl md:text-8xl leading-none">Your Path to <br /><span className="italic font-light">Radiance.</span></h2>
-            <p className="text-xl text-muted-foreground/80 font-light italic max-w-2xl mx-auto">
-              Ready to experience the ultimate in clinical skin intelligence? Private appointments are available daily at Estancia Mall.
-            </p>
             <div className="flex flex-col sm:flex-row justify-center gap-10">
               <Button asChild variant="outline" className="rounded-full border-black/10 px-16 h-16 uppercase tracking-[0.3em] text-[10px] font-bold transition-all duration-500 hover:bg-secondary">
                 <Link href="/signature">View Other Rituals</Link>
