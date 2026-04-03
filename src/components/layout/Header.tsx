@@ -15,7 +15,7 @@ export default function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 40);
+      setScrolled(window.scrollY > 60);
     };
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
@@ -33,20 +33,20 @@ export default function Header() {
   return (
     <header 
       className={cn(
-        "fixed top-0 w-full z-50 transition-all duration-1000 ease-in-out",
+        "fixed top-0 w-full z-[100] transition-all duration-1000 ease-in-out",
         scrolled 
-          ? "bg-white/80 backdrop-blur-2xl border-b border-black/5 py-4 shadow-sm" 
-          : "bg-transparent py-10"
+          ? "bg-white/80 backdrop-blur-3xl border-b border-black/5 py-6 shadow-sm" 
+          : "bg-transparent py-12"
       )}
     >
-      <nav className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 flex items-center justify-between" aria-label="Global">
+      <nav className="max-w-[1800px] mx-auto px-6 sm:px-12 lg:px-20 flex items-center justify-between" aria-label="Global">
         <div className="flex lg:flex-1">
-          <Link href="/" className="flex items-center gap-3 group" onClick={() => setMobileMenuOpen(false)}>
+          <Link href="/" className="flex items-center gap-4 group" onClick={() => setMobileMenuOpen(false)}>
             <div className="flex flex-col">
-              <span className="font-headline text-3xl tracking-[0.1em] uppercase font-light text-foreground transition-all duration-700 group-hover:tracking-[0.15em]">
-                {BRAND.name} <span className="italic font-normal">{BRAND.suffix}</span>
+              <span className="font-headline text-4xl tracking-[0.15em] uppercase font-light text-foreground transition-all duration-1000 group-hover:tracking-[0.2em]">
+                {BRAND.name} <span className="italic font-normal text-primary/60">{BRAND.suffix}</span>
               </span>
-              <span className="text-[9px] uppercase tracking-[0.45em] text-muted-foreground/80 mt-1 font-bold">{BRAND.type}</span>
+              <span className="text-[9px] uppercase tracking-[0.6em] text-muted-foreground/60 mt-2 font-bold">{BRAND.type}</span>
             </div>
           </Link>
         </div>
@@ -58,67 +58,67 @@ export default function Header() {
             onClick={() => setMobileMenuOpen(true)}
             aria-label="Toggle mobile menu"
           >
-            <Menu className="h-7 w-7 stroke-[1.25]" />
+            <Menu className="h-8 w-8 stroke-[1]" />
           </button>
         </div>
 
-        <div className="hidden lg:flex lg:gap-x-12">
+        <div className="hidden lg:flex lg:gap-x-16">
           {NAVIGATION.map((item) => (
             <Link
               key={item.name}
               href={item.href}
               className={cn(
-                "text-[11px] font-bold uppercase tracking-[0.35em] transition-all hover:text-primary relative py-2 group",
-                pathname === item.href ? "text-primary" : "text-muted-foreground/80"
+                "text-[10px] font-bold uppercase tracking-[0.5em] transition-all hover:text-primary relative py-3 group",
+                pathname === item.href ? "text-primary" : "text-muted-foreground/60"
               )}
             >
               {item.name}
               <span className={cn(
-                "absolute bottom-0 left-0 h-px bg-primary transition-all duration-700",
-                pathname === item.href ? "w-full opacity-30" : "w-0 group-hover:w-full opacity-50"
+                "absolute bottom-0 left-1/2 h-[0.5px] bg-accent transition-all duration-700 -translate-x-1/2",
+                pathname === item.href ? "w-full" : "w-0 group-hover:w-full"
               )} />
             </Link>
           ))}
         </div>
 
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <Button asChild variant="outline" className="rounded-full border-black/10 text-foreground hover:bg-black hover:text-white uppercase tracking-[0.3em] text-[10px] px-10 h-11 transition-all duration-700 font-bold shadow-sm">
-            <Link href="/contact">Enquire</Link>
+          <Button asChild variant="outline" className="rounded-full border-black/5 bg-white/50 backdrop-blur-md text-foreground hover:bg-foreground hover:text-white uppercase tracking-[0.4em] text-[10px] px-12 h-14 transition-all duration-1000 font-bold shadow-sm">
+            <Link href="/contact">Concierge</Link>
           </Button>
         </div>
       </nav>
 
-      {/* Mobile menu - Full Screen Editorial */}
+      {/* Mobile menu - Full Screen Cinematic */}
       <div className={cn(
-        "lg:hidden fixed inset-0 z-[100] bg-background/98 backdrop-blur-3xl transition-all duration-1000 ease-in-out",
-        mobileMenuOpen ? "opacity-100 translate-x-0" : "opacity-0 translate-x-full pointer-events-none"
+        "lg:hidden fixed inset-0 z-[200] bg-background/99 backdrop-blur-3xl transition-all duration-1000 ease-in-out",
+        mobileMenuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-full pointer-events-none"
       )}>
-        <div className="flex flex-col h-full px-8 py-12">
-          <div className="flex items-center justify-between mb-24">
+        <div className="flex flex-col h-full px-12 py-16">
+          <div className="flex items-center justify-between mb-32">
             <Link href="/" onClick={() => setMobileMenuOpen(false)}>
-              <span className="font-headline text-2xl tracking-[0.1em] uppercase text-foreground">
+              <span className="font-headline text-3xl tracking-[0.2em] uppercase text-foreground">
                 {BRAND.name} <span className="italic">{BRAND.suffix}</span>
               </span>
             </Link>
             <button
               type="button"
-              className="text-foreground p-2 transition-transform active:scale-90"
+              className="text-foreground p-3 transition-transform active:scale-90"
               onClick={() => setMobileMenuOpen(false)}
             >
-              <X className="h-8 w-8 stroke-[1.25]" />
+              <X className="h-10 w-10 stroke-[1]" />
             </button>
           </div>
           
-          <div className="flex flex-col gap-10 flex-grow">
+          <div className="flex flex-col gap-12 flex-grow">
             {NAVIGATION.map((item, i) => (
               <Link
                 key={item.name}
                 href={item.href}
                 className={cn(
-                  "text-4xl md:text-5xl font-headline italic text-foreground hover:text-primary transition-all duration-700",
-                  pathname === item.href && "text-primary translate-x-4"
+                  "text-5xl md:text-6xl font-headline italic text-foreground/40 hover:text-foreground transition-all duration-1000",
+                  pathname === item.href && "text-foreground translate-x-6"
                 )}
-                style={{ transitionDelay: `${i * 100}ms` }}
+                style={{ transitionDelay: `${i * 150}ms` }}
                 onClick={() => setMobileMenuOpen(false)}
               >
                 {item.name}
@@ -126,12 +126,12 @@ export default function Header() {
             ))}
           </div>
 
-          <div className="mt-auto pt-12 border-t border-black/5">
-            <Button asChild className="w-full rounded-full bg-foreground text-white h-20 uppercase tracking-[0.4em] text-xs font-bold shadow-2xl">
-              <Link href="/contact" onClick={() => setMobileMenuOpen(false)}>Reserve Appointment</Link>
+          <div className="mt-auto pt-16 border-t border-black/5">
+            <Button asChild className="w-full rounded-full bg-foreground text-white h-24 uppercase tracking-[0.5em] text-[11px] font-bold shadow-2xl">
+              <Link href="/contact" onClick={() => setMobileMenuOpen(false)}>Secure Your Ritual</Link>
             </Button>
-            <p className="text-center text-[10px] uppercase tracking-[0.5em] text-muted-foreground/60 mt-10 font-bold">
-              Luxe Glow Premier • Capitol Commons
+            <p className="text-center text-[9px] uppercase tracking-[0.6em] text-muted-foreground/40 mt-12 font-bold">
+              Luxe Glow Premier • Private Aesthetic Intelligence
             </p>
           </div>
         </div>

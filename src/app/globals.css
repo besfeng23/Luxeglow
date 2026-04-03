@@ -4,56 +4,39 @@
 
 @layer base {
   :root {
-    /* Refined Luxury Palette - Soft Ivory & Muted Bronze */
-    --background: 30 20% 98%; 
-    --foreground: 20 10% 15%;
+    /* Muted Royalty Palette - Ivory, Champagne, and Bronze */
+    --background: 30 25% 98%; 
+    --foreground: 20 12% 12%;
     
     --card: 0 0% 100%;
-    --card-foreground: 20 10% 15%;
+    --card-foreground: 20 12% 12%;
     
     --popover: 0 0% 100%;
-    --popover-foreground: 20 10% 15%;
+    --popover-foreground: 20 12% 12%;
     
-    /* Muted Taupe-Rose - Professional & Subtle */
-    --primary: 25 10% 45%; 
-    --primary-foreground: 30 20% 98%;
+    /* Muted Bronze-Taupe */
+    --primary: 25 12% 40%; 
+    --primary-foreground: 30 25% 98%;
     
-    /* Soft Champagne */
-    --secondary: 30 15% 94%;
-    --secondary-foreground: 20 10% 15%;
+    /* Softest Champagne */
+    --secondary: 30 20% 95%;
+    --secondary-foreground: 20 12% 12%;
     
-    --muted: 30 10% 96%;
-    --muted-foreground: 20 5% 45%;
+    --muted: 30 15% 97%;
+    --muted-foreground: 20 8% 40%;
     
-    /* Elegant Bronze/Sand */
-    --accent: 35 15% 82%;
-    --accent-foreground: 20 10% 15%;
+    /* Heraldic Gold-Sand */
+    --accent: 35 18% 78%;
+    --accent-foreground: 20 12% 12%;
     
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
     
-    --border: 30 10% 90%;
-    --input: 30 10% 90%;
-    --ring: 25 10% 45%;
+    --border: 30 15% 92%;
+    --input: 30 15% 92%;
+    --ring: 25 12% 40%;
     
-    --radius: 1.5rem;
-  }
-
-  .dark {
-    --background: 20 10% 10%;
-    --foreground: 30 20% 98%;
-    
-    --card: 20 10% 12%;
-    --card-foreground: 30 20% 98%;
-    
-    --primary: 35 15% 82%;
-    --primary-foreground: 20 10% 10%;
-    
-    --accent: 25 10% 45%;
-    --accent-foreground: 30 20% 98%;
-    
-    --border: 20 10% 20%;
-    --input: 20 10% 20%;
+    --radius: 2rem;
   }
 }
 
@@ -62,31 +45,23 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground font-body antialiased selection:bg-accent/30;
+    @apply bg-background text-foreground font-body antialiased selection:bg-accent/30 tracking-tight;
   }
   h1, h2, h3, h4, h5, h6 {
-    @apply font-headline tracking-tight leading-tight;
+    @apply font-headline tracking-tighter leading-[1.1];
   }
 }
 
 /* Luxury Utility Classes */
 .luxury-shadow {
-  box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 40px 80px -15px rgba(0, 0, 0, 0.03);
 }
 
 .text-balance {
   text-wrap: balance;
 }
 
-.animate-reveal {
-  animation: reveal 1.8s cubic-bezier(0.77, 0, 0.175, 1) forwards;
-}
-
-.animate-fade-in-up {
-  opacity: 0;
-  animation: fade-in-up 1.4s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-}
-
+/* Smooth, High-Prestige Reveal Animations */
 @keyframes reveal {
   0% {
     clip-path: inset(0 100% 0 0);
@@ -99,7 +74,7 @@
 @keyframes fade-in-up {
   0% {
     opacity: 0;
-    transform: translateY(40px);
+    transform: translateY(60px);
   }
   100% {
     opacity: 1;
@@ -107,7 +82,16 @@
   }
 }
 
-/* Embla Carousel Accessibility */
+.animate-reveal {
+  animation: reveal 2.2s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+}
+
+.animate-fade-in-up {
+  opacity: 0;
+  animation: fade-in-up 1.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* Embla Carousel Stability */
 .embla__viewport {
   overflow: hidden;
 }
@@ -117,4 +101,19 @@
 .embla__slide {
   flex: 0 0 100%;
   min-width: 0;
+}
+
+/* Custom Scrollbar for Luxury Desktop Experience */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: hsl(var(--background));
+}
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--accent) / 0.3);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--accent) / 0.6);
 }
