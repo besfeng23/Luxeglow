@@ -32,7 +32,7 @@ export default function Header() {
   return (
     <header 
       className={cn(
-        "fixed top-0 w-full z-[100] transition-all duration-[1500ms] ease-in-out",
+        "fixed top-0 w-full z-[100] transition-all duration-1500 ease-in-out",
         scrolled 
           ? "bg-white/85 backdrop-blur-3xl border-b border-black/5 py-6 shadow-sm" 
           : "bg-transparent py-12"
@@ -42,7 +42,7 @@ export default function Header() {
         <div className="flex lg:flex-1">
           <Link href="/" className="flex items-center gap-6 group" onClick={() => setMobileMenuOpen(false)}>
             <div className="flex flex-col">
-              <span className="font-headline text-3xl md:text-4xl tracking-[0.18em] uppercase font-light text-foreground transition-all duration-[1500ms] group-hover:tracking-[0.22em]">
+              <span className="font-headline text-3xl md:text-4xl tracking-[0.18em] uppercase font-light text-foreground transition-all duration-1500 group-hover:tracking-[0.22em]">
                 {BRAND.name} <span className="italic font-normal text-primary/50">{BRAND.suffix}</span>
               </span>
               <span className="text-[9px] uppercase tracking-[0.8em] text-muted-foreground/40 mt-3 font-bold">{BRAND.type}</span>
@@ -67,7 +67,7 @@ export default function Header() {
               key={item.name}
               href={item.href}
               className={cn(
-                "text-[10px] font-bold uppercase tracking-[0.6em] transition-all duration-[800ms] hover:text-primary relative py-4 group",
+                "text-[10px] font-bold uppercase tracking-[0.6em] transition-all duration-800 hover:text-primary relative py-4 group",
                 pathname === item.href ? "text-primary" : "text-muted-foreground/40"
               )}
             >
@@ -81,7 +81,7 @@ export default function Header() {
         </div>
 
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <Button asChild variant="outline" className="rounded-full border-black/5 bg-white/40 backdrop-blur-2xl text-foreground hover:bg-foreground hover:text-white uppercase tracking-[0.6em] text-[10px] px-12 xl:px-16 h-16 transition-all duration-[1200ms] font-bold shadow-sm">
+          <Button asChild variant="outline" className="rounded-full border-black/5 bg-white/40 backdrop-blur-2xl text-foreground hover:bg-foreground hover:text-white uppercase tracking-[0.6em] text-[10px] px-12 xl:px-16 h-16 transition-all duration-1200 font-bold shadow-sm">
             <Link href="/contact">Concierge</Link>
           </Button>
         </div>
@@ -89,7 +89,7 @@ export default function Header() {
 
       {/* Mobile menu - Cinematic Overlay */}
       <div className={cn(
-        "lg:hidden fixed inset-0 z-[200] bg-background/99 backdrop-blur-3xl transition-all duration-[1200ms] ease-in-out",
+        "lg:hidden fixed inset-0 z-[200] bg-background/99 backdrop-blur-3xl transition-all duration-1200 ease-in-out",
         mobileMenuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-full pointer-events-none"
       )}>
         <div className="flex flex-col h-full px-16 py-20">
@@ -114,7 +114,7 @@ export default function Header() {
                 key={item.name}
                 href={item.href}
                 className={cn(
-                  "text-5xl md:text-6xl font-headline italic text-foreground/30 hover:text-foreground transition-all duration-[1000ms] tracking-tight",
+                  "text-5xl md:text-6xl font-headline italic text-foreground/30 hover:text-foreground transition-all duration-1000 tracking-tight",
                   pathname === item.href && "text-foreground translate-x-6"
                 )}
                 style={{ transitionDelay: `${i * 120}ms` }}

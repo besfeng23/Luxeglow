@@ -6,7 +6,7 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { Sparkles, Gem, Star, Search, ArrowRight, X } from 'lucide-react';
+import { Search, Star, Gem } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const categories = [
@@ -126,7 +126,7 @@ export default function GalleryPage() {
                 key={cat}
                 onClick={() => setFilter(cat)}
                 className={cn(
-                  "text-[10px] uppercase tracking-[0.4em] font-bold transition-all duration-500 relative py-2",
+                  "text-[10px] uppercase tracking-[0.4em] font-bold transition-all duration-800 relative py-2",
                   filter === cat 
                     ? "text-primary after:absolute after:bottom-0 after:left-0 after:w-full after:h-px after:bg-primary" 
                     : "text-muted-foreground/60 hover:text-foreground"
@@ -152,7 +152,7 @@ export default function GalleryPage() {
                       item.span
                     )}
                   >
-                    <div className="absolute inset-0 z-10 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-700 flex flex-col items-center justify-center p-12 text-center text-white">
+                    <div className="absolute inset-0 z-10 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-1000 flex flex-col items-center justify-center p-12 text-center text-white">
                       <Search className="w-8 h-8 mb-6 opacity-60" />
                       <span className="text-[10px] uppercase tracking-[0.3em] font-bold mb-4">{item.category}</span>
                       <h4 className="font-headline text-3xl italic font-light">{item.title}</h4>
@@ -161,7 +161,7 @@ export default function GalleryPage() {
                       src={item.image} 
                       alt={item.title} 
                       fill 
-                      className="object-cover transition-transform duration-[3000ms] group-hover:scale-110"
+                      className="object-cover transition-transform duration-3000 group-hover:scale-110"
                       data-ai-hint={item.hint}
                     />
                     <div className="absolute bottom-10 left-10 z-20 md:hidden">
@@ -206,7 +206,7 @@ export default function GalleryPage() {
                  Our clinic is designed as a sanctuary of quiet prestige. From the desaturated palette to the discrete private suites, every element is considered.
                </p>
                <div className="pt-8">
-                 <Button asChild className="rounded-full bg-white text-foreground hover:bg-accent px-16 h-20 uppercase tracking-[0.4em] text-[11px] font-bold shadow-2xl transition-all duration-700">
+                 <Button asChild className="rounded-full bg-white text-foreground hover:bg-accent px-16 h-20 uppercase tracking-[0.4em] text-[11px] font-bold shadow-2xl transition-all duration-1000">
                     <Link href="/contact">Book Your Visit</Link>
                  </Button>
                </div>
@@ -233,10 +233,10 @@ export default function GalleryPage() {
           <div className="max-w-3xl mx-auto space-y-16">
             <h2 className="font-headline text-6xl md:text-8xl leading-none">Ready for Your <br /><span className="italic font-light">Glow?</span></h2>
             <div className="flex flex-col sm:flex-row justify-center gap-10">
-               <Button asChild variant="outline" className="rounded-full border-black/10 px-16 h-16 uppercase tracking-[0.3em] text-[10px] font-bold transition-all duration-500 hover:bg-secondary">
+               <Button asChild variant="outline" className="rounded-full border-black/10 px-16 h-16 uppercase tracking-[0.3em] text-[10px] font-bold transition-all duration-1000 hover:bg-secondary">
                  <Link href="/signature">Explore Rituals</Link>
                </Button>
-               <Button asChild className="rounded-full bg-foreground text-white hover:bg-black px-16 h-16 uppercase tracking-[0.3em] text-[10px] font-bold shadow-2xl transition-all duration-700">
+               <Button asChild className="rounded-full bg-foreground text-white hover:bg-black px-16 h-16 uppercase tracking-[0.3em] text-[10px] font-bold shadow-2xl transition-all duration-1000">
                  <Link href="/contact">Reserve Journey</Link>
                </Button>
             </div>

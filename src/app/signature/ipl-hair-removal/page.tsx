@@ -7,10 +7,7 @@ import { Button } from '@/components/ui/button';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { 
   Sparkles, 
-  ShieldCheck, 
   Clock, 
-  CheckCircle2, 
-  ArrowRight,
   Zap,
   Target,
   Smile,
@@ -22,6 +19,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { Card } from '@/components/ui/card';
 
 const iplAreas = [
   { area: "Underarms", price: "₱1,500", note: "Includes Whitening Treatment" },
@@ -161,7 +159,7 @@ export default function IPLHairRemovalPage() {
             <div className="lg:col-span-7">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 {iplAreas.map((item, idx) => (
-                  <div key={idx} className="bg-white p-10 rounded-[2.5rem] luxury-shadow border border-black/5 flex flex-col justify-between hover:-translate-y-1 transition-all duration-500">
+                  <div key={idx} className="bg-white p-10 rounded-[2.5rem] luxury-shadow border border-black/5 flex flex-col justify-between hover:-translate-y-1 transition-all duration-1000">
                     <div className="space-y-4">
                       <h5 className="text-[11px] uppercase tracking-widest font-bold text-foreground">{item.area}</h5>
                       <p className="text-xs text-muted-foreground italic font-light">{item.note}</p>
@@ -241,10 +239,10 @@ export default function IPLHairRemovalPage() {
               Ready to liberate yourself from traditional hair removal? Private consultations are available daily at Luxe Glow Premier.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-10 pt-10">
-              <Button asChild variant="outline" className="rounded-full border-white/20 text-white hover:bg-white hover:text-foreground px-16 h-16 uppercase tracking-[0.3em] text-[10px] font-bold transition-all duration-500">
+              <Button asChild variant="outline" className="rounded-full border-white/20 text-white hover:bg-white hover:text-foreground px-16 h-16 uppercase tracking-[0.3em] text-[10px] font-bold transition-all duration-1000">
                 <Link href="/signature">View Other Rituals</Link>
               </Button>
-              <Button asChild className="rounded-full bg-accent text-foreground hover:bg-white px-16 h-16 uppercase tracking-[0.3em] text-[10px] font-bold shadow-2xl transition-all duration-700">
+              <Button asChild className="rounded-full bg-accent text-foreground hover:bg-white px-16 h-16 uppercase tracking-[0.3em] text-[10px] font-bold shadow-2xl transition-all duration-1000">
                 <Link href="/contact">Book Consultation</Link>
               </Button>
             </div>

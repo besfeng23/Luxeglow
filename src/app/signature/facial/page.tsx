@@ -160,7 +160,7 @@ export default function LuxeSignatureFacialPage() {
                 src={facialSteps[7].image} 
                 alt="Signature Clinical Process" 
                 fill 
-                className="object-cover scale-105 group-hover:scale-100 transition-transform duration-[6000ms]"
+                className="object-cover scale-105 group-hover:scale-100 transition-transform duration-6000"
                 data-ai-hint="luxury facial"
               />
               <div className="absolute inset-0 border-[50px] border-white/10 rounded-[6rem] pointer-events-none" />
@@ -198,7 +198,7 @@ export default function LuxeSignatureFacialPage() {
                       src={step.image} 
                       alt={step.title} 
                       fill 
-                      className="object-cover group-hover:scale-110 transition-transform duration-[5000ms]"
+                      className="object-cover group-hover:scale-110 transition-transform duration-5000"
                       data-ai-hint="facial treatment"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
@@ -236,7 +236,7 @@ export default function LuxeSignatureFacialPage() {
                   </Button>
                 </div>
               </div>
-              <div className="p-16 rounded-[4rem] bg-accent text-foreground space-y-12 flex flex-col justify-between group hover:scale-[1.03] transition-all duration-[1200ms]">
+              <div className="p-16 rounded-[4rem] bg-accent text-foreground space-y-12 flex flex-col justify-between group hover:scale-[1.03] transition-all duration-1200">
                 <div className="space-y-6">
                   <Gem className="w-10 h-10 text-foreground/20" />
                   <h4 className="text-[13px] uppercase tracking-[0.5em] font-bold text-foreground">Privilege Series</h4>

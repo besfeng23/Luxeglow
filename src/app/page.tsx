@@ -3,10 +3,9 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { Star, ArrowRight, ShieldCheck, Gem, Phone, MessageCircle, MapPin, Sparkles } from 'lucide-react';
+import { ArrowRight, Gem, MapPin, ShieldCheck, Sparkles } from 'lucide-react';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { BRAND, CONTACT, HOME_CONTENT, SIGNATURE_TREATMENTS, TRUST_STATEMENTS } from '@/content/data';
-import { cn } from '@/lib/utils';
+import { BRAND, HOME_CONTENT, SIGNATURE_TREATMENTS, TRUST_STATEMENTS } from '@/content/data';
 
 export default function Home() {
   return (
@@ -46,9 +45,9 @@ export default function Home() {
                 <Link href="/contact">Book Your Journey</Link>
               </Button>
               
-              <Link href="/signature" className="group flex items-center gap-8 text-[11px] uppercase tracking-[0.4em] font-bold text-white hover:text-accent transition-all duration-500 py-4">
+              <Link href="/signature" className="group flex items-center gap-8 text-[11px] uppercase tracking-[0.4em] font-bold text-white hover:text-accent transition-all duration-1000 py-4">
                 Explore Ritual Menu 
-                <ArrowRight className="w-6 h-6 group-hover:translate-x-3 transition-transform duration-500" />
+                <ArrowRight className="w-6 h-6 group-hover:translate-x-3 transition-transform duration-1000" />
               </Link>
             </div>
           </div>
@@ -113,7 +112,7 @@ export default function Home() {
               return (
                 <div key={i} className="group relative bg-white rounded-[6rem] overflow-hidden luxury-shadow flex flex-col transition-all duration-1000 hover:-translate-y-4 border border-black/5">
                   <div className="relative aspect-[16/11] overflow-hidden">
-                    <Image src={imgUrl} alt={item.name} fill className="object-cover transition-transform duration-[4000ms] group-hover:scale-110" />
+                    <Image src={imgUrl} alt={item.name} fill className="object-cover transition-transform duration-4000 group-hover:scale-110" />
                     <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-1000" />
                     <div className="absolute bottom-10 left-10">
                       <span className="text-[10px] uppercase tracking-[0.4em] font-bold bg-white/95 backdrop-blur-xl px-8 py-4 rounded-full text-primary border border-black/5 shadow-2xl">{item.tagline}</span>
@@ -121,7 +120,7 @@ export default function Home() {
                   </div>
                   <div className="p-16 md:p-20 space-y-12">
                     <div className="flex justify-between items-start border-b border-black/5 pb-10">
-                      <h3 className="font-headline text-5xl text-foreground transition-colors duration-500 group-hover:text-primary leading-none">{item.name}</h3>
+                      <h3 className="font-headline text-5xl text-foreground transition-colors duration-1000 group-hover:text-primary leading-none">{item.name}</h3>
                       <div className="text-right">
                          <span className="text-2xl font-bold text-accent italic block">{item.price}</span>
                          <span className="text-[9px] uppercase tracking-widest font-bold text-muted-foreground/40 mt-1 block">Starting At</span>
@@ -141,8 +140,8 @@ export default function Home() {
           </div>
           
           <div className="mt-32 text-center">
-            <Link href="/services" className="inline-flex items-center gap-8 text-[12px] uppercase tracking-[0.6em] font-bold text-foreground border-b border-black/10 pb-6 hover:border-primary hover:text-primary transition-all group">
-              View Full Ritual Menu <ArrowRight className="w-6 h-6 group-hover:translate-x-4 transition-transform" />
+            <Link href="/services" className="inline-flex items-center gap-8 text-[12px] uppercase tracking-[0.6em] font-bold text-foreground border-b border-black/10 pb-6 hover:border-primary hover:text-primary transition-all duration-1000 group">
+              View Full Ritual Menu <ArrowRight className="w-6 h-6 group-hover:translate-x-4 transition-transform duration-1000" />
             </Link>
           </div>
         </div>

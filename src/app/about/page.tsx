@@ -40,7 +40,7 @@ export default function AboutPage() {
                 src={modelImg?.imageUrl || "https://picsum.photos/seed/lux6/600/800"} 
                 alt="Radiant model representing Luxe Glow skincare philosophy in Pasig" 
                 fill
-                className="object-cover transition-transform duration-[4000ms] group-hover:scale-105"
+                className="object-cover transition-transform duration-4000 group-hover:scale-105"
                 data-ai-hint="glowing skin"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-40" />

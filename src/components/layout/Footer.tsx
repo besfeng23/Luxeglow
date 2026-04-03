@@ -20,10 +20,10 @@ export default function Footer() {
               {BRAND.description}
             </p>
             <div className="flex gap-20 pt-10">
-              <Link href={CONTACT.socials.facebook} target="_blank" className="group flex items-center gap-6 text-[11px] uppercase tracking-[0.6em] font-bold text-foreground hover:text-primary transition-all duration-[1200ms]">
+              <Link href={CONTACT.socials.facebook} target="_blank" className="group flex items-center gap-6 text-[11px] uppercase tracking-[0.6em] font-bold text-foreground hover:text-primary transition-all duration-1200">
                 Facebook <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1 opacity-25 group-hover:opacity-100" />
               </Link>
-              <Link href={CONTACT.socials.instagram} target="_blank" className="group flex items-center gap-6 text-[11px] uppercase tracking-[0.6em] font-bold text-foreground hover:text-primary transition-all duration-[1200ms]">
+              <Link href={CONTACT.socials.instagram} target="_blank" className="group flex items-center gap-6 text-[11px] uppercase tracking-[0.6em] font-bold text-foreground hover:text-primary transition-all duration-1200">
                 Instagram <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1 opacity-25 group-hover:opacity-100" />
               </Link>
             </div>
