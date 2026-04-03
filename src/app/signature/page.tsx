@@ -21,6 +21,18 @@ const signatureTreatments = [
     link: "/signature/facial"
   },
   {
+    id: "ipl-hair-removal",
+    name: "IPL Hair Removal",
+    tagline: "The Silk Protocol",
+    price: "From ₱1,500",
+    package: "Unlimited Yearly Options",
+    description: "Achieve lasting smoothness with our advanced Intense Pulsed Light technology. Precise, safe, and effective hair reduction for those who demand the ultimate in care and convenience.",
+    benefits: ["Long-term Reduction", "Precision Targeting", "Painless Experience", "Skin Smoothing"],
+    image: "treatment-room",
+    accent: "bg-secondary/20",
+    link: "/signature/ipl-hair-removal"
+  },
+  {
     id: "carbon-laser",
     name: "Carbon Laser Ritual",
     tagline: "The Hollywood Porcelain Peel",
@@ -42,18 +54,6 @@ const signatureTreatments = [
     benefits: ["Even Skin Tone", "Hyper-pigmentation Cover", "Natural Rosy Glow", "Minimal Makeup Need"],
     image: "facial-treatment",
     accent: "bg-white",
-    link: "/contact"
-  },
-  {
-    id: "ipl-hair-removal",
-    name: "IPL Hair Removal",
-    tagline: "The Silk Protocol",
-    price: "From ₱1,500",
-    package: "Unlimited Yearly Options",
-    description: "Achieve lasting smoothness with our advanced Intense Pulsed Light technology. Precise, safe, and effective hair reduction for those who demand the ultimate in care and convenience.",
-    benefits: ["Long-term Reduction", "Precision Targeting", "Painless Experience", "Skin Smoothing"],
-    image: "treatment-room",
-    accent: "bg-secondary/20",
     link: "/contact"
   },
   {
