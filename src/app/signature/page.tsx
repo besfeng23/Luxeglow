@@ -17,7 +17,8 @@ const signatureTreatments = [
     description: "Our flagship experience. A meticulous multi-step journey designed for deep restoration and visible radiance. This treatment adapts to your skin's unique intelligence, using a combination of medical-grade technology and sensory care.",
     benefits: ["Deep Cellular Cleansing", "Diamond Peel Exfoliation", "Radiofrequency Tightening", "PDT Light Restoration"],
     image: "signature-facial",
-    accent: "bg-secondary/30"
+    accent: "bg-secondary/30",
+    link: "/signature/facial"
   },
   {
     id: "carbon-laser",
@@ -28,7 +29,8 @@ const signatureTreatments = [
     description: "An advanced laser treatment that targets the deepest layers of the skin to minimize pores, refine texture, and stimulate collagen production. Results are immediate: skin looks airbrushed and luminous with zero downtime.",
     benefits: ["Instant Pore Refinement", "Texture Smoothing", "Oil Control", "Collagen Induction"],
     image: "carbon-laser",
-    accent: "bg-foreground text-white"
+    accent: "bg-foreground text-white",
+    link: "/contact"
   },
   {
     id: "bb-glow",
@@ -39,7 +41,8 @@ const signatureTreatments = [
     description: "Wake up with a flawless, radiant complexion every single day. Our BB Glow and Blush treatments use safe, semi-permanent foundation and tinting to even out skin tone and add a natural, healthy flush.",
     benefits: ["Even Skin Tone", "Hyper-pigmentation Cover", "Natural Rosy Glow", "Minimal Makeup Need"],
     image: "facial-treatment",
-    accent: "bg-white"
+    accent: "bg-white",
+    link: "/contact"
   },
   {
     id: "ipl-hair-removal",
@@ -50,7 +53,8 @@ const signatureTreatments = [
     description: "Achieve lasting smoothness with our advanced Intense Pulsed Light technology. Precise, safe, and effective hair reduction for those who demand the ultimate in care and convenience.",
     benefits: ["Long-term Reduction", "Precision Targeting", "Painless Experience", "Skin Smoothing"],
     image: "treatment-room",
-    accent: "bg-secondary/20"
+    accent: "bg-secondary/20",
+    link: "/contact"
   },
   {
     id: "mesolipo",
@@ -61,7 +65,8 @@ const signatureTreatments = [
     description: "Targeted fat reduction and body refinement through precision micro-injections. Designed to address stubborn areas and enhance your natural silhouette with medical-grade safety.",
     benefits: ["Spot Fat Reduction", "Cellulite Improvement", "Body Contouring", "Quick Recovery"],
     image: "skincare-products",
-    accent: "bg-white"
+    accent: "bg-white",
+    link: "/contact"
   },
   {
     id: "wart-removal",
@@ -72,7 +77,8 @@ const signatureTreatments = [
     description: "Safe, effective, and clinical removal of skin imperfections. We use precise techniques to ensure clear results and healthy skin healing for a truly flawless finish.",
     benefits: ["Clinical Precision", "Safe Procedure", "Minimal Scarring", "Immediate Results"],
     image: "clinic-interior",
-    accent: "bg-secondary/40"
+    accent: "bg-secondary/40",
+    link: "/contact"
   }
 ];
 
@@ -153,7 +159,7 @@ export default function SignatureTreatmentsPage() {
                     <p className="text-sm font-bold tracking-wide text-primary">{item.package}</p>
                   </div>
                   <Button asChild className="rounded-full bg-foreground text-white hover:bg-black px-12 h-16 uppercase tracking-[0.3em] text-[10px] font-bold shadow-2xl transition-all duration-700 hover:scale-105">
-                    <Link href="/contact">Inquire Now</Link>
+                    <Link href={item.link}>Discover The Ritual</Link>
                   </Button>
                 </div>
               </div>
@@ -164,7 +170,7 @@ export default function SignatureTreatmentsPage() {
 
       {/* Experience High-Trust Section */}
       <section className="py-56 bg-foreground text-white overflow-hidden relative">
-        <div className="container mx-auto px-6 lg:px-12 relative z-10 text-center">
+        <div className="container mx-auto px-6 lg:px-12 text-center relative z-10">
           <div className="max-w-4xl mx-auto space-y-20">
             <ShieldCheck className="w-16 h-16 text-accent mx-auto animate-pulse" />
             <h2 className="font-headline text-6xl md:text-8xl italic font-light leading-tight">
