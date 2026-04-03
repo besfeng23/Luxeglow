@@ -31,10 +31,16 @@ export default function Footer() {
           <div className="md:col-span-2">
             <h3 className="text-[10px] font-bold uppercase tracking-[0.3em] mb-10 text-foreground">Navigation</h3>
             <ul className="space-y-5">
-              {['Home', 'Rituals', 'Signature', 'Signature', 'Gallery'].map((item) => (
-                <li key={item}>
-                  <Link href={`/${item.toLowerCase().replace(' ', '-')}`} className="text-sm font-light text-muted-foreground hover:text-foreground transition-all">
-                    {item}
+              {[
+                { name: 'Home', href: '/' },
+                { name: 'About', href: '/about' },
+                { name: 'Signature', href: '/signature' },
+                { name: 'Rituals', href: '/services' },
+                { name: 'Contact', href: '/contact' }
+              ].map((item) => (
+                <li key={item.name}>
+                  <Link href={item.href} className="text-sm font-light text-muted-foreground hover:text-foreground transition-all">
+                    {item.name}
                   </Link>
                 </li>
               ))}
@@ -43,13 +49,19 @@ export default function Footer() {
 
           {/* Services */}
           <div className="md:col-span-2">
-            <h3 className="text-[10px] font-bold uppercase tracking-[0.3em] mb-10 text-foreground">Signature</h3>
+            <h3 className="text-[10px] font-bold uppercase tracking-[0.3em] mb-10 text-foreground">Featured</h3>
             <ul className="space-y-5">
-              {['Signature Facial', 'Carbon Laser', 'BB Glow Ritual', 'IPL Removal', 'Mesolipo Sculpt'].map((item) => (
+              {[
+                'Luxe Signature Facial',
+                'Carbon Laser Ritual',
+                'BB Glow Ritual',
+                'IPL Hair Removal',
+                'Mesolipo Sculpt'
+              ].map((item) => (
                 <li key={item}>
-                  <span className="text-sm font-light text-muted-foreground">
+                  <Link href="/signature" className="text-sm font-light text-muted-foreground hover:text-foreground transition-all">
                     {item}
-                  </span>
+                  </Link>
                 </li>
               ))}
             </ul>
