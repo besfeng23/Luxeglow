@@ -17,27 +17,36 @@ export default function Header() {
     const handleScroll = () => {
       setScrolled(window.scrollY > 40);
     };
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  // Prevent scroll when mobile menu is open
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+  }, [mobileMenuOpen]);
 
   return (
     <header 
       className={cn(
-        "fixed top-0 w-full z-50 transition-all duration-700",
+        "fixed top-0 w-full z-50 transition-all duration-1000 ease-in-out",
         scrolled 
-          ? "bg-white/80 backdrop-blur-xl border-b border-black/5 py-4 shadow-sm" 
-          : "bg-transparent py-8"
+          ? "bg-white/80 backdrop-blur-2xl border-b border-black/5 py-4 shadow-sm" 
+          : "bg-transparent py-10"
       )}
     >
       <nav className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 flex items-center justify-between" aria-label="Global">
         <div className="flex lg:flex-1">
           <Link href="/" className="flex items-center gap-3 group" onClick={() => setMobileMenuOpen(false)}>
             <div className="flex flex-col">
-              <span className="font-headline text-2xl tracking-[0.1em] uppercase font-light text-foreground">
+              <span className="font-headline text-3xl tracking-[0.1em] uppercase font-light text-foreground transition-all duration-700 group-hover:tracking-[0.15em]">
                 {BRAND.name} <span className="italic font-normal">{BRAND.suffix}</span>
               </span>
-              <span className="text-[9px] uppercase tracking-[0.4em] text-muted-foreground/80 mt-1">{BRAND.type}</span>
+              <span className="text-[9px] uppercase tracking-[0.45em] text-muted-foreground/80 mt-1 font-bold">{BRAND.type}</span>
             </div>
           </Link>
         </div>
@@ -45,76 +54,88 @@ export default function Header() {
         <div className="flex lg:hidden">
           <button
             type="button"
-            className="text-foreground p-2"
+            className="text-foreground p-3 transition-transform active:scale-90"
             onClick={() => setMobileMenuOpen(true)}
+            aria-label="Toggle mobile menu"
           >
-            <Menu className="h-6 w-6 stroke-[1.5]" />
+            <Menu className="h-7 w-7 stroke-[1.25]" />
           </button>
         </div>
 
-        <div className="hidden lg:flex lg:gap-x-10">
+        <div className="hidden lg:flex lg:gap-x-12">
           {NAVIGATION.map((item) => (
             <Link
               key={item.name}
               href={item.href}
               className={cn(
-                "text-[11px] font-medium uppercase tracking-[0.25em] transition-all hover:text-primary relative py-1",
-                pathname === item.href ? "text-primary after:absolute after:bottom-0 after:left-0 after:w-full after:h-px after:bg-primary/30" : "text-muted-foreground"
+                "text-[11px] font-bold uppercase tracking-[0.35em] transition-all hover:text-primary relative py-2 group",
+                pathname === item.href ? "text-primary" : "text-muted-foreground/80"
               )}
             >
               {item.name}
+              <span className={cn(
+                "absolute bottom-0 left-0 h-px bg-primary transition-all duration-700",
+                pathname === item.href ? "w-full opacity-30" : "w-0 group-hover:w-full opacity-50"
+              )} />
             </Link>
           ))}
         </div>
 
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <Button asChild variant="outline" className="rounded-full border-black/10 text-foreground hover:bg-black hover:text-white uppercase tracking-[0.2em] text-[10px] px-8 h-10 transition-all duration-500">
+          <Button asChild variant="outline" className="rounded-full border-black/10 text-foreground hover:bg-black hover:text-white uppercase tracking-[0.3em] text-[10px] px-10 h-11 transition-all duration-700 font-bold shadow-sm">
             <Link href="/contact">Enquire</Link>
           </Button>
         </div>
       </nav>
 
-      {/* Mobile menu */}
-      {mobileMenuOpen && (
-        <div className="lg:hidden fixed inset-0 z-50 bg-background/98 backdrop-blur-2xl animate-in fade-in duration-500">
-          <div className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto px-8 py-8 sm:max-w-sm">
-            <div className="flex items-center justify-between mb-16">
-              <Link href="/" onClick={() => setMobileMenuOpen(false)}>
-                <span className="font-headline text-xl tracking-[0.1em] uppercase text-foreground">
-                  {BRAND.name} <span className="italic">{BRAND.suffix}</span>
-                </span>
-              </Link>
-              <button
-                type="button"
-                className="text-foreground p-2"
+      {/* Mobile menu - Full Screen Editorial */}
+      <div className={cn(
+        "lg:hidden fixed inset-0 z-[100] bg-background/98 backdrop-blur-3xl transition-all duration-1000 ease-in-out",
+        mobileMenuOpen ? "opacity-100 translate-x-0" : "opacity-0 translate-x-full pointer-events-none"
+      )}>
+        <div className="flex flex-col h-full px-8 py-12">
+          <div className="flex items-center justify-between mb-24">
+            <Link href="/" onClick={() => setMobileMenuOpen(false)}>
+              <span className="font-headline text-2xl tracking-[0.1em] uppercase text-foreground">
+                {BRAND.name} <span className="italic">{BRAND.suffix}</span>
+              </span>
+            </Link>
+            <button
+              type="button"
+              className="text-foreground p-2 transition-transform active:scale-90"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              <X className="h-8 w-8 stroke-[1.25]" />
+            </button>
+          </div>
+          
+          <div className="flex flex-col gap-10 flex-grow">
+            {NAVIGATION.map((item, i) => (
+              <Link
+                key={item.name}
+                href={item.href}
+                className={cn(
+                  "text-4xl md:text-5xl font-headline italic text-foreground hover:text-primary transition-all duration-700",
+                  pathname === item.href && "text-primary translate-x-4"
+                )}
+                style={{ transitionDelay: `${i * 100}ms` }}
                 onClick={() => setMobileMenuOpen(false)}
               >
-                <X className="h-6 w-6 stroke-[1.5]" />
-              </button>
-            </div>
-            <div className="flex flex-col gap-8">
-              {NAVIGATION.map((item) => (
-                <Link
-                  key={item.name}
-                  href={item.href}
-                  className={cn(
-                    "text-2xl font-headline italic text-foreground hover:text-primary transition-colors",
-                    pathname === item.href && "text-primary"
-                  )}
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  {item.name}
-                </Link>
-              ))}
-              <div className="mt-12">
-                <Button asChild className="w-full rounded-full bg-foreground text-white py-8 uppercase tracking-[0.3em] text-xs">
-                  <Link href="/contact" onClick={() => setMobileMenuOpen(false)}>Reserve Appointment</Link>
-                </Button>
-              </div>
-            </div>
+                {item.name}
+              </Link>
+            ))}
+          </div>
+
+          <div className="mt-auto pt-12 border-t border-black/5">
+            <Button asChild className="w-full rounded-full bg-foreground text-white h-20 uppercase tracking-[0.4em] text-xs font-bold shadow-2xl">
+              <Link href="/contact" onClick={() => setMobileMenuOpen(false)}>Reserve Appointment</Link>
+            </Button>
+            <p className="text-center text-[10px] uppercase tracking-[0.5em] text-muted-foreground/60 mt-10 font-bold">
+              Luxe Glow Premier • Capitol Commons
+            </p>
           </div>
         </div>
-      )}
+      </div>
     </header>
   );
 }
