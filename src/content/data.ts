@@ -33,8 +33,8 @@ export const CONTACT = {
 export const NAVIGATION = [
   { name: 'Home', href: '/' },
   { name: 'About', href: '/about' },
-  { name: 'Signature', href: '/signature' },
-  { name: 'Rituals', href: '/services' },
+  { name: 'Signature Rituals', href: '/signature' },
+  { name: 'The Menu', href: '/services' },
   { name: 'Gallery', href: '/gallery' },
   { name: 'Concierge', href: '/ai-recommendations' },
   { name: 'Contact', href: '/contact' },
@@ -61,19 +61,19 @@ export const TRUST_STATEMENTS = [
 export const HOME_CONTENT = {
   hero: {
     badge: CONTACT.shortAddress,
-    title: "Radiance",
-    titleItalic: "Refined.",
-    description: '"Experience the private sanctuary of Luxe Glow Premier, where clinical precision meets the art of quiet luxury and aesthetic intelligence."',
+    title: "The Art of",
+    titleItalic: "Radiance.",
+    description: '"Experience the private sanctuary of Luxe Glow Premier—where clinical precision meets the art of quiet luxury. We don\'t just treat skin; we curate perfection."',
     image: getImg('hero-main'),
   },
   positioning: {
     title: "A Sanctuary of",
-    titleItalic: "Elevated Rejuvenation",
-    quote: '"We believe beauty is an intimate journey of self-honor. Our philosophy centers on quiet prestige—delivering luminous results through clinical artistry."',
+    titleItalic: "Quiet Prestige",
+    quote: '"We believe beauty is an intimate journey of self-honor. Our philosophy centers on delivering luminous results through clinical artistry and absolute discretion."',
   },
   sequence: [
-    { step: "01", title: "Consultation", desc: "Private skin intelligence analysis with our aesthetic experts at Capitol Commons." },
-    { step: "02", title: "Purification", desc: "Deep double-cleansing and thermal steaming to prepare the clinical canvas." },
+    { step: "01", title: "Intelligence", desc: "Private skin analysis with our aesthetic experts to map your unique radiance journey." },
+    { step: "02", title: "Preparation", desc: "Meticulous clinical cleansing and thermal steaming to prepare the skin architecture." },
     { step: "03", title: "Refinement", desc: "Precision execution of your bespoke ritual using advanced medical-grade technology." },
     { step: "04", title: "Restoration", desc: "PDT Light Therapy and final SPF shielding for a luminous, protected finish." }
   ]
@@ -83,10 +83,10 @@ export const SIGNATURE_TREATMENTS = [
   {
     id: "signature-facial",
     name: "Luxe Signature Facial",
-    tagline: "The 10-Step Rejuvenation Ritual",
+    tagline: "The Definitive 10-Step Ritual",
     price: "₱3,500",
     package: "5 Sessions + 1 Complimentary",
-    description: "The definitive Luxe Glow experience. A multi-step sequence including Diamond Peel, Radiofrequency, and PDT Light Therapy.",
+    description: "Our flagship clinical experience. A multi-step sequence including Diamond Peel, Radiofrequency, and PDT Light Therapy tailored to your skin's intelligence.",
     benefits: ["Cellular Deep Cleansing", "Diamond Peel Exfoliation", "Radiofrequency Tightening", "PDT Light Restoration"],
     image: 'facial-process',
     link: "/signature/facial"
@@ -94,10 +94,10 @@ export const SIGNATURE_TREATMENTS = [
   {
     id: "carbon-laser",
     name: "Carbon Laser Ritual",
-    tagline: "Advanced Texture Refinement",
+    tagline: "The Hollywood Texture Peel",
     price: "₱4,500",
     package: "Buy 3 Get 1 Offer",
-    description: "The 'Hollywood Peel' for immediate porcelain-smooth skin. Superior pore minimization and texture correction.",
+    description: "Immediate porcelain-smooth skin. Combines advanced laser technology with our basic facial for superior pore architecture refinement.",
     benefits: ["Instant Pore Refinement", "Texture Smoothing", "Deep Exfoliation", "Collagen Induction"],
     image: 'laser-tech',
     link: "/contact"
@@ -105,11 +105,11 @@ export const SIGNATURE_TREATMENTS = [
   {
     id: "bb-glow",
     name: "BB Glow & Blush",
-    tagline: "The Semi-Permanent Canvas",
+    tagline: "Semi-Permanent Radiance",
     price: "From ₱2,500",
     package: "Radiant Bundle: ₱5,000",
-    description: "Wake up with a flawless complexion. Our pigment-infusion rituals provide a semi-permanent foundation and natural flush.",
-    benefits: ["Even Skin Tone", "Hyper-pigmentation Cover", "Natural Rosy Glow", "Minimal Makeup Lifestyle"],
+    description: "Wake up with a flawless, radiant complexion. Our pigment-infusion rituals provide a semi-permanent foundation and natural flush.",
+    benefits: ["Even Skin Tone", "Hyper-pigmentation Cover", "Natural Rosy Glow", "Zero Makeup Maintenance"],
     image: 'model-radiant',
     link: "/signature/bb-glow"
   },
@@ -119,8 +119,8 @@ export const SIGNATURE_TREATMENTS = [
     tagline: "Permanent Hair Reduction",
     price: "From ₱1,500",
     package: "Unlimited Yearly Privileges",
-    description: "Precision permanent hair reduction using light-based rituals. Includes specialized whitening protocols.",
-    benefits: ["Permanent Reduction", "Precision Area Targeting", "Painless Technology", "Underarm Whitening"],
+    description: "Precision hair reduction meeting clinical artistry. Includes specialized underarm whitening for complete skin confidence.",
+    benefits: ["Permanent Reduction", "Area Specific Precision", "Painless Technology", "Underarm Whitening"],
     image: 'treatment-suite',
     link: "/signature/ipl-hair-removal"
   }
