@@ -11,13 +11,15 @@ export default function Home() {
   const signatureImg = PlaceHolderImages.find(img => img.id === 'signature-facial');
   const glowImg = PlaceHolderImages.find(img => img.id === 'model-glowing-skin');
 
+  const fallbackHeroUrl = "https://picsum.photos/seed/lux1/1200/800";
+
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
       <section className="relative h-screen min-h-[700px] flex items-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src={heroImg?.imageUrl || ''}
+            src={heroImg?.imageUrl || fallbackHeroUrl}
             alt="Luxe Glow Premier Hero"
             fill
             className="object-cover brightness-[0.85]"
@@ -41,7 +43,7 @@ export default function Home() {
               Indulge in a world of royalty and wealth. Luxe Glow Premier offers exclusive treatments designed for those who demand nothing less than perfection.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button asChild size="lg" className="rounded-full bg-primary text-white hover:bg-primary/90 px-10 h-14 uppercase tracking-widest text-sm">
+              <Button asChild size="lg" className="rounded-full bg-primary text-white hover:bg-primary/90 px-10 h-14 uppercase tracking-widest text-sm font-bold shadow-xl shadow-primary/20">
                 <Link href="/contact">Book Your Consultation</Link>
               </Button>
               <Button asChild variant="outline" size="lg" className="rounded-full bg-white/20 backdrop-blur-md border-primary text-primary hover:bg-white px-10 h-14 uppercase tracking-widest text-sm">
@@ -59,7 +61,7 @@ export default function Home() {
             <div className="relative">
               <div className="relative aspect-[4/5] rounded-t-[100px] overflow-hidden luxury-shadow">
                 <Image
-                  src={glowImg?.imageUrl || ''}
+                  src={glowImg?.imageUrl || "https://picsum.photos/seed/lux6/600/800"}
                   alt="Philosophy"
                   fill
                   className="object-cover"
@@ -110,7 +112,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Featured Treatments Carousel Placeholder */}
+      {/* Featured Treatments Section */}
       <section className="py-24 bg-ivory">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-2xl mx-auto mb-16">
@@ -123,26 +125,29 @@ export default function Home() {
               {
                 title: 'Luxe Signature Facial',
                 desc: 'A comprehensive, rejuvenating 10-step facial including Diamond Peel and Radiofrequency.',
-                img: 'signature-facial',
+                imgId: 'signature-facial',
+                fallback: 'https://picsum.photos/seed/lux7/600/600',
                 price: '₱3,500'
               },
               {
                 title: 'Carbon Laser',
                 desc: 'Advanced skin rejuvenation for texture and pores, combined with our foundational facial.',
-                img: 'carbon-laser',
+                imgId: 'carbon-laser',
+                fallback: 'https://picsum.photos/seed/lux8/600/600',
                 price: '₱4,500'
               },
               {
                 title: 'BB Glow Treatment',
                 desc: 'Semi-permanent foundation ritual for a long-lasting radiant, even-toned complexion.',
-                img: 'facial-treatment',
+                imgId: 'facial-treatment',
+                fallback: 'https://picsum.photos/seed/lux2/600/800',
                 price: '₱3,000'
               }
             ].map((item, i) => (
               <Card key={i} className="overflow-hidden border-none luxury-shadow hover:-translate-y-2 transition-transform duration-300">
                 <div className="relative aspect-[4/3]">
                   <Image
-                    src={PlaceHolderImages.find(img => img.id === item.img)?.imageUrl || ''}
+                    src={PlaceHolderImages.find(img => img.id === item.imgId)?.imageUrl || item.fallback}
                     alt={item.title}
                     fill
                     className="object-cover"
@@ -164,7 +169,7 @@ export default function Home() {
           </div>
           
           <div className="mt-16 text-center">
-            <Button asChild variant="outline" className="rounded-full border-primary text-primary hover:bg-primary hover:text-white px-10">
+            <Button asChild variant="outline" className="rounded-full border-primary text-primary hover:bg-primary hover:text-white px-10 h-12 uppercase tracking-widest text-xs font-bold">
               <Link href="/services">View All Services</Link>
             </Button>
           </div>
@@ -185,7 +190,7 @@ export default function Home() {
             <p className="text-xl text-gray-400 mb-12 max-w-2xl mx-auto">
               Our AI Concierge uses advanced skin intelligence to recommend the perfect Luxe Glow Premier treatment based on your unique concerns.
             </p>
-            <Button asChild size="lg" className="rounded-full bg-accent text-foreground hover:bg-accent/90 px-12 h-16 uppercase tracking-widest text-sm font-bold">
+            <Button asChild size="lg" className="rounded-full bg-accent text-foreground hover:bg-accent/90 px-12 h-16 uppercase tracking-widest text-sm font-bold shadow-lg shadow-accent/20">
               <Link href="/ai-recommendations">Consult Your AI Concierge</Link>
             </Button>
           </div>
@@ -206,33 +211,33 @@ export default function Home() {
           </div>
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 h-[600px]">
-            <div className="col-span-2 row-span-2 relative overflow-hidden rounded-2xl group">
+            <div className="col-span-2 row-span-2 relative overflow-hidden rounded-2xl group luxury-shadow">
               <Image 
-                src={PlaceHolderImages.find(img => img.id === 'clinic-interior')?.imageUrl || ''} 
+                src={PlaceHolderImages.find(img => img.id === 'clinic-interior')?.imageUrl || "https://picsum.photos/seed/lux3/800/600"} 
                 alt="Clinic Interior" 
                 fill 
                 className="object-cover transition-transform duration-700 group-hover:scale-105" 
               />
             </div>
-            <div className="relative overflow-hidden rounded-2xl group">
+            <div className="relative overflow-hidden rounded-2xl group luxury-shadow">
               <Image 
-                src={PlaceHolderImages.find(img => img.id === 'treatment-room')?.imageUrl || ''} 
+                src={PlaceHolderImages.find(img => img.id === 'treatment-room')?.imageUrl || "https://picsum.photos/seed/lux5/800/600"} 
                 alt="Treatment Room" 
                 fill 
                 className="object-cover transition-transform duration-700 group-hover:scale-105" 
               />
             </div>
-            <div className="relative overflow-hidden rounded-2xl group">
+            <div className="relative overflow-hidden rounded-2xl group luxury-shadow">
               <Image 
-                src={PlaceHolderImages.find(img => img.id === 'skincare-products')?.imageUrl || ''} 
+                src={PlaceHolderImages.find(img => img.id === 'skincare-products')?.imageUrl || "https://picsum.photos/seed/lux4/600/400"} 
                 alt="Skincare" 
                 fill 
                 className="object-cover transition-transform duration-700 group-hover:scale-105" 
               />
             </div>
-            <div className="col-span-2 relative overflow-hidden rounded-2xl group">
+            <div className="col-span-2 relative overflow-hidden rounded-2xl group luxury-shadow">
               <Image 
-                src={heroImg?.imageUrl || ''} 
+                src={heroImg?.imageUrl || fallbackHeroUrl} 
                 alt="Luxe Glow Ritual" 
                 fill 
                 className="object-cover transition-transform duration-700 group-hover:scale-105" 
@@ -251,10 +256,10 @@ export default function Home() {
               Your Journey to <br />
               <span className="text-primary italic">Absolute Perfection</span> Begins Here
             </h2>
-            <p className="text-lg text-muted-foreground mb-12 max-w-xl mx-auto">
-              Visit us at Estancia Mall for a transformation that transcends the ordinary.
+            <p className="text-lg text-muted-foreground mb-12 max-w-xl mx-auto leading-relaxed">
+              Visit us at Estancia Mall for a transformation that transcends the ordinary and reveals your true inner glow.
             </p>
-            <Button asChild size="lg" className="rounded-full bg-primary text-white px-16 h-14 uppercase tracking-widest text-sm shadow-lg shadow-primary/20">
+            <Button asChild size="lg" className="rounded-full bg-primary text-white px-16 h-14 uppercase tracking-widest text-sm font-bold shadow-lg shadow-primary/20">
               <Link href="/contact">Book Appointment</Link>
             </Button>
           </div>
