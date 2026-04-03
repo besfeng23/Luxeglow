@@ -17,7 +17,6 @@ export default function Home() {
       
       {/* 1. Hero Section - Editorial Premium */}
       <section className="relative min-h-screen flex items-center pt-24 pb-16 overflow-hidden">
-        {/* Abstract Background Element */}
         <div className="absolute top-0 right-0 w-1/3 h-full bg-secondary/30 -z-10 translate-x-1/4 skew-x-12 hidden lg:block" />
         
         <div className="container mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
@@ -77,7 +76,6 @@ export default function Home() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-60" />
             </div>
             
-            {/* Elegant Floating Badge */}
             <div className="absolute -bottom-12 -right-12 hidden xl:flex w-64 h-64 bg-white/90 backdrop-blur-2xl rounded-full p-12 luxury-shadow border border-white flex-col items-center justify-center text-center gap-3 animate-fade-in-up delay-700">
               <Star className="w-6 h-6 text-accent fill-accent mb-2" />
               <p className="text-[10px] uppercase tracking-[0.3em] font-bold text-primary">Private Selection</p>
@@ -106,7 +104,7 @@ export default function Home() {
                 { icon: Sparkles, title: "Bespoke Protocols", desc: "Every treatment is tailored to your unique skin DNA and personal beauty aspirations." },
                 { icon: MapPin, title: "Elite Location", desc: "Located in the exclusive Estancia Mall, offering a discrete and peaceful haven." }
               ].map((item, i) => (
-                <div key={i} className="space-y-4 group">
+                <div key={i} className="space-y-4 group text-center">
                   <div className="w-12 h-12 rounded-full border border-black/5 flex items-center justify-center mx-auto text-primary group-hover:bg-primary group-hover:text-white transition-all duration-700">
                     <item.icon className="w-5 h-5" />
                   </div>
@@ -119,7 +117,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 3. Featured Treatments Section */}
+      {/* 3. Featured Rituals Section */}
       <section className="py-40 bg-secondary/20">
         <div className="container mx-auto px-6 lg:px-12">
           <div className="flex flex-col md:flex-row justify-between items-end mb-24 gap-12">
@@ -263,11 +261,11 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 6. Packages & Promos Preview */}
+      {/* 6. Curated Collections Section */}
       <section className="py-40 bg-white">
         <div className="container mx-auto px-6 lg:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-20 items-center">
-            <div className="lg:col-span-4 space-y-10">
+            <div className="lg:col-span-4 space-y-10 text-center lg:text-left">
               <span className="text-[10px] uppercase tracking-[0.5em] font-bold text-accent">Curated Offers</span>
               <h2 className="font-headline text-5xl md:text-6xl text-foreground leading-tight">
                 The Season <br />
@@ -316,7 +314,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 7. Why Choose Luxe Glow */}
+      {/* 7. Why Luxe Glow */}
       <section className="py-40 bg-secondary/10">
         <div className="container mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
           <div className="space-y-12">
@@ -352,7 +350,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 9. Book-now CTA Section */}
+      {/* 9. Final CTA */}
       <section className="py-40 bg-background relative overflow-hidden">
         <div className="container mx-auto px-6 lg:px-12 relative z-10">
           <div className="bg-white rounded-[4rem] p-16 md:p-32 text-center relative overflow-hidden luxury-shadow border border-black/5">
