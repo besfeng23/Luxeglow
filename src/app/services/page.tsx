@@ -1,4 +1,3 @@
-
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
@@ -69,65 +68,69 @@ export default function ServicesPage() {
   const serviceImg = PlaceHolderImages.find(img => img.id === 'treatment-room');
 
   return (
-    <div className="bg-white min-h-screen">
-      {/* Header */}
-      <section className="relative h-[50vh] min-h-[400px] flex items-center bg-foreground overflow-hidden">
+    <div className="bg-background min-h-screen">
+      {/* Header - Editorial Style */}
+      <section className="relative h-[70vh] flex items-center bg-foreground overflow-hidden">
         <div className="absolute inset-0 opacity-40">
           <Image
             src={serviceImg?.imageUrl || ''}
             alt="Services Header"
             fill
-            className="object-cover"
+            className="object-cover scale-110"
           />
         </div>
-        <div className="container mx-auto px-4 relative z-10 text-center">
-          <h1 className="font-headline text-5xl md:text-7xl text-white mb-6">Our <span className="text-primary italic">Rituals</span></h1>
-          <p className="text-gray-300 max-w-2xl mx-auto text-lg italic">"A curation of high-end aesthetic experiences designed for absolute perfection."</p>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-transparent" />
+        <div className="container mx-auto px-6 lg:px-12 relative z-10 text-center">
+          <span className="text-[10px] uppercase tracking-[0.6em] font-bold text-accent mb-8 block animate-fade-in-up">The Collection</span>
+          <h1 className="font-headline text-6xl md:text-9xl text-white mb-8 animate-fade-in-up delay-100">
+            Our <span className="italic font-light">Rituals</span>
+          </h1>
+          <p className="text-white/60 max-w-2xl mx-auto text-xl italic font-light animate-fade-in-up delay-200 leading-relaxed">
+            "A curation of high-end aesthetic experiences designed for absolute perfection and refined results."
+          </p>
         </div>
-        <div className="absolute bottom-0 left-0 w-full h-px gold-gradient" />
       </section>
 
-      {/* Services Grid */}
-      <section className="py-24 bg-ivory">
-        <div className="container mx-auto px-4">
+      {/* Rituals Menu */}
+      <section className="py-40">
+        <div className="container mx-auto px-6 lg:px-12">
           {services.map((category, idx) => (
-            <div key={idx} className="mb-24 last:mb-0">
-              <div className="flex items-center gap-4 mb-12">
-                <h2 className="font-headline text-3xl md:text-4xl text-foreground whitespace-nowrap">{category.category}</h2>
-                <div className="h-px w-full bg-primary/20" />
+            <div key={idx} className="mb-40 last:mb-0">
+              <div className="flex flex-col items-center mb-24">
+                <span className="text-[10px] uppercase tracking-[0.4em] font-bold text-accent mb-6">Selection 0{idx + 1}</span>
+                <h2 className="font-headline text-5xl md:text-6xl text-foreground text-center">{category.category}</h2>
+                <div className="h-px w-32 bg-accent/20 mt-10" />
               </div>
               
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
                 {category.items.map((service, sIdx) => (
-                  <div key={sIdx} className="bg-white rounded-3xl p-8 md:p-12 luxury-shadow border border-primary/5 hover:border-primary/20 transition-all group">
-                    <div className="flex flex-col md:flex-row justify-between gap-6 mb-8">
-                      <div>
-                        <div className="flex items-center gap-2 mb-2">
-                          <Star className="w-4 h-4 text-accent fill-accent" />
-                          <span className="text-[10px] uppercase tracking-[0.3em] font-bold text-primary">Luxe Glow Selection</span>
+                  <div key={sIdx} className="group flex flex-col justify-between h-full bg-white p-12 md:p-16 rounded-[3rem] luxury-shadow border border-black/5 hover:-translate-y-2 transition-all duration-700">
+                    <div>
+                      <div className="flex justify-between items-start mb-10">
+                        <Gem className="w-8 h-8 text-accent/40" />
+                        <div className="text-right">
+                          <div className="text-3xl font-headline text-foreground mb-1 italic">{service.price}</div>
+                          <div className="flex items-center justify-end text-[10px] text-muted-foreground gap-2 uppercase tracking-[0.2em]">
+                            <Clock className="w-3 h-3" /> {service.duration}
+                          </div>
                         </div>
-                        <h3 className="font-headline text-3xl text-foreground mb-4 group-hover:text-primary transition-colors">{service.name}</h3>
-                        <p className="text-muted-foreground leading-relaxed">{service.desc}</p>
                       </div>
-                      <div className="text-right shrink-0">
-                        <div className="text-2xl font-headline text-foreground mb-1">{service.price}</div>
-                        <div className="flex items-center justify-end text-xs text-muted-foreground gap-1 uppercase tracking-widest">
-                          <Clock className="w-3 h-3" /> {service.duration}
-                        </div>
+                      
+                      <h3 className="font-headline text-4xl text-foreground mb-6 group-hover:text-primary transition-colors leading-tight">{service.name}</h3>
+                      <p className="text-muted-foreground/80 leading-relaxed font-light text-lg mb-10">{service.desc}</p>
+                      
+                      <div className="grid grid-cols-2 gap-y-4 gap-x-8 mb-16 border-t border-black/5 pt-10">
+                        {service.features.map((feat, fIdx) => (
+                          <div key={fIdx} className="flex items-center gap-3 text-xs uppercase tracking-widest text-muted-foreground font-medium">
+                            <div className="w-1.5 h-1.5 rounded-full bg-accent" />
+                            {feat}
+                          </div>
+                        ))}
                       </div>
                     </div>
                     
-                    <div className="grid grid-cols-2 gap-4 mb-10">
-                      {service.features.map((feat, fIdx) => (
-                        <div key={fIdx} className="flex items-center gap-2 text-sm text-muted-foreground">
-                          <Check className="w-4 h-4 text-primary" />
-                          {feat}
-                        </div>
-                      ))}
-                    </div>
-                    
-                    <Button asChild className="w-full rounded-full bg-primary text-white h-12 uppercase tracking-widest text-xs font-bold">
-                      <Link href="/contact">Book Ritual <ArrowRight className="ml-2 w-4 h-4" /></Link>
+                    <Button asChild className="w-full rounded-full bg-foreground text-white h-14 uppercase tracking-[0.3em] text-[10px] font-bold shadow-xl transition-all duration-500 hover:bg-black">
+                      <Link href="/contact">Book This Ritual</Link>
                     </Button>
                   </div>
                 ))}
@@ -137,40 +140,48 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* Package Highlight */}
-      <section className="py-24 bg-foreground text-white relative overflow-hidden">
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-16">
-            <div className="relative w-full md:w-1/2 aspect-square rounded-[40px] overflow-hidden luxury-shadow border-4 border-accent/20">
-              <Image 
-                src={PlaceHolderImages.find(img => img.id === 'hero-main')?.imageUrl || ''} 
-                alt="Packages" 
-                fill 
-                className="object-cover"
-              />
+      {/* Package Highlight - Editorial Spread */}
+      <section className="py-40 bg-foreground text-white relative overflow-hidden">
+        <div className="container mx-auto px-6 lg:px-12 relative z-10">
+          <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-24">
+            <div className="relative group">
+              <div className="relative aspect-square rounded-[4rem] overflow-hidden luxury-shadow border-[12px] border-white/5">
+                <Image 
+                  src={PlaceHolderImages.find(img => img.id === 'hero-main')?.imageUrl || ''} 
+                  alt="Luxe Packages" 
+                  fill 
+                  className="object-cover transition-transform duration-1000 group-hover:scale-110"
+                />
+              </div>
+              <div className="absolute -top-10 -right-10 w-48 h-48 bg-accent rounded-full flex items-center justify-center p-8 text-center text-foreground luxury-shadow rotate-12 group-hover:rotate-0 transition-transform duration-700">
+                <p className="font-headline italic text-xl leading-tight">Seasonal Collections</p>
+              </div>
             </div>
-            <div className="w-full md:w-1/2 space-y-8">
-              <h2 className="font-headline text-4xl md:text-5xl">Seasonal <span className="text-accent italic">Packages</span></h2>
-              <p className="text-gray-400 text-lg leading-relaxed">
-                Elevate your experience with our curated collections. From Bridal Showers to Holiday Glow packages, we offer combined treatments for a truly transformative journey.
+            <div className="space-y-12">
+              <span className="text-[10px] uppercase tracking-[0.6em] font-bold text-accent">Curated Spreads</span>
+              <h2 className="font-headline text-6xl md:text-8xl leading-none">The <span className="italic font-light">Collections</span></h2>
+              <p className="text-white/50 text-xl font-light leading-relaxed">
+                Elevate your journey with our meticulously designed sequences. From the Bridal Radiance collection to Private Boutique events.
               </p>
-              <div className="space-y-4">
-                <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 rounded-full bg-accent/20 flex items-center justify-center">
-                    <Gem className="w-4 h-4 text-accent" />
+              <div className="space-y-8">
+                <div className="flex items-center gap-6 group">
+                  <div className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center group-hover:bg-accent group-hover:border-accent transition-all duration-500">
+                    <Gem className="w-4 h-4 text-accent group-hover:text-foreground" />
                   </div>
-                  <span className="font-semibold">Bridal Glow Collection</span>
+                  <span className="text-[11px] uppercase tracking-[0.3em] font-bold">Bridal Glow Collection</span>
                 </div>
-                <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 rounded-full bg-accent/20 flex items-center justify-center">
-                    <Sparkles className="w-4 h-4 text-accent" />
+                <div className="flex items-center gap-6 group">
+                  <div className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center group-hover:bg-accent group-hover:border-accent transition-all duration-500">
+                    <Sparkles className="w-4 h-4 text-accent group-hover:text-foreground" />
                   </div>
-                  <span className="font-semibold">BFF Beauty Spree</span>
+                  <span className="text-[11px] uppercase tracking-[0.3em] font-bold">The Socialite Series</span>
                 </div>
               </div>
-              <Button asChild variant="outline" className="rounded-full border-accent text-accent hover:bg-accent hover:text-foreground px-10 h-14 uppercase tracking-widest text-sm font-bold">
-                <Link href="/promos">Explore Packages</Link>
-              </Button>
+              <div className="pt-10">
+                <Button asChild variant="outline" className="rounded-full border-white/20 text-white hover:bg-white hover:text-foreground px-16 h-16 uppercase tracking-[0.3em] text-[10px] font-bold transition-all duration-500">
+                  <Link href="/promos">Enquire About Packages</Link>
+                </Button>
+              </div>
             </div>
           </div>
         </div>

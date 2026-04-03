@@ -1,67 +1,59 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    /* Ivory Pearl Background */
+    /* Refined Luxury Palette - Soft Ivory & Muted Bronze */
     --background: 30 20% 98%; 
-    --foreground: 0 0% 20%;
+    --foreground: 20 10% 15%;
     
     --card: 0 0% 100%;
-    --card-foreground: 0 0% 20%;
+    --card-foreground: 20 10% 15%;
     
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 20%;
+    --popover-foreground: 20 10% 15%;
     
-    /* Muted Dusty Rose */
-    --primary: 345 18% 66%; 
+    /* Muted Taupe-Rose - Professional & Subtle */
+    --primary: 25 10% 45%; 
     --primary-foreground: 30 20% 98%;
     
-    /* Soft Secondary Nude */
-    --secondary: 20 15% 92%;
-    --secondary-foreground: 0 0% 20%;
+    /* Soft Champagne */
+    --secondary: 30 15% 94%;
+    --secondary-foreground: 20 10% 15%;
     
-    --muted: 20 10% 95%;
-    --muted-foreground: 0 0% 45%;
+    --muted: 30 10% 96%;
+    --muted-foreground: 20 5% 45%;
     
-    /* Restrained Warm Gold */
-    --accent: 39 34% 73%;
-    --accent-foreground: 0 0% 20%;
+    /* Elegant Bronze/Sand */
+    --accent: 35 15% 82%;
+    --accent-foreground: 20 10% 15%;
     
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
     
-    --border: 39 15% 90%;
-    --input: 39 15% 90%;
-    --ring: 345 18% 66%;
+    --border: 30 10% 90%;
+    --input: 30 10% 90%;
+    --ring: 25 10% 45%;
     
-    --radius: 0.75rem;
-    
-    --chart-1: 345 18% 66%;
-    --chart-2: 39 34% 73%;
-    --chart-3: 0 0% 20%;
-    --chart-4: 20 15% 92%;
-    --chart-5: 30 20% 98%;
+    --radius: 0.5rem;
   }
 
   .dark {
-    /* Using a dark charcoal theme for luxury contrast */
-    --background: 0 0% 10%;
+    --background: 20 10% 10%;
     --foreground: 30 20% 98%;
     
-    --card: 0 0% 12%;
+    --card: 20 10% 12%;
     --card-foreground: 30 20% 98%;
     
-    --primary: 345 18% 66%;
-    --primary-foreground: 30 20% 98%;
+    --primary: 35 15% 82%;
+    --primary-foreground: 20 10% 10%;
     
-    --accent: 39 34% 73%;
-    --accent-foreground: 0 0% 10%;
+    --accent: 25 10% 45%;
+    --accent-foreground: 30 20% 98%;
     
-    --border: 0 0% 20%;
-    --input: 0 0% 20%;
+    --border: 20 10% 20%;
+    --input: 20 10% 20%;
   }
 }
 
@@ -70,25 +62,41 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground font-body antialiased selection:bg-primary/20;
+    @apply bg-background text-foreground font-body antialiased selection:bg-accent/30;
   }
   h1, h2, h3, h4, h5, h6 {
-    @apply font-headline;
+    @apply font-headline tracking-tight;
   }
 }
 
+/* Luxury Utility Classes */
 .luxury-shadow {
-  box-shadow: 0 10px 40px -10px rgba(185, 156, 164, 0.15);
+  box-shadow: 0 20px 50px -12px rgba(0, 0, 0, 0.05);
 }
 
-.gold-gradient {
-  background: linear-gradient(135deg, #D6C29F 0%, #E8DAC2 50%, #D6C29F 100%);
+.editorial-mask {
+  mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
 }
 
-.text-gold {
-  color: #D6C29F;
+.glass-morphism {
+  @apply bg-white/70 backdrop-blur-md border border-white/20;
 }
 
-.bg-ivory {
-  background-color: #F5EDED;
+.text-balance {
+  text-wrap: balance;
+}
+
+.letter-spacing-widest {
+  letter-spacing: 0.25em;
+}
+
+.gold-shimmer {
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  background-size: 200% 100%;
+  animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
 }
