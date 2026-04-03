@@ -33,18 +33,6 @@ const signatureTreatments = [
     link: "/signature/ipl-hair-removal"
   },
   {
-    id: "carbon-laser",
-    name: "Carbon Laser Ritual",
-    tagline: "The Hollywood Porcelain Peel",
-    price: "₱4,500",
-    package: "Promo: Buy 3 Get 1",
-    description: "An advanced laser treatment that targets the deepest layers of the skin to minimize pores, refine texture, and stimulate collagen production. Results are immediate: skin looks airbrushed and luminous with zero downtime.",
-    benefits: ["Instant Pore Refinement", "Texture Smoothing", "Oil Control", "Collagen Induction"],
-    image: "carbon-laser",
-    accent: "bg-foreground text-white",
-    link: "/contact"
-  },
-  {
     id: "bb-glow",
     name: "BB Glow & Blush",
     tagline: "The Semi-Permanent Canvas",
@@ -54,6 +42,18 @@ const signatureTreatments = [
     benefits: ["Even Skin Tone", "Hyper-pigmentation Cover", "Natural Rosy Glow", "Minimal Makeup Need"],
     image: "facial-treatment",
     accent: "bg-white",
+    link: "/signature/bb-glow"
+  },
+  {
+    id: "carbon-laser",
+    name: "Carbon Laser Ritual",
+    tagline: "The Hollywood Porcelain Peel",
+    price: "₱4,500",
+    package: "Promo: Buy 3 Get 1",
+    description: "An advanced laser treatment that targets the deepest layers of the skin to minimize pores, refine texture, and stimulate collagen production. Results are immediate: skin looks airbrushed and luminous with zero downtime.",
+    benefits: ["Instant Pore Refinement", "Texture Smoothing", "Oil Control", "Collagen Induction"],
+    image: "carbon-laser",
+    accent: "bg-foreground text-white",
     link: "/contact"
   },
   {
