@@ -1,0 +1,53 @@
+
+{
+  "placeholderImages": [
+    {
+      "id": "hero-main",
+      "description": "Luxurious spa interior with soft lighting and elegant decor",
+      "imageUrl": "https://picsum.photos/seed/lux1/1200/800",
+      "imageHint": "luxury spa"
+    },
+    {
+      "id": "facial-treatment",
+      "description": "Professional facial treatment being performed in a clean clinic environment",
+      "imageUrl": "https://picsum.photos/seed/lux2/600/800",
+      "imageHint": "facial treatment"
+    },
+    {
+      "id": "clinic-interior",
+      "description": "Modern and elegant clinic reception area",
+      "imageUrl": "https://picsum.photos/seed/lux3/800/600",
+      "imageHint": "aesthetic clinic"
+    },
+    {
+      "id": "skincare-products",
+      "description": "Premium skincare products on a marble surface",
+      "imageUrl": "https://picsum.photos/seed/lux4/600/400",
+      "imageHint": "luxury skincare"
+    },
+    {
+      "id": "treatment-room",
+      "description": "Serene treatment room with high-end equipment",
+      "imageUrl": "https://picsum.photos/seed/lux5/800/600",
+      "imageHint": "treatment room"
+    },
+    {
+      "id": "model-glowing-skin",
+      "description": "A woman with radiant, clear skin smiling softly",
+      "imageUrl": "https://picsum.photos/seed/lux6/600/800",
+      "imageHint": "glowing skin"
+    },
+    {
+      "id": "signature-facial",
+      "description": "Close up of a luxury signature facial process",
+      "imageUrl": "https://picsum.photos/seed/lux7/600/600",
+      "imageHint": "luxury facial"
+    },
+    {
+      "id": "carbon-laser",
+      "description": "Advanced laser treatment equipment in a medical spa",
+      "imageUrl": "https://picsum.photos/seed/lux8/600/600",
+      "imageHint": "laser skin"
+    }
+  ]
+}
