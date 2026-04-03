@@ -91,18 +91,6 @@
   animation: fade-in-up 1.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
-/* Embla Carousel Stability */
-.embla__viewport {
-  overflow: hidden;
-}
-.embla__container {
-  display: flex;
-}
-.embla__slide {
-  flex: 0 0 100%;
-  min-width: 0;
-}
-
 /* Custom Scrollbar for Luxury Desktop Experience */
 ::-webkit-scrollbar {
   width: 6px;
