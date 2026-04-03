@@ -7,6 +7,7 @@ import { Button } from '@/components/ui/button';
 import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Sparkles, Gem, Star, Search, ArrowRight, X } from 'lucide-react';
+import { cn } from '@/lib/utils';
 
 const categories = [
   "All Rituals",
@@ -93,7 +94,6 @@ const galleryItems = [
 
 export default function GalleryPage() {
   const [filter, setFilter] = useState("All Rituals");
-  const [selectedImage, setSelectedImage] = useState<typeof galleryItems[0] | null>(null);
 
   const filteredItems = galleryItems.filter(item => 
     filter === "All Rituals" || item.category === filter

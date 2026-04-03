@@ -6,16 +6,7 @@ import { usePathname } from 'next/navigation';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
-
-const navigation = [
-  { name: 'Home', href: '/' },
-  { name: 'About', href: '/about' },
-  { name: 'Signature', href: '/signature' },
-  { name: 'Rituals', href: '/services' },
-  { name: 'Gallery', href: '/gallery' },
-  { name: 'Concierge', href: '/ai-recommendations' },
-  { name: 'Contact', href: '/contact' },
-];
+import { BRAND, NAVIGATION } from '@/content/data';
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -41,12 +32,12 @@ export default function Header() {
     >
       <nav className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 flex items-center justify-between" aria-label="Global">
         <div className="flex lg:flex-1">
-          <Link href="/" className="flex items-center gap-3 group">
+          <Link href="/" className="flex items-center gap-3 group" onClick={() => setMobileMenuOpen(false)}>
             <div className="flex flex-col">
               <span className="font-headline text-2xl tracking-[0.1em] uppercase font-light text-foreground">
-                Luxe Glow <span className="italic font-normal">Premier</span>
+                {BRAND.name} <span className="italic font-normal">{BRAND.suffix}</span>
               </span>
-              <span className="text-[9px] uppercase tracking-[0.4em] text-muted-foreground/80 mt-1">Private Aesthetic Clinic</span>
+              <span className="text-[9px] uppercase tracking-[0.4em] text-muted-foreground/80 mt-1">{BRAND.type}</span>
             </div>
           </Link>
         </div>
@@ -62,7 +53,7 @@ export default function Header() {
         </div>
 
         <div className="hidden lg:flex lg:gap-x-10">
-          {navigation.map((item) => (
+          {NAVIGATION.map((item) => (
             <Link
               key={item.name}
               href={item.href}
@@ -90,7 +81,7 @@ export default function Header() {
             <div className="flex items-center justify-between mb-16">
               <Link href="/" onClick={() => setMobileMenuOpen(false)}>
                 <span className="font-headline text-xl tracking-[0.1em] uppercase text-foreground">
-                  Luxe Glow <span className="italic">Premier</span>
+                  {BRAND.name} <span className="italic">{BRAND.suffix}</span>
                 </span>
               </Link>
               <button
@@ -102,7 +93,7 @@ export default function Header() {
               </button>
             </div>
             <div className="flex flex-col gap-8">
-              {navigation.map((item) => (
+              {NAVIGATION.map((item) => (
                 <Link
                   key={item.name}
                   href={item.href}

@@ -1,5 +1,6 @@
 import Link from 'next/link';
-import { Facebook, Instagram, Mail, MapPin, Phone, Star, ArrowUpRight } from 'lucide-react';
+import { Facebook, Instagram, ArrowUpRight } from 'lucide-react';
+import { BRAND, CONTACT, NAVIGATION, SIGNATURE_TREATMENTS } from '@/content/data';
 
 export default function Footer() {
   return (
@@ -10,18 +11,18 @@ export default function Footer() {
           <div className="md:col-span-5">
             <div className="flex flex-col mb-10">
               <span className="font-headline text-3xl tracking-[0.1em] uppercase font-light text-foreground">
-                Luxe Glow <span className="italic font-normal">Premier</span>
+                {BRAND.name} <span className="italic font-normal">{BRAND.suffix}</span>
               </span>
-              <span className="text-[10px] uppercase tracking-[0.5em] text-muted-foreground/60 mt-2">Private Aesthetic Clinic</span>
+              <span className="text-[10px] uppercase tracking-[0.5em] text-muted-foreground/60 mt-2">{BRAND.type}</span>
             </div>
             <p className="text-lg text-muted-foreground/70 leading-relaxed mb-12 max-w-md font-light">
-              Redefining luxury aesthetics through medical-grade precision and a refined, editorial approach to beauty.
+              {BRAND.description}
             </p>
             <div className="flex gap-10">
-              <Link href="https://facebook.com" className="group flex items-center gap-2 text-[10px] uppercase tracking-widest font-bold text-foreground hover:text-primary transition-colors">
+              <Link href={CONTACT.socials.facebook} className="group flex items-center gap-2 text-[10px] uppercase tracking-widest font-bold text-foreground hover:text-primary transition-colors">
                 Facebook <ArrowUpRight className="w-3 h-3 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </Link>
-              <Link href="https://instagram.com" className="group flex items-center gap-2 text-[10px] uppercase tracking-widest font-bold text-foreground hover:text-primary transition-colors">
+              <Link href={CONTACT.socials.instagram} className="group flex items-center gap-2 text-[10px] uppercase tracking-widest font-bold text-foreground hover:text-primary transition-colors">
                 Instagram <ArrowUpRight className="w-3 h-3 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </Link>
             </div>
@@ -31,13 +32,7 @@ export default function Footer() {
           <div className="md:col-span-2">
             <h3 className="text-[10px] font-bold uppercase tracking-[0.3em] mb-10 text-foreground">Navigation</h3>
             <ul className="space-y-5">
-              {[
-                { name: 'Home', href: '/' },
-                { name: 'About', href: '/about' },
-                { name: 'Signature', href: '/signature' },
-                { name: 'Rituals', href: '/services' },
-                { name: 'Contact', href: '/contact' }
-              ].map((item) => (
+              {NAVIGATION.slice(0, 5).map((item) => (
                 <li key={item.name}>
                   <Link href={item.href} className="text-sm font-light text-muted-foreground hover:text-foreground transition-all">
                     {item.name}
@@ -51,16 +46,10 @@ export default function Footer() {
           <div className="md:col-span-2">
             <h3 className="text-[10px] font-bold uppercase tracking-[0.3em] mb-10 text-foreground">Featured</h3>
             <ul className="space-y-5">
-              {[
-                'Luxe Signature Facial',
-                'Carbon Laser Ritual',
-                'BB Glow Ritual',
-                'IPL Hair Removal',
-                'Mesolipo Sculpt'
-              ].map((item) => (
-                <li key={item}>
-                  <Link href="/signature" className="text-sm font-light text-muted-foreground hover:text-foreground transition-all">
-                    {item}
+              {SIGNATURE_TREATMENTS.map((item) => (
+                <li key={item.name}>
+                  <Link href={item.link} className="text-sm font-light text-muted-foreground hover:text-foreground transition-all">
+                    {item.name}
                   </Link>
                 </li>
               ))}
@@ -73,15 +62,15 @@ export default function Footer() {
             <ul className="space-y-8 text-sm font-light text-muted-foreground">
               <li className="flex flex-col gap-2">
                 <span className="text-[10px] uppercase tracking-widest text-accent font-bold">Location</span>
-                <span className="leading-relaxed">Estancia Mall, 3F East Wing,<br />Capitol Commons, Pasig City</span>
+                <span className="leading-relaxed">{CONTACT.address}</span>
               </li>
               <li className="flex flex-col gap-2">
                 <span className="text-[10px] uppercase tracking-widest text-accent font-bold">Enquiries</span>
-                <span>+63 998 936 8395</span>
+                <span>{CONTACT.phone}</span>
               </li>
               <li className="flex flex-col gap-2">
                 <span className="text-[10px] uppercase tracking-widest text-accent font-bold">Digital</span>
-                <span className="truncate">luxeglowbeautylounge@gmail.com</span>
+                <span className="truncate">{CONTACT.email}</span>
               </li>
             </ul>
           </div>
@@ -89,7 +78,7 @@ export default function Footer() {
 
         <div className="pt-12 border-t border-black/5 flex flex-col md:flex-row justify-between items-center gap-8">
           <p className="text-[10px] uppercase tracking-[0.3em] text-muted-foreground/60">
-            © {new Date().getFullYear()} Luxe Glow Premier • All Rights Reserved
+            © {new Date().getFullYear()} {BRAND.fullName} • All Rights Reserved
           </p>
           <div className="flex space-x-12 text-[10px] uppercase tracking-[0.3em] text-muted-foreground/60">
             <Link href="#" className="hover:text-foreground transition-colors">Privacy</Link>
