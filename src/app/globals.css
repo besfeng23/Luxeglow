@@ -4,7 +4,7 @@
 
 @layer base {
   :root {
-    /* Quiet Luxury Palette - Ivory, Champagne, and Muted Bronze */
+    /* Refined Quiet Luxury Palette - Ivory, Champagne, and Muted Bronze */
     --background: 30 25% 98%; 
     --foreground: 20 12% 12%;
     
@@ -14,8 +14,8 @@
     --popover: 0 0% 100%;
     --popover-foreground: 20 12% 12%;
     
-    /* Muted Bronze-Taupe for Primary text and depth */
-    --primary: 25 12% 35%; 
+    /* Muted Bronze-Taupe for Primary text and depth - slightly darkened for better contrast */
+    --primary: 25 12% 28%; 
     --primary-foreground: 30 25% 98%;
     
     /* Softest Champagne for backgrounds */
@@ -23,17 +23,17 @@
     --secondary-foreground: 20 12% 12%;
     
     --muted: 30 15% 96%;
-    --muted-foreground: 20 8% 45%;
+    --muted-foreground: 20 10% 35%; /* Darkened for better readability */
     
     /* Elegant Champagne Gold for highlights */
-    --accent: 35 15% 75%;
+    --accent: 35 15% 70%; /* Slightly more saturated/darker for contrast */
     --accent-foreground: 20 12% 12%;
     
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
     
-    --border: 30 10% 90%;
-    --input: 30 10% 90%;
+    --border: 30 10% 88%;
+    --input: 30 10% 88%;
     --ring: 25 12% 35%;
     
     --radius: 2rem;
@@ -54,7 +54,7 @@
 
 /* Luxury UI Utility Classes */
 .luxury-shadow {
-  box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.05), 0 18px 36px -18px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.04), 0 18px 36px -18px rgba(0, 0, 0, 0.04);
 }
 
 .text-balance {
@@ -82,7 +82,7 @@
 @keyframes fade-in-up {
   0% {
     opacity: 0;
-    transform: translateY(60px);
+    transform: translateY(40px);
   }
   100% {
     opacity: 1;
@@ -91,12 +91,12 @@
 }
 
 .animate-reveal {
-  animation: reveal 2.5s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+  animation: reveal 2.2s cubic-bezier(0.77, 0, 0.175, 1) forwards;
 }
 
 .animate-fade-in-up {
   opacity: 0;
-  animation: fade-in-up 2.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation: fade-in-up 1.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
 /* Custom Scrollbar */
@@ -107,11 +107,11 @@
   background: hsl(var(--background));
 }
 ::-webkit-scrollbar-thumb {
-  background: hsl(var(--accent) / 0.3);
+  background: hsl(var(--accent) / 0.4);
   border-radius: 10px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: hsl(var(--accent) / 0.6);
+  background: hsl(var(--accent) / 0.7);
 }
 
 @keyframes spin-slow {
@@ -123,5 +123,5 @@
   }
 }
 .animate-spin-slow {
-  animation: spin-slow 15s linear infinite;
+  animation: spin-slow 20s linear infinite;
 }
